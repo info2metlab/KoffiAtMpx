@@ -1,0 +1,217 @@
+[
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": -0.01, "High": 15.00,   "Score": 0,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 15.00, "High": 30.00,   "Score": 2,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 30.00, "High": 40.00,   "Score": 4,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 40.00, "High": 50.00,   "Score": 8,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 50.00, "High": 10000.0, "Score": 10,   "Modtype": "MOISTURE" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 15.00,   "Score": 0,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 15.00, "High": 30.00,   "Score": 2,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 30.00, "High": 40.00,   "Score": 4,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 40.00, "High": 50.00,   "Score": 8,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 50.00, "High": 10000.0, "Score": 10,   "Modtype": "MOISTURE" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 15.00,   "Score": 0,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 15.00, "High": 20.00,   "Score": 2,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 20.00, "High": 30.00,   "Score": 4,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 30.00, "High": 40.00,   "Score": 8,    "Modtype": "MOISTURE" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 40.00, "High": 10000.0, "Score": 10,   "Modtype": "MOISTURE" },
+
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": -0.01, "High": 0.15,    "Score": 2,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 0.15,  "High": 0.30,    "Score": 4,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 0.30,  "High": 0.50,    "Score": 8,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 0.50,  "High": 10000.0, "Score": 10,   "Modtype": "ACIDITY" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 0.10,    "Score": 0,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 0.10,  "High": 0.15,    "Score": 2,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 0.15,  "High": 0.30,    "Score": 4,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 0.30,  "High": 0.40,    "Score": 8,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 0.40,  "High": 10000.0, "Score": 10,   "Modtype": "ACIDITY" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 0.05,    "Score": 0,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 0.05,  "High": 0.10,    "Score": 2,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 0.10,  "High": 0.20,    "Score": 4,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 0.20,  "High": 0.30,    "Score": 8,    "Modtype": "ACIDITY" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 0.30,  "High": 10000.0, "Score": 10,   "Modtype": "ACIDITY" },
+
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": -0.01, "High": 30.00,   "Score": 10,   "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 30.00, "High": 40.00,   "Score": 4,    "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 40.00, "High": 50.00,   "Score": 2,    "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 50.00, "High": 10000.0, "Score": 0,    "Modtype": "BD_STRENGTH" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 30.00,   "Score": 10,   "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 30.00, "High": 40.00,   "Score": 4,    "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 40.00, "High": 50.00,   "Score": 2,    "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 50.00, "High": 10000.0, "Score": 0,    "Modtype": "BD_STRENGTH" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 40.00,   "Score": 10,   "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 40.00, "High": 50.00,   "Score": 4,    "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 50.00, "High": 60.00,   "Score": 2,    "Modtype": "BD_STRENGTH" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 60.00, "High": 10000.0, "Score": 0,    "Modtype": "BD_STRENGTH" },
+
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": -0.01, "High": 25.0,    "Score": 1.00, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 250.0, "High": 500.0,   "Score": 1.10, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 500.0, "High": 1000.0,  "Score": 1.20, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 1000.0,"High": 10000.0, "Score": 1.40, "Modtype": "OIL_CONDITION_SCORE" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 50.0,    "Score": 0.90, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 50.0,  "High": 200.0,   "Score": 1.00, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 200.0, "High": 500.0,   "Score": 1.05, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 500.0, "High": 1000.0,  "Score": 1.10, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 1000.0,"High": 10000.0, "Score": 1.20, "Modtype": "OIL_CONDITION_SCORE" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 500.0,   "Score": 0.90, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 50.0,  "High": 200.0,   "Score": 1.00, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 200.0, "High": 500.0,   "Score": 1.05, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 500.0, "High": 1000.0,  "Score": 1.10, "Modtype": "OIL_CONDITION_SCORE" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 1000.0,"High": 10000.0, "Score": 1.20, "Modtype": "OIL_CONDITION_SCORE" },
+
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": -0.01, "High": 250.0,   "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 250.0, "High": 500.0,   "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 500.0, "High": 1000.0,  "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "HV_TRANSFORMER",  "Low": 1000.0,"High": 10000.0, "Score": 5.5,  "Modtype": "OIL_TEST_COLLAR" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 50.0,    "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 50.0,  "High": 200.0,   "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 200.0, "High": 500.0,   "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 500.0, "High": 1000.0,  "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 1000.0,"High": 10000.0, "Score": 5.5,  "Modtype": "OIL_TEST_COLLAR" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 50.0,    "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 50.0,  "High": 200.0,   "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 200.0, "High": 500.0,   "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 500.0, "High": 1000.0,  "Score": 0.5,  "Modtype": "OIL_TEST_COLLAR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 1000.0,"High": 10000.0, "Score": 5.5,  "Modtype": "OIL_TEST_COLLAR" },
+
+  { "Eqpmt": "HV_TRANSFORMER", "Low": -0.01, "High": 20.00,   "Score": 0,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 20.00, "High": 40.00,   "Score": 2,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 40.00, "High": 100.00,  "Score": 4,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 100.00,"High": 200.00,  "Score": 10,   "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 200.00,"High": 10000.0, "Score": 16,   "Modtype": "HYDROGEN_CONDITION" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 20.00,   "Score": 0,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 20.00, "High": 40.00,   "Score": 2,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 40.00, "High": 100.00,  "Score": 4,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 100.00,"High": 200.00,  "Score": 10,   "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 200.00,"High": 10000.0, "Score": 16,   "Modtype": "HYDROGEN_CONDITION" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 20.00,   "Score": 0,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 20.00, "High": 40.00,   "Score": 2,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 40.00, "High": 100.00,  "Score": 4,    "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 100.00,"High": 200.00,  "Score": 10,   "Modtype": "HYDROGEN_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 200.00,"High": 10000.0, "Score": 16,   "Modtype": "HYDROGEN_CONDITION" },
+
+
+  { "Eqpmt": "HV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 10.00, "High": 40.00,   "Score": 2,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "METHANE_CONDITION" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 10.00, "High": 20.00,   "Score": 2,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "METHANE_CONDITION" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 10.00, "High": 20.00,   "Score": 2,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "METHANE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "METHANE_CONDITION" },
+
+
+
+  { "Eqpmt": "HV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 10.00, "High": 20.00,   "Score": 2,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "ETHYLENE_CONDITION" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 10.00, "High": 20.00,   "Score": 2,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "ETHYLENE_CONDITION" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 10.00, "High": 20.00,   "Score": 2,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "ETHYLENE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "ETHYLENE_CONDITION" },
+
+  { "Eqpmt": "HV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 10.00, "High": 20.00,   "Score": 2,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "ETHANE_CONDITION" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 10.00, "High": 20.00,   "Score": 2,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "ETHANE_CONDITION" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 10.00,   "Score": 0,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 10.00, "High": 20.00,   "Score": 2,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 20.00, "High": 50.00,   "Score": 4,    "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 50.00, "High": 150.00,  "Score": 10,   "Modtype": "ETHANE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 150.00,"High": 10000.0, "Score": 16,   "Modtype": "ETHANE_CONDITION" },
+
+
+
+  { "Eqpmt": "HV_TRANSFORMER", "Low": -0.01, "High": 1.00,    "Score": 0,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 1.00,  "High": 5.00,    "Score": 2,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 5.00,  "High": 20.00,   "Score": 4,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 20.00, "High": 100.00,  "Score": 8,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 100.00,"High": 10000.0, "Score": 10,   "Modtype": "ACETYLENE_CONDITION" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 1.00,    "Score": 0,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 1.00,  "High": 5.00,    "Score": 2,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 5.00,  "High": 20.00,   "Score": 4,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 20.00, "High": 100.00,  "Score": 8,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 100.00,"High": 10000.0, "Score": 10,   "Modtype": "ACETYLENE_CONDITION" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 1.00,    "Score": 0,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 1.00,  "High": 5.00,    "Score": 2,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 5.00,  "High": 20.00,   "Score": 4,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 20.00, "High": 100.00,  "Score": 8,    "Modtype": "ACETYLENE_CONDITION" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 100.00,"High": 10000.0, "Score": 10,   "Modtype": "ACETYLENE_CONDITION" },
+
+  { "Eqpmt": "HV_TRANSFORMER", "Low": -1000.0,"High": -5.0,   "Score": 0.90, "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": -5.0,   "High": 5.0,    "Score": 1.00, "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 5.0,    "High": 25.0,   "Score": 1.10, "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 25.0,   "High": 100.0,  "Score": 1.20, "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 100.0,  "High": 10000.0,"Score": 1.50, "Modtype": "DGA_TEST_FACTOR" },
+
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01, "High": 1.00,    "Score": 0,    "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 1.00,  "High": 5.00,    "Score": 2,    "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 5.00,  "High": 20.00,   "Score": 4,    "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 20.00, "High": 100.00,  "Score": 8,    "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 100.00,"High": 10000.0, "Score": 10,   "Modtype": "DGA_TEST_FACTOR" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01, "High": 1.00,    "Score": 0,    "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 1.00,  "High": 5.00,    "Score": 2,    "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 5.00,  "High": 20.00,   "Score": 4,    "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 20.00, "High": 100.00,  "Score": 8,    "Modtype": "DGA_TEST_FACTOR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 100.00,"High": 10000.0, "Score": 10,   "Modtype": "DGA_TEST_FACTOR" },
+
+
+  { "Eqpmt": "HV_TRANSFORMER", "Low": -0.01,  "High": 4.0,    "Score": 1.00, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 4.0,    "High": 5.0,    "Score": 1.10, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 5.0,    "High": 6.0,    "Score": 1.25, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 6.0,    "High": 7.0,    "Score": 1.40, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "HV_TRANSFORMER", "Low": 7.0,    "High": 9999.0, "Score": 1.60, "Modtype": "FFA_TEST_FACTOR" },
+  
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": -0.01,  "High": 4.0,    "Score": 1.00, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 4.0,    "High": 5.0,    "Score": 1.10, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 5.0,    "High": 6.0,    "Score": 1.25, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 6.0,    "High": 7.0,    "Score": 1.40, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Low": 7.0,    "High": 9999.0, "Score": 1.60, "Modtype": "FFA_TEST_FACTOR" },
+
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": -0.01,  "High": 4.0,    "Score": 1.00, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 4.0,    "High": 5.0,    "Score": 1.10, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 5.0,    "High": 6.0,    "Score": 1.25, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 6.0,    "High": 7.0,    "Score": 1.40, "Modtype": "FFA_TEST_FACTOR" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Low": 7.0,    "High": 9999.0, "Score": 1.60, "Modtype": "FFA_TEST_FACTOR" }
+]

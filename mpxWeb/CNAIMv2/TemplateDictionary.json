@@ -1,0 +1,1731 @@
+[  
+  {
+    "Eqsernum": "Template", "Varname": "customerid", "Value": "6.0", "Unit": "-", "Defaultv": "-", "Description": "Customer Identification",
+    "Groupname": "nameplate", "Information": ""
+  },
+    {
+    "Eqsernum": "Template", "Varname": "unitid", "Value": "6.0", "Unit": "-", "Defaultv": "-", "Description": "Unit Identification",
+    "Groupname": "nameplate", "Information": ""
+  },
+  {
+    "Eqsernum": "Template", "Varname": "assettype", "Value": "HV_TRANSFORMER", "Unit": "-", "Defaultv": "-", "Description": "Asset category",
+    "Groupname": "nameplate", "Information": ""
+  },
+  {
+    "Eqsernum": "Template", "Varname": "numphase", "Value": "6.0", "Unit": "-", "Defaultv": "-", "Description": "Number of phases",
+    "Groupname": "nameplate", "Information": ""
+  },
+  {
+    "Eqsernum": "Template", "Varname": "lossbasekva", "Value": "26000", "Unit": "Volt", "Defaultv": "-", "Description": "Loss Base kVA",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "losstempbase", "Value": "85", "Unit": "Volt", "Defaultv": "85", "Description": "Temperature Base for Losses",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "windI2Rlosses", "Value": "65", "Unit": "kW", "Defaultv": "1200", "Description": "Winding square Losses",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "windeddyloss", "Value": "65", "Unit": "kW", "Defaultv": "100", "Description": "Winding Eddy Losses",
+    "Groupname": "nameplate", "Information": " "
+  },    
+  {
+    "Eqsernum": "Template", "Varname": "windstraylosses", "Value": "65", "Unit": "kW", "Defaultv": "20", "Description": "Winding Stray Losses",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "corelosses", "Value": "65", "Unit": "kW", "Defaultv": "0.5", "Description": "Core Losses",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "perunitbasekvA", "Value": "65", "Unit": "kW", "Defaultv": "0.5", "Description": "Per-unit base kVA",
+    "Groupname": "nameplate", "Information": " "
+  },
+
+  {
+    "Eqsernum": "Template", "Varname": "perUnitbasekvA", "Value": "65", "Unit": "kW", "Defaultv": "0.5", "Description": "Per-unit base kVA",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "Voltage", "Value": "132", "Unit": "kV", "Defaultv": "132", "Description": "Voltage Class",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "WindingTempBase", "Value": "65", "Unit": "degC", "Defaultv": "65", "Description": "Rated Avg. Winding Rise (AWR)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "AvgWindingRise", "Value": "65", "Unit": "degC", "Defaultv": "65", "Description": "Tested Average Winding Temperature Rise(ΔΘᴡ⁄ᴀ,ʀ)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HotSpotRise", "Value": "65", "Unit": "degC", "Defaultv": "65", "Description": "Hot Spot Temperature Rise(ΔΘн,ᴀ)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "TopOilRise", "Value": "65", "Unit": "degC", "Defaultv": "65", "Description": "Tested Top Oil Temperature Rise(ΔΘᴛᴏ,ʀ)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "BottomOilRise", "Value": "65", "Unit": "degC", "Defaultv": "65", "Description": "Bottom Oil Temperature Rise(ΔΘʙᴏ,ʀ)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "AvgOilRise", "Value": "65", "Unit": "degC", "Defaultv": "65", "Description": "Average Oil Temperature Rise(ΔΘᴀᴏ,ʀ)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "RatedAmbient", "Value": "65", "Unit": "degC", "Defaultv": "65", "Description": "Rated Ambient Temperature(Θᴀ,ʀ)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "WindingConductor", "Value": "COPPER", "Unit": "-", "Defaultv": "COPPER", "Description": "Winding conductor Type(1=Aluminum, 2=Copper)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "PerUnitHSEddyLoss", "Value": "1.1", "Unit": "-", "Defaultv": "COPPER", "Description": "Per-unit Eddy Loss At Winding Hot Spot",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "WindTimeCst", "Value": "10", "Unit": "Minute", "Defaultv": "COPPER", "Description": "Winding Time Constant (tw)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "PerUnitHeighToHotSpot", "Value": "1.1", "Unit": "-", "Defaultv": "1.1", "Description": "Per-unit Height To Hot Spot",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "MassCoreCoil", "Value": "417776", "Unit": "pounds", "Defaultv": "-", "Description": "Weight of Core and Coils",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "MassTank", "Value": "155426", "Unit": "pounds", "Defaultv": "-", "Description": "Weight of Tank and Fittings",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "FluidType", "Value": "1", "Unit": "-", "Defaultv": "-", "Description": "Fluid Type (1=min. oil, 2=silicone, 3=HTHC)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "FluidDensity", "Value": "7.4", "Unit": "lbs/gal", "Defaultv": "-", "Description": "Fluid Density",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "GallonsOfFluid", "Value": "500", "Unit": "US Gallons", "Defaultv": "-", "Description": "Total Gallons of Fluid in the Transformer",
+    "Groupname": "nameplate", "Information": " "
+  },   
+  {
+    "Eqsernum": "Template", "Varname": "XfrmerRating", "Value": "500", "Unit": "kVA", "Defaultv": "-", "Description": "Nameplate Ratings in kVA",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "XfrmerCooling", "Value": "ONAN", "Unit": "-", "Defaultv": "ONAN", "Description": "Cooling Modes",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "XfrmerCoolLevel", "Value": "100", "Unit": "%", "Defaultv": "100", "Description": "Cooling Capacities",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "OverExcitation", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Over Excitation (0=no, 1=yes)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "TimeOverExcitation", "Value": "0", "Unit": "hours", "Defaultv": "-", "Description": "Time When Over Excitation Occurs (hour)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "CoreLossesOverEx", "Value": "0", "Unit": "Watts", "Defaultv": "-", "Description": "Core Loss During Over Excitatio",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "TimeStep", "Value": "0.5", "Unit": "Minute", "Defaultv": "5", "Description": "Time increment for calculation(minutes)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LoadLoss", "Value": "112600", "Unit": "Watts", "Defaultv": "-", "Description": "Load Losses",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "PerImpedance", "Value": "8.920", "Unit": "%", "Defaultv": "-", "Description": "Winding Impedance",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "PerResistance", "Value": "0.432", "Unit": "%", "Defaultv": "-", "Description": "Winding Resistance",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "CumLossOfLife", "Value": "0.432", "Unit": "%", "Defaultv": "-", "Description": "Cumulative Loss of Life",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "PUMinMUL", "Value": "0.24", "Unit": "%", "Defaultv": "-", "Description": "Minimum Load Multiplier",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "PUMaxMUL", "Value": "2.432", "Unit": "%", "Defaultv": "-", "Description": "Maximum Load Multiplier",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HotSpotDepth", "Value": "3.6", "Unit": "inches", "Defaultv": "-", "Description": "Depth of hotspot below oil",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HotSpotMois", "Value": "1.11", "Unit": "%", "Defaultv": "-", "Description": "Hot Spot Moisture Content",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "InsLifeExp", "Value": "65000", "Unit": "Hour", "Defaultv": "-", "Description": "Insulation Life Expectancy",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HotSpotLimit", "Value": "120", "Unit": "degC", "Defaultv": "-", "Description": "Hot Spot Temperature Limit",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "TopOilLimit", "Value": "105", "Unit": "degC", "Defaultv": "-", "Description": "Top Oil Temperature Limit",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LoLLimit", "Value": "24", "Unit": "Hours", "Defaultv": "-", "Description": "Loss of Life Limit",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "PULLimit", "Value": "24", "Unit": "Hours", "Defaultv": "-", "Description": "Load Limit, p.u of Maximum Nameplate Rating",
+    "Groupname": "nameplate", "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "BubblingLimit", "Value": "143", "Unit": "degC", "Defaultv": "-", "Description": "Bubbling Temperature Limit",
+    "Groupname": "nameplate", "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "LoadType", "Value": "24h-Normal", "Unit": "-", "Defaultv": "-", "Description": "Loading Scenario Name, ex.(Normal, Contingency)",
+    "Groupname": "nameplate", "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "OptimError", "Value": "0.1", "Unit": "-", "Defaultv": "-", "Description": "Temperature Limit Tolerance for Optimization",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "BeginOverTime", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Begin Overload Time",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "EndOverTime", "Value": "24", "Unit": "Hour", "Defaultv": "-", "Description": "End Overload Time",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "GasContent", "Value": "10", "Unit": "%", "Defaultv": "-", "Description": "Gas Content in the Transformer Oil",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "MoisContent", "Value": "1.93", "Unit": "%", "Defaultv": "1.93", "Description": "Insulation Moisture content at Hot Spot",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HSPressure", "Value": "828", "Unit": "Mm/Hg", "Defaultv": "1.93", "Description": "Threshold Pressure at Hot Spot ",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "AvgInsMois", "Value": "828", "Unit": "Mm/Hg", "Defaultv": "1.850", "Description": "Average Insulation Mositure Content",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HotSpotMoMUL", "Value": "0.6", "Unit": "-", "Defaultv": "0.6", "Description": "Hot Spot Moisture Multiplier",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "num_fans", "Value": "4", "Unit": "-", "Defaultv": "0", "Description": "Total number of fans installed",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "dynamic_cycle", "Value": "0", "Unit": "-", "Defaultv": "0", "Description": "Load cycle count for dynamic loading",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "num_pumps", "Value": "2", "Unit": "-", "Defaultv": "2", "Description": "Total number of pumps installed",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "num_radiators", "Value": "2", "Unit": "-", "Defaultv": "2", "Description": "Total number of radiators installed",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "num_coolers", "Value": "2", "Unit": "-", "Defaultv": "2", "Description": "Total number of coolers installed",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "power_per_fan", "Value": "5000", "Unit": "Watts", "Defaultv": "5000", "Description": "Cooling Power per installed fan",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "power_per_pump", "Value": "8000", "Unit": "Watts", "Defaultv": "8000", "Description": "Cooling Power per installed pump",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "power_per_radiator", "Value": "2500", "Unit": "Watts", "Defaultv": "2500", "Description": "Cooling Power per installed radiator",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "power_per_cooler", "Value": "2500", "Unit": "Watts", "Defaultv": "2500", "Description": "Cooling Power per installed cooler",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HRatedAmps", "Value": "489.5", "Unit": "Amps", "Defaultv": "2500", "Description": "Rated current in the primary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "XRatedAmps", "Value": "955", "Unit": "Amps", "Defaultv": "2500", "Description": "Rated current in the secondary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "TRatedAmps", "Value": "1575", "Unit": "Amps", "Defaultv": "2500", "Description": "Rated current in the tertiary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "HRatedVolt", "Value": "1575", "Unit": "kV", "Defaultv": "2500", "Description": "Rated voltage in the primary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "XRatedVolt", "Value": "180", "Unit": "kV", "Defaultv": "180", "Description": "Rated voltage in the secondary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "TRatedVolt", "Value": "300", "Unit": "kV", "Defaultv": "300", "Description": "Rated voltage in the tertiary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },  
+  {
+    "Eqsernum": "Template", "Varname": "HRatedMVA", "Value": "250", "Unit": "kVA", "Defaultv": "250", "Description": "Rated apparent power in the primary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "XRatedMVA", "Value": "250", "Unit": "kVA", "Defaultv": "250", "Description": "Rated apparent power in the secondary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "TRatedMVA", "Value": "250", "Unit": "kVA", "Defaultv": "250", "Description": "Rated apparent power in the tertiary winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HXRatedMVA", "Value": "250", "Unit": "kVA", "Defaultv": "250", "Description": "Cross Rated apparent power in HX winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "HTRatedMVA", "Value": "250", "Unit": "kVA", "Defaultv": "250", "Description": "Cross Rated apparent power in HT winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HXLoadLoss", "Value": "250", "Unit": "Watts", "Defaultv": "250", "Description": "Load Losses in HX cross-winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "HTLoadLoss", "Value": "250", "Unit": "Watts", "Defaultv": "250", "Description": "Load Losses in HT cross-winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "XTLoadLoss", "Value": "250", "Unit": "Watts", "Defaultv": "250", "Description": "Load Losses in XT cross-winding",
+    "Groupname": "nameplate",  "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "tflifetime", "Value": "50", "Unit": "Years",  "Defaultv": "50", "Description": "Normal expected life of the tap changer",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "tclifetime", "Value": "50", "Unit": "Years",  "Defaultv": "50", "Description": "Normal expected life of the tap changer",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "eqpmt", "Value": "0",  "Unit": "-",  "Defaultv": "{{XType}}", "Description": "Equipment type",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "manyear", "Value": "1986", "Unit": "Year", "Defaultv": "1986", "Description": "Year of manufacture",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "storage_duration", "Value": "4", "Unit": "Year", "Defaultv": "0", "Description": "Storage duration",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "accesstype", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Access Type A - Type B - Type C",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "notaps", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Indication of the presence of a tap changer",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "placement", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Location indication (Indoor or Outdoor)", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "coastaldist", "Value": "150", "Unit": "m", "Defaultv": "-", "Description": "Distance from the coast",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "corrosion", "Value": "1.0", "Unit": "Years", "Defaultv": "-", "Description": "Corrosion category index", "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "age", "Value": "65", "Unit": "Years", "Defaultv": "-", "Description": "Normal life expectancy", "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "fleet_clustering", "Value": "0", "Unit": "-", "Defaultv": "0", "Description": "Fleet clustering flag",
+    "Groupname": "Clustering", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "learning_mode", "Value": "0", "Unit": "-", "Defaultv": "0", "Description": "Fleet learning flag",
+    "Groupname": "Clustering", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "simu_sample", "Value": "1000", "Unit": "-",  "Defaultv": "1000", "Description": "Number of simulation samples",
+    "Groupname": "Simulation", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "mtrg_rate", "Value": "4", "Unit": "Minute", "Defaultv": "-", "Description": "Monitoring data sampling rate",
+    "Groupname": "Monitoring", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "main_program", "Value": "REACTIVE", "Unit": "Minute", "Defaultv": "-", "Description": "Activat Maintenance program",
+    "Groupname": "Monitoring", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "seasonal_rate", "Value": "24", "Unit": "Minute", "Defaultv": "-", "Description": "Monitoring data sampling rate",
+    "Groupname": "Monitoring", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "alm_scanning", "Value": "10", "Unit": "minute", "Defaultv": "-", "Description": "Alarms scanning rate", "Groupname": "Monitoring",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "reliability", "Value": "1.0", "Unit": "minute", "Defaultv": "-", "Description": "Reliability assessment rate", "Groupname": "Monitoring",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "health_rate", "Value": "10", "Unit": "minute", "Defaultv": "-", "Description": "Health indexing assessment rate",
+    "Groupname": "Monitoring", "Information": " " 
+  },
+  {
+    "Eqsernum": "Template", "Varname": "num_deg_samples", "Value": "1000", "Unit": "-", "Defaultv": "-", "Description": "Number of degradation samples", "Groupname": "Reliability", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "monitoring_mode", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Monitoring mode or simulation mode", "Groupname": "Reliability", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "growth_rate", "Value": "5", "Unit": "%/Year", "Defaultv": "-", "Description": "Annual Maintenance Budget Growth Rate",
+    "Groupname": "Maintenance", "Information": "Maintenance"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "normal_pof", "Value": "0.009", "Unit": "-", "Defaultv": "0.009", "Description": "Normal Pof Threshold", "Groupname": "Monitoring",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "caution_pof", "Value": "0.0115", "Unit": "-", "Defaultv": "0.0115",  "Description": "Caution Pof Threshold",
+    "Groupname": "Monitoring", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "warning_pof", "Value": "0.150", "Unit": "-", "Defaultv": "0.150", "Description": "Warning Pof Threshold",
+    "Groupname": "Monitoring", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "alarm_pof", "Value": "0.2", "Unit": "-", "Defaultv": "0.2", "Description": "Alarm Pof Threshold",
+    "Groupname": "Monitoring", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "alert_pof", "Value": "0.5", "Unit": "-", "Defaultv": "0.5", "Description": "Alert Pof Threshold", "Groupname": "Monitoring",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "normal_score", "Value": "3", "Unit": "-", "Defaultv": "3", "Description": "Normal Score Threshold", "Groupname": "Monitoring",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "caution_score", "Value": "5", "Unit": "-", "Defaultv": "5", "Description": "Caution Score Threshold", "Groupname": "Monitoring",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "warning_score", "Value": "7", "Unit": "-", "Defaultv": "7", "Description": "Warning Score Threshold", "Groupname": "Monitoring",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "alarm_score", "Value": "8", "Unit": "-", "Defaultv": "8", "Description": "Alarm Score Threshold", "Groupname": "Monitoring",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "alert_score", "Value": "9.5", "Unit": "-", "Defaultv": "9.5", "Description": "Alert Score Threshold",
+    "Groupname": "Monitoring", "Information": " "
+  },
+  {
+    "Eqsernum": "Email", "Varname": "SmtpServer", "Value": "smtp.example.com", "Unit": "-", "Defaultv": "smtp.example.com", "Description": "SMTP Server Address",
+    "Groupname": "Email", "Information": " "
+  },
+  {
+    "Eqsernum": "Email", "Varname": "SmtpPort", "Value": "587", "Unit": "-", "Defaultv": "587", "Description": "SMTP Server Port", "Groupname": "Email",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Email", "Varname": "SmtpUsername", "Value": "user@example.com", "Unit": "-", "Defaultv": "user@example.com",
+    "Description": "SMTP Username", "Groupname": "Email", "Information": " "
+  },
+  {
+    "Eqsernum": "Email", "Varname": "SmtpPassword", "Value": "password", "Unit": "-", "Defaultv": "password", "Description": "SMTP Password",
+    "Groupname": "Email", "Information": " "
+  },
+  {
+    "Eqsernum": "Twilio", "Varname": "TwilioAccountSid", "Value": "your_account_sid", "Unit": "-", "Defaultv": "your_account_sid",
+    "Description": "Twilio Account SID", "Groupname": "Twilio", "Information": " "
+  },
+  {
+    "Eqsernum": "Twilio", "Varname": "TwilioAuthToken", "Value": "your_auth_token", "Unit": "-", "Defaultv": "your_auth_token",
+    "Description": "Twilio Auth Token", "Groupname": "Twilio", "Information": " "
+  },
+  {
+    "Eqsernum": "Twilio", "Varname": "TwilioPhoneNumber", "Value": "+1234567890", "Unit": "-", "Defaultv": "+1234567890",
+    "Description": "Twilio Phone Number", "Groupname": "Twilio", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "sched_horizon", "Value": "Current Date", "Unit": "-", "Defaultv": "-", "Description": "Scheduling time horizon",
+    "Groupname": "Scheduling", "Information": ""
+  },
+  {
+    "Eqsernum": "Template", "Varname": "tapage", "Value": "65", "Unit": "Years", "Defaultv": "-", "Description": "Tap changer normal life expectancy",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "avgtapops", "Value": "20", "Unit": "-", "Defaultv": "-", "Description": "Average number of tap changer operations", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "proxwater", "Value": "1000", "Unit": "-", "Defaultv": "-", "Description": "Proximity to water", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "locationrisk", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Location Risk Rating", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "typerisk", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Type Risk Rating Risk that the asset presents to the public by its characteristics and particular situation", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "loadatrisk", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Proximity to areas that may affect its likelihood of trespass or interference)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "rating",  "Value": "{{Rating1}}", "Unit": "kVA", "Defaultv": "-", "Description": "Equipment Operating rating", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "bunded", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Bunded Distance to the coast", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "secured", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Boolean If the asset is in a secure network or not", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "gridoredge", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Whether the asset is a primary or a distribution (secondary) asset in the network", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "numcustomers", "Value": "150", "Unit": "-", "Defaultv": "-", "Description": "Attached Number of customers", "Groupname": "nameplate",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "loademand", "Value": "15", "Unit": "kVA", "Defaultv": "-", "Description": "Size of loads and or electricity demand", "Groupname": "nameplate",
+    "Information": " "
+  },
+
+  {
+    "Eqsernum": "Template", "Varname": "puload", "Value": "1.0", "Unit": "p.u", "Defaultv": "-", "Description": "Maximum utilisation under normal operation", "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "moisAw", "Value": "0.1", "Unit": "p.u", "Defaultv": "-", "Description": "Water Activiy in oil", "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "hotspot", "Value": "150", "Unit": "degC", "Defaultv": "-", "Description": "Hottest spot Temperature", "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "bubbling",
+    "Value": "150",
+    "Unit": "degC",
+    "Defaultv": "-",
+    "Description": "Bubbling Temperature",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "obreakdwn",
+    "Value": "10",
+    "Unit": "%",
+    "Defaultv": "-",
+    "Description": "Oil Breakdown Voltage strength",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+ 
+  {
+    "Eqsernum": "Template",
+    "Varname": "moisture",
+    "Value": "0.1",
+    "Unit": "%",
+    "Defaultv": "-",
+    "Description": "Moisture level in oil",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "fural",
+    "Value": "0.1",
+    "Unit": "%",
+    "Defaultv": "-",
+    "Description": "Furan level in oil Quality Analysis",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "dobletestCI",
+    "Value": "0.1",
+    "Unit": "%",
+    "Defaultv": "-",
+    "Description": "Doble Test Results",
+    "Groupname": "Inspections",
+    "Information": ""
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "meggertestCI",
+    "Value": "0.1",
+    "Unit": "%",
+    "Defaultv": "-",
+    "Description": "Core Megger test results",
+    "Groupname": "Inspections",
+    "Information": "Inspections"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "WindRestestCI",
+    "Value": "0.1",
+    "Unit": "%",
+    "Defaultv": "-",
+    "Description": "Winding Resistance test results",
+    "Groupname": "Inspections",
+    "Information": "Inspections"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DPtestCI",
+    "Value": "0.1",
+    "Unit": "%",
+    "Defaultv": "-",
+    "Description": "Paper Degree of Polymerization Test results",
+    "Groupname": "Inspections",
+    "Information": "Inspections"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "IntInspecCI",
+    "Value": "0.1",
+    "Unit": "%",
+    "Defaultv": "-",
+    "Description": "Internal inspection Test results",
+    "Groupname": "Inspections",
+    "Information": "Inspections"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "ac2h2ppm",
+    "Value": "1045",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Actual value of Acethylen gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "ac2h4ppm",
+    "Value": "100",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Actual value of ethylen gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "ac2h6ppm",
+    "Value": "500",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Actual value of ethane gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "ac2h8ppm",
+    "Value": "500",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Actual value of propane gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "ach4ppm",
+    "Value": "200",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Actual value of methane gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "acoppm",
+    "Value": "1000",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Actual value of carbon monoxide gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "aco2ppm",
+    "Value": "1200",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Actual value of arbon dioxide gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "ah2ppm",
+    "Value": "1300",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Actual value of hydrogen gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "prec2h2ppm",
+    "Value": "1045",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Previous value of Acethylen gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "prec2h4ppm",
+    "Value": "100",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Previous value of ethylen gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "prec2h6ppm",
+    "Value": "500",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Previous value of ethane gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "prec3h6ppm",
+    "Value": "1000",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Previous value of propane gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "prech4ppm",
+    "Value": "1200",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Previous value of methane gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "precoppm",
+    "Value": "1000",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Previous value of carbon monoxide gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "preco2ppm",
+    "Value": "1200",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Previous value of carbon dioxide gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "preh2ppm",
+    "Value": "1300",
+    "Unit": "ppm",
+    "Defaultv": "-",
+    "Description": "Previous value of hydrogen gas",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "c2h2WeightFactor",
+    "Value": "5",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Acetylene Weighting Factor ",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "c2h4WeightFactor",
+    "Value": "4",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Ethylene Weighting Factor ",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "c2h6WeightFactor",
+    "Value": "3",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Ethane Weighting Factor ",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "c3h6WeightFactor",
+    "Value": "3",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Propane Weighting Factor ",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "ch4WeightFactor",
+    "Value": "3",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Methane Weighting Factor ",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "coWeightFactor",
+    "Value": "1",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Carbon Monoxide Weighting Factor ",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "h2WeightFactor",
+    "Value": "3",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Carbon Dioxide Weighting Factor ",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "co2WeightFactor",
+    "Value": "3",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Hydrogen Weighting Factor ",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGARoCFactorG1",
+    "Value": "0.1",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Rate Of Change Factor G1",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGARoCFactorG2",
+    "Value": "0.2",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Rate Of Change Factor G2",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF0",
+    "Value": "0.0",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 0",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF1",
+    "Value": "0.2",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 1",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF2",
+    "Value": "0.2",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 2",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF3",
+    "Value": "0.33",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 3",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF4",
+    "Value": "0.33",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 4",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF5",
+    "Value": "1.0",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 4",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF6",
+    "Value": "0.66",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 6",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF7",
+    "Value": "1.0",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 7",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF8",
+    "Value": "1.5",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 8",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF9",
+    "Value": "2.0",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 9",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "DGAConcentrationF10",
+    "Value": "4.0",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "DGA Concentration Factor 10",
+    "Groupname": "Health Index",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_dga_frequency",
+    "Value": "10",
+    "Unit": "Hour",
+    "Defaultv": "0",
+    "Description": "Low level of acetylen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_c2h2ppm",
+    "Value": "750",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of acetylen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_c2h2ppm",
+    "Value": "750",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of acetylen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_c2h2ppm",
+    "Value": "7500",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of acetylen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_c2h4ppm",
+    "Value": "900",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of ethylen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_c2h4ppm",
+    "Value": "900",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of ethylen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_c2h4ppm",
+    "Value": "9000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of ethylen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_c2h6ppm",
+    "Value": "800",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of ethane gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_c2h6ppm",
+    "Value": "800",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of ethane gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_c2h6ppm",
+    "Value": "8000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of ethane gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_c3h6ppm",
+    "Value": "700",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of propen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_c3h6ppm",
+    "Value": "700",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of propen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_c3h6ppm",
+    "Value": "7000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of propen gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_ch4ppm",
+    "Value": "600",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of methane gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_ch4ppm",
+    "Value": "600",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of methane gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_ch4ppm",
+    "Value": "6000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of methane gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_coppm",
+    "Value": "500",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of carbon monoxide",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_coppm",
+    "Value": "500",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of carbon monoxide",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_coppm",
+    "Value": "5000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "high level of carbon monoxide",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_co2ppm",
+    "Value": "200",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of carbon dioxide",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_co2ppm",
+    "Value": "200",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of carbon dioxide",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_co2ppm",
+    "Value": "2000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "high level of carbon dioxide",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_h2ppm",
+    "Value": "1000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of hydrogen",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_h2ppm",
+    "Value": "1000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of hydrogen",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_h2ppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of hydrogen",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_o2ppm",
+    "Value": "1000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Normal level of oxygen",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_o2ppm",
+    "Value": "1000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of oxygen",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_high_o2ppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of oxygen",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_norm_n2ppm",
+    "Value": "1000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Normal level of nitrogen",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_real_low_n2ppm",
+    "Value": "1000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Low level of nitrogen",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_real_high_n2ppm", "Value": "15000",  "Unit": "-",  "Defaultv": "0",  "Description": "High level of nitrogen",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_real_norm_tdcgppm", "Value": "1000", "Unit": "-", "Defaultv": "0", "Description": "Normal level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_real_low_tdcgppm", "Value": "1000", "Unit": "-", "Defaultv": "0", "Description": "Low level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_real_high_tdcgppm", "Value": "15000", "Unit": "-", "Defaultv": "0", "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_c2h2ppm", "Value": "1000", "Unit": "-", "Defaultv": "0", "Description": "Low level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_c2h4ppm", "Value": "1000", "Unit": "-", "Defaultv": "0", "Description": "Low level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_c2h6ppm", "Value": "15000", "Unit": "-", "Defaultv": "0", "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_c3h6ppm", "Value": "1000", "Unit": "-", "Defaultv": "0", "Description": "Low level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_ch4ppm", "Value": "1000", "Unit": "-", "Defaultv": "0", "Description": "Low level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_coppm", "Value": "15000", "Unit": "-", "Defaultv": "0", "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_co2ppm", "Value": "15000", "Unit": "-", "Defaultv": "0", "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_h2ppm", "Value": "15000", "Unit": "-", "Defaultv": "0", "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_lviec_tdcgppm",  "Value": "15000",  "Unit": "-",  "Defaultv": "0", "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "unp_rociec_c2h2ppm", "Value": "15000", "Unit": "-", "Defaultv": "0", "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints", "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_rociec_c2h4ppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_rociec_c2h6ppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_rociec_c3h6ppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_rociec_ch4ppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_rociec_coppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_rociec_co2ppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_rociec_h2ppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "unp_rociec_tdcgppm",
+    "Value": "15000",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "High level of Total Dissolved Gas",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "high_topoil",
+    "Value": "120",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Maximum top oil temperature",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "high_hotspot",
+    "Value": "150",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Maximum hot spot temperature",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "high_bottom",
+    "Value": "60",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Maximum bottom temperature",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "high_bubbling",
+    "Value": "180",
+    "Unit": "-",
+    "Defaultv": "0",
+    "Description": "Maximum bubbling temperature",
+    "Groupname": "Setpoints",
+    "Information": "-"
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "pdtankCI",
+    "Value": "1.93",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Partial discharge main tank",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "pdtacpCI",
+    "Value": "828",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Partial Discharge of Tap Changer",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "maintankCI",
+    "Value": "1.850",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Main Tank conditions",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "bushingCI",
+    "Value": "0.6",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Bushing conditions",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "coolradCI",
+    "Value": "40.17",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Cooler and radiator conditions",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "kioskCI",
+    "Value": "0.04",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Kiosk Condition Index",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template",
+    "Varname": "cableboxCI",
+    "Value": "22.4",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "Cable and Boxes Condition Index",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "externtapCI",
+    "Value": "22.4",
+    "Unit": "-",
+    "Defaultv": "-",
+    "Description": "External Tap Condition Index",
+    "Groupname": "diagnostic",
+    "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "interntapCI", "Value": "22.4", "Unit": "-", "Defaultv": "-", "Description": "Internal Tap Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "mechnismCI", "Value": "22.4", "Unit": "-", "Defaultv": "-", "Description": "Drive Mechanism Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "divbraidCI", "Value": "0", "Unit": "-", "Defaultv": "-", "Description": "Diverter braids Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "divctactCI", "Value": "0", "Unit": "-", "Defaultv": "-","Description": "Selector and Diverter contacts Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "compCI", "Value": "100", "Unit": "%", "Defaultv": "-", "Description": "Composite/Combined Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "dgaCI", "Value": "0", "Unit": "%",  "Defaultv": "-",  "Description": "DGA Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "hstCI", "Value": "40", "Unit": "%", "Defaultv": "-", "Description": "Thermal Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "topCI", "Value": "90", "Unit": "%", "Defaultv": "-", "Description": "Top Oil Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "boardbpCI", "Value": "44", "Unit": "%", "Defaultv": "-", "Description": "Board Break Down Probability Condition Index",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "oilbpCI", "Value": "1", "Unit": "%", "Defaultv": "-",
+    "Description": "Oil Break Down Probability Condition Index", "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "loadCI", "Value": "1",  "Unit": "%", "Defaultv": "-",
+    "Description": "Load Condition Index", "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "tapCI", "Value": "1", "Unit": "%", "Defaultv": "-", "Description": "Tap Changer Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "bubCI",  "Value": "1", "Unit": "%", "Defaultv": "-", "Description": "Bubling Temperature Condition Index",
+    "Groupname": "diagnostic", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "altitude", "Value": "30.201", "Unit": "deg", "Defaultv": "-", "Description": "GPS Altitude",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "longitude", "Value": "99.2", "Unit": "deg", "Defaultv": "-", "Description": "GPS Longitude",  
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "latitude", "Value": "101.2", "Unit": "deg", "Defaultv": "-", "Description": "GPS Latitude",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "partial_discharge_tf", "Value": "1.93", "Unit": "-", "Defaultv": "-", "Description": "Partial discharge main tank",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "partial_discharge_tc", "Value": "0.5", "Unit": "-", "Defaultv": "-", "Description": "Partial Discharge of Tap Changer",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "main_tank", "Value": "1.850", "Unit": "-", "Defaultv": "-", "Description": "Main Tank conditions",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "bushings", "Value": "0.6", "Unit": "-",  "Defaultv": "-", "Description": "Bushing conditions",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "coolers_radiator", "Value": "9.5", "Unit": "-", "Defaultv": "-",
+    "Description": "Cooler and radiator conditions", "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "kiosk", "Value": "0.8", "Unit": "-",  "Defaultv": "-",  "Description": "Kiosk Condition Index",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "cable_boxes",  "Value": "2.4", "Unit": "-", "Defaultv": "-", "Description": "Cable and Boxes Condition Index",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "external_tap", "Value": "7.4", "Unit": "-",  "Defaultv": "-",
+    "Description": "External Tap Condition Index", "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "internal_tap", "Value": "8.4",
+    "Unit": "-", "Defaultv": "-", "Description": "Internal Tap Condition Index", "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "mechnism_cond", "Value": "9.4", "Unit": "-", "Defaultv": "-", "Description": "Drive Mechanism Condition Index",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "diverter_braids", "Value": "8.0", "Unit": "-", "Defaultv": "-", "Description": "Diverter braids Condition Index",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "diverter_contacts", "Value": "8.0", "Unit": "-", "Defaultv": "-", "Description": "Selector and Diverter contacts Condition Index",
+    "Groupname": "diagnostic", "Information": "OBSERVED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "temperature_reading", "Value": "8.0", "Unit": "%", "Defaultv": "-", "Description": "Thermal Condition Index", "Groupname": "diagnostic",
+    "Information": "MEASURED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "oil_condition", "Value": "8.5",
+    "Unit": "%", "Defaultv": "-", "Description": "Oil condition Index", "Groupname": "diagnostic", "Information": "MEASURED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "paper_condition", "Value": "8.5",  "Unit": "%", "Defaultv": "-",
+    "Description": "Paper condition Index", "Groupname": "diagnostic", "Information": "MEASURED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "dissolved_gas", "Value": "8.5", "Unit": "%",
+    "Defaultv": "-", "Description": "Dissolved Gas condition Index", "Groupname": "diagnostic", "Information": "MEASURED CONDITIONS"
+  },
+  {
+    "Eqsernum": "Template", "Varname": "cm_replacement_threshold", "Value": "8.0", "Unit": "%",
+    "Defaultv": "-", "Description": "Corrective maintenance score level", "Groupname": "Intervention", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "pm_replacement_threshold", "Value": "6.0", "Unit": "%", "Defaultv": "-",
+    "Description": "Preventive maintenance score level", "Groupname": "Intervention", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "em_replacement_threshold", "Value": "9.8", "Unit": "%", "Defaultv": "-",
+    "Description": "Emergency replacement score level", "Groupname": "Intervention", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "routine_servicing_threshold", "Value": "0.2", "Unit": "days",
+    "Defaultv": "-", "Description": "Routine servicing threshold", "Groupname": "Intervention", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "end_of_life_threshold", "Value": "9.8", "Unit": "-", "Defaultv": "-",
+    "Description": "End of life score level", "Groupname": "INTERVENTION", "Information": ""
+  },
+
+  {
+    "Eqsernum": "Template", "Varname": "inspec_testing_threshold", "Value": "0.2", "Unit": "-", "Defaultv": "-", "Description": "inspection testing threshold",
+    "Groupname": "INTERVENTION", "Information": ""
+  },
+  {
+    "Eqsernum": "Template", "Varname": "condition_monitoring_threshold", "Value": "0.5", "Unit": "-", "Defaultv": "-", "Description": "Condition monitoring threshold",
+    "Groupname": "INTERVENTION", "Information": ""
+  },
+  {
+    "Eqsernum": "Template", "Varname": "minimum_repair_threshold", "Value": "6.0", "Unit": "-", "Defaultv": "-", "Description": "Minimum repair threshold",
+    "Groupname": "INTERVENTION", "Information": ""
+  }, 
+  {
+    "Eqsernum": "Template", "Varname": "refurbishment_threshold", "Value": "6.0", "Unit": "-", "Defaultv": "-", "Description": "Refurbishment threshold",
+    "Groupname": "INTERVENTION", "Information": ""
+  }
+]

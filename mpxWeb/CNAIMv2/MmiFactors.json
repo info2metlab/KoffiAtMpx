@@ -1,0 +1,22 @@
+[
+  { "Eqpmt": "HV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 4, "Modtype": "HEALTH_SCORE_MODIFIER" },
+  { "Eqpmt": "HV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "HEALTH_SCORE_MODIFIER" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 4, "Modtype": "HEALTH_SCORE_MODIFIER" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "HEALTH_SCORE_MODIFIER" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 4, "Modtype": "HEALTH_SCORE_MODIFIER" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "HEALTH_SCORE_MODIFIER" },
+
+  { "Eqpmt": "HV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "OBSERVED_CONDTION_MODIFIER" },
+  { "Eqpmt": "HV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "OBSERVED_CONDTION_MODIFIER" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 3, "Modtype": "OBSERVED_CONDTION_MODIFIER" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 3, "Modtype": "OBSERVED_CONDTION_MODIFIER" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 3, "Modtype": "OBSERVED_CONDTION_MODIFIER" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 3, "Modtype": "OBSERVED_CONDTION_MODIFIER" },
+
+  { "Eqpmt": "HV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "MEASURED_CONDTION_MODIFIER" },
+  { "Eqpmt": "HV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "MEASURED_CONDTION_MODIFIER" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "MEASURED_CONDTION_MODIFIER" },
+  { "Eqpmt": "EHV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 1, "Modtype": "MEASURED_CONDTION_MODIFIER" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Subcomp": "MAIN_TANK", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 2, "Modtype": "MEASURED_CONDTION_MODIFIER" },
+  { "Eqpmt": "UHV_TRANSFORMER", "Subcomp": "TAP_CHANGER", "Df1": 1.5, "Df2": 1.5, "Maxnofc": 1, "Modtype": "MEASURED_CONDTION_MODIFIER" }
+]

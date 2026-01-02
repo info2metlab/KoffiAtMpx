@@ -1,0 +1,66 @@
+[  
+  {
+    "varname": "partial_discharge_tf", "alphamin": 0.2, "alphamax": 1.2, "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "partial_discharge_tc", "alphamin": 0.2, "alphamax": 1.2, "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "main_tank", "alphamin": 0.2, "alphamax": 1.2, "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "bushings", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "coolers_radiator", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "kiosk", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "cable_boxes",  "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "external_tap", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "internal_tap", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "mechnism_cond", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "diverter_braids", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "diverter_contacts", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "temperature_reading", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "oil_condition", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "paper_condition", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  },
+  {
+    "varname": "dissolved_gas", "alphamin": 0.2, "alphamax": 1.2,  "betamin": 0.3, "betamax": 1.2,
+    "sigmamin": 0.1, "sigmamax": 1.0, "scoremin": 0.5, "scoremax": 10
+  }
+]

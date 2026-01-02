@@ -1,0 +1,379 @@
+[
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "LOW",
+    "Descp": "Low or negligible levels of partial discharge indicating no issues identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation.",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "MEDIUM",
+    "Descp": "Some moderate levels of partial discharge recorded (e.g. �Amber� result from TEV measuring device or between 10% and 30% of the manufacturers recommendation) identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation",
+    "Infactor": 1.1,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_NOT_CONFIRMED",
+    "Descp": "High levels of partial discharge indicating possible defect with plant / equipment, requiring further investigation (e.g. �Red� result from TEV measuring device or above manufacturers recommendation)",
+    "Infactor": 1.3,
+    "Incap": 10.0,
+    "Incollar": 5.5
+  },
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_CONFIRMED",
+    "Descp": "High partial discharge. Source of partial discharge confirmed as potential source of failure",
+    "Infactor": 1.5,
+    "Incap": 10.0,
+    "Incollar": 8.0
+  },
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "DEFAULT",
+    "Descp": "No data available",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "NORMAL",
+    "Descp": "Normally expected temperature for transformer loading",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "MODERATELY_HIGH",
+    "Descp": "Slightly above normally expected temperature for transformer loading",
+    "Infactor": 1.2,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "VERY_HIGH",
+    "Descp": "Significantly above normally expected temperature for transformer loading",
+    "Infactor": 1.4,
+    "Incap": 10.0,
+    "Incollar": 5.5
+  },
+  {
+    "Eqpmt": "HV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "DEFAULT",
+    "Descp": "No data available",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "LOW",
+    "Descp": "Low or negligible levels of partial discharge indicating no issues identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation.",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "MEDIUM",
+    "Descp": "Some moderate levels of partial discharge recorded (e.g. �Amber� result from TEV measuring device or between 10% and 30% of the manufacturers recommendation) identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation",
+    "Infactor": 1.1,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_NOT_CONFIRMED",
+    "Descp": "High levels of partial discharge indicating possible defect with plant / equipment, requiring further investigation (e.g. �Red� result from TEV measuring device or above manufacturers recommendation)",
+    "Infactor": 1.3,
+    "Incap": 10.0,
+    "Incollar": 5.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_CONFIRMED",
+    "Descp": "High partial discharge. Source of partial discharge confirmed as potential source of failure",
+    "Infactor": 1.5,
+    "Incap": 10.0,
+    "Incollar": 8.0
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "DEFAULT",
+    "Descp": "No data available",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "NORMAL",
+    "Descp": "Normally expected temperature for transformer loading",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "MODERATELY_HIGH",
+    "Descp": "Slightly above normally expected temperature for transformer loading",
+    "Infactor": 1.2,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "VERY_HIGH",
+    "Descp": "Significantly above normally expected temperature for transformer loading",
+    "Infactor": 1.4,
+    "Incap": 10.0,
+    "Incollar": 5.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "DEFAULT",
+    "Descp": "No data available",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "LOW",
+    "Descp": "Low or negligible levels of partial discharge indicating no issues identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation.",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "MEDIUM",
+    "Descp": "Some moderate levels of partial discharge recorded (e.g. �Amber� result from TEV measuring device or between 10% and 30% of the manufacturers recommendation) identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation",
+    "Infactor": 1.1,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_NOT_CONFIRMED",
+    "Descp": "High levels of partial discharge indicating possible defect with plant / equipment, requiring further investigation (e.g. �Red� result from TEV measuring device or above manufacturers recommendation)",
+    "Infactor": 1.3,
+    "Incap": 10.0,
+    "Incollar": 5.5
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_CONFIRMED",
+    "Descp": "High partial discharge. Source of partial discharge confirmed as potential source of failure",
+    "Infactor": 1.5,
+    "Incap": 10.0,
+    "Incollar": 8.0
+  },
+  {
+    "Eqpmt": "EHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "DEFAULT",
+    "Descp": "No data available",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "LOW",
+    "Descp": "Low or negligible levels of partial discharge indicating no issues identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation.",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "MEDIUM",
+    "Descp": "Some moderate levels of partial discharge recorded (e.g. �Amber� result from TEV measuring device or between 10% and 30% of the manufacturers recommendation) identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation",
+    "Infactor": 1.1,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_NOT_CONFIRMED",
+    "Descp": "High levels of partial discharge indicating possible defect with plant / equipment, requiring further investigation (e.g. �Red� result from TEV measuring device or above manufacturers recommendation)",
+    "Infactor": 1.3,
+    "Incap": 10.0,
+    "Incollar": 5.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_CONFIRMED",
+    "Descp": "High partial discharge. Source of partial discharge confirmed as potential source of failure",
+    "Infactor": 1.5,
+    "Incap": 10.0,
+    "Incollar": 8.0
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "DEFAULT",
+    "Descp": "No data available",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "NORMAL",
+    "Descp": "Normally expected temperature for transformer loading",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "MODERATELY_HIGH",
+    "Descp": "Slightly above normally expected temperature for transformer loading",
+    "Infactor": 1.2,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "VERY_HIGH",
+    "Descp": "Significantly above normally expected temperature for transformer loading",
+    "Infactor": 1.4,
+    "Incap": 10.0,
+    "Incollar": 5.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "MAIN_TANK",
+    "Condtype": "TEMPERATURE_READINGS",
+    "Criteria": "DEFAULT",
+    "Descp": "No data available",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "LOW",
+    "Descp": "Low or negligible levels of partial discharge indicating no issues identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation.",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "MEDIUM",
+    "Descp": "Some moderate levels of partial discharge recorded (e.g. �Amber� result from TEV measuring device or between 10% and 30% of the manufacturers recommendation) identified (e.g. a green condition using a TEV or <10% of manufacturers recommendation",
+    "Infactor": 1.1,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_NOT_CONFIRMED",
+    "Descp": "High levels of partial discharge indicating possible defect with plant / equipment, requiring further investigation (e.g. �Red� result from TEV measuring device or above manufacturers recommendation)",
+    "Infactor": 1.3,
+    "Incap": 10.0,
+    "Incollar": 5.5
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "HIGH_CONFIRMED",
+    "Descp": "High partial discharge. Source of partial discharge confirmed as potential source of failure",
+    "Infactor": 1.5,
+    "Incap": 10.0,
+    "Incollar": 8.0
+  },
+  {
+    "Eqpmt": "UHV_TRANSFORMER",
+    "Subcomp": "TAP_CHANGER",
+    "Condtype": "PARTIAL_DISCHARGE",
+    "Criteria": "DEFAULT",
+    "Descp": "No data available",
+    "Infactor": 1.0,
+    "Incap": 10.0,
+    "Incollar": 0.5
+  }
+]
