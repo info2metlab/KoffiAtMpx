@@ -1,10 +1,12 @@
 import shutil
 from audioop import avgpp
+from dataclasses import dataclass
 from datetime import datetime
 from enum import Enum
 import math
 import os
 import threading
+from typing import List
 import numpy as np
 import pandas as pd
 import sqlalchemy as db
@@ -58,6 +60,20 @@ ALPHA                   = 0.5
 NUM_LEARNING_EPISODES   = 626
 DISCOUNT_RATE           = 0.1
 
+CONVERGE_MAX = 30
+OVERTIME_STEP = 30
+DELTA_TEMP = 5.0
+
+MAX_TOPOIL = 115.0
+MAX_HOTSPOT = 185.0
+MAX_PU_LOAD = 1.5
+MAX_LOL_RATE = 2.0
+MAX_BUB_TEMP = 4.0
+EPSILON = 1e-5
+CALCULATION_PRECISION = 2
+
+
+
 CoolingModes = ["ONAN", "ONAF", "ODAF", "ODWF", "OFWF", "OFAF", "OFAN", "OA", "FOA", "FA"]
 Voltages = ["<110kV (Class1)", "110kV-220kV (Class2)", ">220kV (Class3)"]
 Liquids = ["MINERAL OIL", "ESTER", "SILICONE", "DRY-AIR"]
@@ -89,25 +105,28 @@ class EvtStatus(Enum):
         DISMISSED = 3
         INFO = 4
 
+class PaperTypes(Enum):
+    KRAFT = 0
+    TUK = 1
+    ARAMID = 2
 
-class MaintenanceCost:
-    asset_id            = ""
-    score               = 0.0
-    inspection_cost     = 0.0
-    testing_cost        = 0.0
-    pm_replacement_cost = 0.0        # PM_REPLACEMENT
-    minimum_repair_cost = 0.0        # MINIMUM_REPAIR
-    disposal_cost       = 0.0        # DISPOSAL
-    refurbishment_cost  = 0.0        # UPGRADE
-    cm_replacement_cost = 0.0        # CM_REPLACEMENT  
-    monitoring_cost     = 0.0       # MONITORING      
-    repair_factor       = 0.0       # REPAIR_FACTOR 
-    em_replacement_cost = 0.0       # Emergency repair cost 
-    
-    # Degradation model parameters
-    a                   = 0.2, # component['a']
-    b                   = 1.2 # component['b']
-    sigma               = 0.2 # component['sigma'] 
+
+class Phase(Enum):
+    SINGLE_PHASE = 0
+    THREE_PHASE = 1
+
+
+class LoadingStandard(Enum):
+    IEEEG = 0
+    IEEE7 = 1
+    IEC60354 = 2
+    IEC60076 = 3
+
+
+class Winding(Enum):
+    HV = 0
+    LV = 1
+    TV = 2
 
 
 # --------------------------------#
@@ -115,11 +134,6 @@ class MaintenanceCost:
 # --------------------------------#
 metadata            = db.MetaData()
 
-# m_engine            = db.create_engine(maintenance_string,
-#                                        pool_pre_ping=True,  # checks if connection is alive before using
-#                                        pool_recycle=3600)   # recycles connections to avoid timeout
-                        
-# r_engine            = db.create_engine(asset_repo_string, pool_pre_ping=True, pool_recycle=3600)
 p_engine            = db.create_engine(rating_string, pool_pre_ping=True, pool_recycle=3600)
 
 # healthresults        = db.Table("healthresults", metadata, autoload_with=p_engine)
@@ -134,10 +148,10 @@ thermaldistros       = db.Table("thermaldistros", metadata, autoload_with=p_engi
 
 loadprofiles         = db.Table("loadprofiles", metadata, autoload_with=p_engine)
 
-# labresults           = db.Table("labresults", metadata, autoload_with=p_engine)
+# labresults         = db.Table("labresults", metadata, autoload_with=p_engine)
 datadictionaries     = db.Table("datadictionaries", metadata, autoload_with=p_engine)
 loadcbdistros        = db.Table("loadcbdistros", metadata, autoload_with=p_engine)
-degradations          = db.Table("degradations", metadata, autoload_with=p_engine)
+degradations         = db.Table("degradations", metadata, autoload_with=p_engine)
 
 # dgaresults           = db.Table("dgaresults", metadata, autoload_with=p_engine)
 # nameplates           = db.Table("nameplates", metadata, autoload_with=p_engine)
@@ -172,6 +186,7 @@ def parse_dt(val: str) -> datetime:
 FLEET_LABELS = ["VERY GOOD", "GOOD", "FAIR", "BAD", "POOR", "VERY POOR"]
 ALARM_LABELS = ["CAUTION", "ALERT", "ALARM", "EMERGENCY"]
 NUMBER_DGA_SCORES = 11
+MIN_WIND_TIME_CST = 5.0  # minutes
 
 black       = (0, 0, 0)
 green       = (0, 255, 0)
@@ -228,10 +243,16 @@ def archive_best_models(
         return ""
 
 
+
+class OptimumResults:
+    xfrm_id: str
+    thermal_results: List["Thermal"]
+    name_plate_results: List["ThermalPlate"]
+   
 class LoadProfile:
-    sessionId   = ""
+    sessionId   = PERIODIC_USER
     IsSelected  = True
-    xfrmId      = ""
+    xfrmId      = "MPX-100M"
     profileName = "PERIODIC"
     time        = ""
     sumamb      = ""
@@ -239,17 +260,17 @@ class LoadProfile:
     sumcool     = ""
 
 class LoadingCase:
-    xfrmId          = "",
-    sessionId       = PERIODIC_USER,
-    LoadType        = '24-hNormal',
-    HotSpotLimit    = '120',
-    TopOilLimit     = '105',
-    LoLLimit        = '0.037',
-    PULLimit        = '1.0',
-    BubblingLimit   = '150',
-    CoolPWLimit     = '0',
-    BeginOverTime   = '0',
-    EndOverTime     = '24',
+    xfrmId          = "MPX-100M"
+    sessionId       = PERIODIC_USER
+    LoadType        = '24-hNormal'
+    HotSpotLimit    = '120'
+    TopOilLimit     = '105'
+    LoLLimit        = '0.037'
+    PULLimit        = '1.0'
+    BubblingLimit   = '150'
+    CoolPWLimit     = '0'
+    BeginOverTime   = '0'
+    EndOverTime     = '24'
     InsLifeExp      = '65000',
     OxyContent      = '10',
     MoisContent     = '10',
@@ -259,8 +280,16 @@ class LoadingCase:
     OptimError      = '0.001'
     Scheduled        = True
 
+class mpcArgs:
+    xfrmId: str
+    sessionId: str
+    mpcPof: float = 0.0
+    loadProfile: List[LoadProfile]
+    loadingCase: LoadingCase
+
+
 class LoadResult:
-    eqsernum    = '' 
+    eqsernum    = 'MPX-100M' 
     loadtype    = ''
     sampdate    = ''
     uptopoil    = '0'
@@ -275,7 +304,7 @@ class LoadResult:
     cycle       = 0
 
 class LoadCurve:
-    eqsernum    = ''
+    eqsernum    = 'MPX-100M'
     loadtype    = ''
     sampdate    = arrow.now().int_timestamp
     otime       = '0'
@@ -289,6 +318,159 @@ class LoadCurve:
     opage       =' 0'
     osimu       = ''
     cycle = 0
+
+class Cooling:
+    sessionId: str = ""
+    XfrmID: str = ""
+    Status: str = ""
+    PerUnitBasekVA: float = 0.0
+    WindingTempBase: float = 0.0
+    AvgWindingRise: float = 0.0
+    HotSpotRise: float = 0.0
+    TopOilRise: float = 0.0
+    BottomOilRise: float = 0.0
+    AvgOilRise: float = 0.0
+
+    LossBasekVA: float = 0.0
+    LossTempBase: float = 0.0
+    WindI2RLosses: float = 0.0
+    WindEddyLoss: float = 0.0
+    WindStrayLosses: float = 0.0
+
+    XfrmerCoolLevel: float = 0.0
+    XfrmerCooling: str = ""
+    XfrmerRating: float = 0.0
+    LoadLoss: float = 0.0
+
+    numCooler: int = 0
+    numFan: int = 0
+    numRadiator: int = 0
+    numPumps: int = 0
+
+    HRatedAmps: float = 0.0
+    XRatedAmps: float = 0.0
+    TRatedAmps: float = 0.0
+    Power: float = 0.0
+
+
+
+class ThermalPlate:
+    Id: int = 0
+    xfrmId: str = ""
+    sessionId: str = ""
+    profileName: str = ""
+    LoadType: str = ""
+    baPeakAMB: float = 0.0
+    baPeakMVA: float = 0.0
+
+    # IEEEG Properties
+    IEEEGPeakHotSpot: float = 0.0
+    IEEEGPeakTopOil: float = 0.0
+    IEEEGPeakBottom: float = 0.0
+    IEEEGPeakPUL: float = 0.0
+    IEEEGPeakMVA: float = 0.0
+    IEEEGPeakLoL: float = 0.0
+    IEEEGttpHST: float = 0.0
+    IEEEGttpTOT: float = 0.0
+    IEEEGttpBOT: float = 0.0
+    IEEEGttpMVA: float = 0.0
+    IEEEGMargin: float = 0.0
+    IEEEGLimitedBy: str = ""
+
+    # IEEE7 Properties
+    IEEE7PeakHotSpot: float = 0.0
+    IEEE7PeakTopOil: float = 0.0
+    IEEE7PeakPUL: float = 0.0
+    IEEE7PeakMVA: float = 0.0
+    IEEE7PeakLoL: float = 0.0
+    IEEE7ttpHST: float = 0.0
+    IEEE7ttpTOT: float = 0.0
+    IEEE7ttpMVA: float = 0.0
+    IEEE7Margin: float = 0.0
+    IEEE7LimitedBy: str = ""
+
+    # IEC Properties
+    IECPeakHotSpot: float = 0.0
+    IECPeakTopOil: float = 0.0
+    IECPeakPUL: float = 0.0
+    IECPeakMVA: float = 0.0
+    IECPeakLoL: float = 0.0
+    IECttpHST: float = 0.0
+    IECttpTOT: float = 0.0
+    IECttpMVA: float = 0.0
+    IECMargin: float = 0.0
+    IECLimitedBy: str = ""
+    TimeToPeakAMB: float = 0.0
+
+    # Limits
+    HotSpotLimit: float = 0.0
+    TopOilLimit: float = 0.0
+    PULLimit: float = 0.0
+    LoLLimit: float = 0.0
+    mvaAmbient: float = 0.0
+    mvaCooling: float = 0.0
+
+    TimeLimit: float = 0.0
+    overtime: float = 0.0
+    Cooling: float = 0.0
+    MvaMargin: float = 0.0
+    CaseLimitedBy: str = ""
+
+
+class Thermal:
+    XfrmID: str = ""
+    sessionId: str = ""
+    profileName: str = ""
+    LoadType: str = ""
+    time: float = 0.0
+    sumamb: float = 0.0
+    sumpul: float = 0.0
+    basicMVA: float = 0.0
+    IEEEGPULoad: float = 0.0
+    IEEEGMva: float = 0.0
+    IEEEGMargin: float = 0.0
+    IEEEGTOT: float = 0.0
+    IEEEGHST: float = 0.0
+    IEEEGLOL: float = 0.0
+    IEEEGTDO: float = 0.0
+    IEEEGBOT: float = 0.0
+    IEEEGAWT: float = 0.0
+    IEEEGWOT: float = 0.0
+    IEEEGAOT: float = 0.0
+    IEEEGDAO: float = 0.0
+    IEEEGTOR: float = 0.0
+    IEEEGAOR: float = 0.0
+    IEEEGAWR: float = 0.0
+
+    # IEEE Clause 7
+    IEEE7PULoad: float = 0.0
+    IEEE7Mva: float = 0.0
+    IEEE7Margin: float = 0.0
+    IEEE7HST: float = 0.0
+    IEEE7TOT: float = 0.0
+    IEEE7LOL: float = 0.0
+
+    # IEC
+    IECPULoad: float = 0.0
+    IECMva: float = 0.0
+    IECMargin: float = 0.0
+    IECHST: float = 0.0
+    IECTOT: float = 0.0
+    IECLOL: float = 0.0
+
+    LoadLossKW: float = 0.0
+    PerReactance: float = 0.0
+    PerImpedance: float = 0.0
+    PerResistance: float = 0.0
+    Wdg2mHotSpGrad: float = 0.0
+    HalfDelta: float = 0.0
+    LvMVAOutput: float = 0.0
+    PerVoltDrop: float = 0.0
+
+    mvaCooling: float = 0.0
+    mvaAmbient: float = 0.0
+    overtime: float = 0.0
+
 
 class LOADING(Enum):
     REFERENCE = 0
@@ -374,9 +556,9 @@ class LoadType(Enum):
 
 
 class LoadingStandard(Enum):
-    IEEEG   = 0
-    IEEE7   = 1
-    IEC     = 2
+    IEEEG    = 0
+    IEEE7    = 1
+    IEC60354 = 2
 
 class ReportType(Enum):
     LOAD_REPORT = 0

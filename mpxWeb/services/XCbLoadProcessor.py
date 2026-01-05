@@ -18,6 +18,8 @@ from sqlalchemy import extract, func
 from datetime import timedelta
 from XUtility import *
 from XPoFailure import *
+# from HelpSolverAnalytics import *
+from HelpSolverService import SolverService
 
 
 # APIs URLs
@@ -95,6 +97,8 @@ class LoadProcessor:
         print(csv_profile)
         for index, row_data in csv_profile.iterrows():
             load_profile            = loadprofiles()
+            load_profile.sessionId  = PERIODIC_USER
+            load_profile.xfrmId     = "MPX-100M"
             load_profile.IsSelected = True
             load_profile.profileName= "PERIODIC"
             load_profile.time       = self.time_to_minute(row_data['time'])
@@ -234,6 +238,8 @@ class LoadProcessor:
             self.load_profile.clear()
             while rec_count < LOADCYCLE :
                 load_profile            = loadprofiles()
+                load_profile.sessionId  = PERIODIC_USER
+                load_profile.xfrmId     = "MPX-100M"
                 load_profile.IsSelected = True
                 load_profile.profileName= "PERIODIC"
                 load_profile.time       = str(rec_count*60)
@@ -273,6 +279,8 @@ class LoadProcessor:
             # dynamic load profile
             for index, row_data in rla_all_state.iterrows():
                 load_profile            = loadprofiles()
+                load_profile.sessionId  = PERIODIC_USER
+                load_profile.xfrmId     = "MPX-100M"
                 load_profile.IsSelected = True
                 load_profile.profileName= "PERIODIC"
 
@@ -328,26 +336,32 @@ class LoadProcessor:
             except Exception as err:
                 print(f'HTTP error occured: {err}')
 
-    def perform_load_diagnostic (self, mpcPof, loading_case):
+    async def perform_load_diagnostic (self, mpcPof, loading_case):
                         
             if self.load_profile.__len__() < MAX_LOAD_PROFILE :
                 # print(f'Load profile length not adequate :{self.load_profile}')
                 return
-            mpcArgs = {
-                       "sessionId"  : PERIODIC_USER, 
-                       "mpcPof"     : str(mpcPof),
-                       "mpcProfile" : [obj.__dict__ for obj in self.load_profile],
-                       "mpcScenario": loading_case.__dict__
-                      }  
+            mpc_args = mpcArgs(
+                       xfrmId="MPX-100M",
+                       sessionId=PERIODIC_USER, 
+                       mpcPof=mpcPof,
+                       loadProfile=self.load_profile,
+                       loadingCase=loading_case
+                      )  
             # print(f"----seasonal load profile at step : ----{self.asset_id}--\n--")
             # print( loading_case.__dict__)
             # print("-------====--------")
             # [print(f"{load_profile.time} {load_profile.sumamb} {load_profile.sumpul} {load_profile.sumcool}") for load_profile in self.load_profile]
 
             try:
-                response = requests.post(os.environ["RATING_URL"]  +'/DoRealForecast',  data = json.dumps(mpcArgs)) 
+          
+                
+                solver_service       = SolverService() 
+                self.mpc_results     = await solver_service.solve_dynamic_plate(mpc_args)
+
+                # response = requests.post(os.environ["RATING_URL"]  +'/DoRealForecast',  data = json.dumps(mpcArgs)) 
                 # print("======================\n", self.mpc_results)
-                self.mpc_results = response.json()           
+                # self.mpc_results = response.json()           
                 df_thermal = pd.DataFrame()
                 df_nameplate = pd.DataFrame()
 
@@ -514,7 +528,7 @@ class LoadProcessor:
             loading_case.LtcPosition     = int(loading_case_item.LtcPosition)
             loading_case.LtcAmpacity     = float(loading_case_item.LtcAmpacity)
             loading_case.OptimError      = float(loading_case_item.OptimError)
-            loading_case.Scheduled        = loading_case_item.Scheduled
+            loading_case.Scheduled       = loading_case_item.Scheduled
             loading_case.CoolPWLimit     = float(loading_case_item.CoolPWLimit)
             loading_case.HotSpotLimit    = float(loading_case_item.HotSpotLimit)
             loading_case.TopOilLimit     = float(loading_case_item.TopOilLimit)
@@ -687,6 +701,8 @@ class LoadProcessor:
                 cool     = getattr(row, 'cooling', 1000.0)
 
                 load_profile                 = LoadProfile()
+                load_profile.sessionId       = PERIODIC_USER
+                load_profile.xfrmId          = "MPX-100M"
                 load_profile.IsSelected      = True
                 load_profile.profileName     = "PERIODIC"
                 load_profile.time            = time_min
