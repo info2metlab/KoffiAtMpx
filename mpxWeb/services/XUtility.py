@@ -18,7 +18,7 @@ import arrow
 import requests
 from urllib.error import HTTPError
 import logging
-import logging.handlers
+import logging.handlers 
 logger = logging.getLogger('uNamePlate')
 logger.setLevel(logging.INFO)
 
@@ -110,6 +110,11 @@ class PaperTypes(Enum):
     TUK = 1
     ARAMID = 2
 
+class CONDUCTOR(Enum):
+    ALUMINIUM = 0
+    COPPER   = 1
+    
+
 
 class Phase(Enum):
     SINGLE_PHASE = 0
@@ -120,7 +125,7 @@ class LoadingStandard(Enum):
     IEEEG = 0
     IEEE7 = 1
     IEC60354 = 2
-    IEC60076 = 3
+    # IEC60076 = 3
 
 
 class Winding(Enum):
@@ -139,7 +144,7 @@ p_engine            = db.create_engine(rating_string, pool_pre_ping=True, pool_r
 # healthresults        = db.Table("healthresults", metadata, autoload_with=p_engine)
 # xfrmmaps             = db.Table("xfrmmaps", metadata, autoload_with=p_engine)
 vardictionaries      = db.Table("vardictionaries", metadata, autoload_with=p_engine)
-measconditions      = db.Table("measconditions", metadata, autoload_with=p_engine)
+measconditions       = db.Table("measconditions", metadata, autoload_with=p_engine)
 
 loadcurves           = db.Table("loadcurves", metadata, autoload_with=p_engine)
 loadresults          = db.Table("loadresults", metadata, autoload_with=p_engine)
@@ -254,10 +259,10 @@ class LoadProfile:
     IsSelected  = True
     xfrmId      = "MPX-100M"
     profileName = "PERIODIC"
-    time        = ""
-    sumamb      = ""
-    sumpul      = ""
-    sumcool     = ""
+    time        : float = 0.0
+    sumamb      : float = 0.0
+    sumpul      : float = 0.0
+    sumcool     : float = 0.0
 
 class LoadingCase:
     xfrmId          = "MPX-100M"
@@ -286,6 +291,7 @@ class mpcArgs:
     mpcPof: float = 0.0
     loadProfile: List[LoadProfile]
     loadingCase: LoadingCase
+    mpcPower:float=0.0
 
 
 class LoadResult:
@@ -321,7 +327,7 @@ class LoadCurve:
 
 class Cooling:
     sessionId: str = ""
-    XfrmID: str = ""
+    xfrmId: str = ""
     Status: str = ""
     PerUnitBasekVA: float = 0.0
     WindingTempBase: float = 0.0
@@ -352,7 +358,10 @@ class Cooling:
     TRatedAmps: float = 0.0
     Power: float = 0.0
 
-
+class LoadingStd:
+    pubDate: str = ""
+    pubName: str = ""
+    pubTitle: str = ""
 
 class ThermalPlate:
     Id: int = 0
@@ -418,7 +427,7 @@ class ThermalPlate:
 
 
 class Thermal:
-    XfrmID: str = ""
+    xfrmId: str = ""
     sessionId: str = ""
     profileName: str = ""
     LoadType: str = ""

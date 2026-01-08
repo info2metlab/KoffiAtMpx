@@ -1,0 +1,298 @@
+id	varname	value	unit	defaultv	description	information	groupname
+1	customerid	6.0	-	-	Customer Identification		nameplate
+2	LossBasekVA	26000	Volt	-	Loss Base kVA	 	nameplate
+3	LossTempBase	85	Volt	85	Temperature Base for Losses	 	nameplate
+4	WindI2RLosses	65	kW	1200	Winding square Losses	 	nameplate
+5	WindEddyLoss	65	kW	100	Winding Eddy Losses	 	nameplate
+6	WindStrayLosses	65	kW	20	Winding Stray Losses	 	nameplate
+7	CoreLosses	65	kW	0.5	Core Losses	 	nameplate
+8	PerUnitbasekVA	65	kW	0.5	Per-unit base kVA	 	nameplate
+9	Voltage	132	kV	132	Voltage Class	 	nameplate
+10	WindingTempBase	65	degC	65	Rated Avg. Winding Rise (AWR)	 	nameplate
+11	AvgWindingRise	65	degC	65	Tested Average Winding Temperature Rise(ΔΘᴡ⁄ᴀ,ʀ)	 	nameplate
+12	HotSpotRise	65	degC	65	Hot Spot Temperature Rise(ΔΘн,ᴀ)	 	nameplate
+13	TopOilRise	65	degC	65	Tested Top Oil Temperature Rise(ΔΘᴛᴏ,ʀ)	 	nameplate
+14	BottomOilRise	65	degC	65	Bottom Oil Temperature Rise(ΔΘʙᴏ,ʀ)	 	nameplate
+15	AvgOilRise	65	degC	65	Average Oil Temperature Rise(ΔΘᴀᴏ,ʀ)	 	nameplate
+16	RatedAmbient	65	degC	65	Rated Ambient Temperature(Θᴀ,ʀ)	 	nameplate
+17	WindingConductor	COPPER	-	COPPER	Winding conductor Type(1=Aluminum, 2=Copper)	 	nameplate
+18	PerUnitHSEddyLoss	1.1	-	COPPER	Per-unit Eddy Loss At Winding Hot Spot	 	nameplate
+19	WindTimeCst	10	Minute	COPPER	Winding Time Constant (tw)	 	nameplate
+20	PerUnitHeighToHotSpot	1.1	-	1.1	Per-unit Height To Hot Spot	 	nameplate
+21	MassCoreCoil	417776	pounds	-	Weight of Core and Coils	 	nameplate
+22	MassTank	155426	pounds	-	Weight of Tank and Fittings	 	nameplate
+23	FluidType	1	-	-	Fluid Type (1=min. oil, 2=silicone, 3=HTHC)	 	nameplate
+24	FluidDensity	7.4	lbs/gal	-	Fluid Density	 	nameplate
+25	GallonsOfFluid	500	US Gallons	-	Total Gallons of Fluid in the Transformer	 	nameplate
+26	XfrmerRating	500	kVA	-	Nameplate Ratings in kVA	 	nameplate
+27	XfrmerCooling	ONAN	-	ONAN	Cooling Modes	 	nameplate
+28	XfrmerCoolLevel	100	%	100	Cooling Capacities	 	nameplate
+29	OverExcitation	0	-	-	Over Excitation (0=no, 1=yes)	 	nameplate
+30	TimeOverExcitation	0	hours	-	Time When Over Excitation Occurs (hour)	 	nameplate
+31	CoreLossesOverEx	0	Watts	-	Core Loss During Over Excitatio	 	nameplate
+32	TimeStep	0.5	Minute	5	Time increment for calculation(minutes)	 	nameplate
+33	LoadLoss	112600	Watts	-	Load Losses	 	nameplate
+34	PerImpedance	8.920	%	-	Winding Impedance	 	nameplate
+35	PerResistance	0.432	%	-	Winding Resistance	 	nameplate
+36	CumLossOfLife	0.432	%	-	Cumulative Loss of Life	 	nameplate
+37	PUMinMUL	0.24	%	-	Minimum Load Multiplier	 	nameplate
+38	PUMaxMUL	2.432	%	-	Maximum Load Multiplier	 	nameplate
+39	HotSpotDepth	3.6	inches	-	Depth of hotspot below oil	 	nameplate
+40	HotSpotMois	1.11	%	-	Hot Spot Moisture Content	 	nameplate
+41	InsLifeExp	65000	Hour	-	Insulation Life Expectancy	 	nameplate
+42	HotSpotLimit	120	degC	-	Hot Spot Temperature Limit	 	nameplate
+43	TopOilLimit	105	degC	-	Top Oil Temperature Limit	 	nameplate
+44	LoLLimit	24	Hours	-	Loss of Life Limit	 	nameplate
+45	PULLimit	24	Hours	-	Load Limit, p.u of Maximum Nameplate Rating	 	nameplate
+46	BubblingLimit	143	degC	-	Bubbling Temperature Limit	 	nameplate
+47	LoadType	24h-Normal	-	-	Loading Scenario Name, ex.(Normal, Contingency)	 	nameplate
+48	OptimError	0.1	-	-	Temperature Limit Tolerance for Optimization	 	nameplate
+49	BeginOverTime	0	-	-	Begin Overload Time	 	nameplate
+50	EndOverTime	24	Hour	-	End Overload Time	 	nameplate
+51	GasContent	10	%	-	Gas Content in the Transformer Oil	 	nameplate
+52	MoisContent	1.93	%	1.93	Insulation Moisture content at Hot Spot	 	nameplate
+53	HSPressure	828	Mm/Hg	1.93	Threshold Pressure at Hot Spot 	 	nameplate
+54	AvgInsMois	828	Mm/Hg	1.850	Average Insulation Mositure Content	 	nameplate
+55	HotSpotMoMUL	0.6	-	0.6	Hot Spot Moisture Multiplier	 	nameplate
+56	dynamic_cycle	4	-	0	Load cycle count for dynamic loading	 	nameplate
+57	enp_paper_type	0	-	0	Type of Paper	 	nameplate
+58	enp_iec_ref	110	degC	0	Reference IEC Temperature	 	nameplate
+59	enp_ieee_ref	110	degC	0	Reference IEEE Temperature	 	nameplate
+60	num_fans	4	-	0	Total number of fans installed	 	nameplate
+61	num_pumps	2	-	2	Total number of pumps installed	 	nameplate
+62	num_radiators	2	-	2	Total number of radiators installed	 	nameplate
+63	num_coolers	2	-	2	Total number of coolers installed	 	nameplate
+64	power_per_fan	5000	Watts	5000	Cooling Power per installed fan	 	nameplate
+65	power_per_pump	8000	Watts	8000	Cooling Power per installed pump	 	nameplate
+66	power_per_radiator	2500	Watts	2500	Cooling Power per installed radiator	 	nameplate
+67	power_per_cooler	2500	Watts	2500	Cooling Power per installed cooler	 	nameplate
+68	HRatedAmps	489.5	Amps	2500	Rated current in the primary winding	 	nameplate
+69	XRatedAmps	955	Amps	2500	Rated current in the secondary winding	 	nameplate
+70	TRatedAmps	1575	Amps	2500	Rated current in the tertiary winding	 	nameplate
+71	HRatedVolt	1575	kV	2500	Rated voltage in the primary winding	 	nameplate
+72	XRatedVolt	180	kV	180	Rated voltage in the secondary winding	 	nameplate
+73	TRatedVolt	300	kV	300	Rated voltage in the tertiary winding	 	nameplate
+74	HRatedMVA	250	kVA	250	Rated apparent power in the primary winding	 	nameplate
+75	XRatedMVA	250	kVA	250	Rated apparent power in the secondary winding	 	nameplate
+76	TRatedMVA	250	kVA	250	Rated apparent power in the tertiary winding	 	nameplate
+77	HXRatedMVA	250	kVA	250	Cross Rated apparent power in HX winding	 	nameplate
+78	HTRatedMVA	250	kVA	250	Cross Rated apparent power in HT winding	 	nameplate
+79	HXLoadLoss	250	Watts	250	Load Losses in HX cross-winding	 	nameplate
+80	HTLoadLoss	250	Watts	250	Load Losses in HT cross-winding	 	nameplate
+81	XTLoadLoss	250	Watts	250	Load Losses in XT cross-winding	 	nameplate
+82	tflifetime	50	Years	50	Normal expected life of the tap changer	 	nameplate
+83	LtcTapRange	50	kV	50	Load Tap Range [±]	 	nameplate
+84	LtcTapSteps	10	-	10	Number of Tap Steps	 	nameplate
+85	LtcRatedOilRise	35	degC	50	Contact temperature rise over oil at rated current(ΔΘc,ʀ)	 	nameplate
+86	LtcLocation	INTEGRATED	-	INTEGRATED	Location of the LTC (INTEGRATED/SEPARATED)	 	nameplate
+87	LtcWinding	HV	-	HV	Winding with the adjustable tap (HV/LV)	 	nameplate
+88	LtcCapacity	10	MVA	10	Load Tap Changer switching capacity	 	nameplate
+89	LtcRatedTapPos	5	-	5	Load Tap Changer Rated Position	 	nameplate
+90	LtcMinPos	10	-	10	Minimun Tap Changer Position	 	nameplate
+91	LtcMaxPos	5	-	5	Maximun Tap Changer Position	 	nameplate
+92	IsTapChanging	0	-	0	Whether or Not Tap Changer gets Evaluated	 	nameplate
+93	eqpmt	0	-	{{XType}}	Equipment type	 	nameplate
+94	manyear	1986	Year	1986	Year of manufacture	 	nameplate
+95	storage_duration	4	Year	0	Storage duration	 	nameplate
+96	accesstype	0	-	-	Access Type A - Type B - Type C	 	nameplate
+97	notaps	0	-	-	Indication of the presence of a tap changer	 	nameplate
+98	placement	0	-	-	Location indication (Indoor or Outdoor)	 	nameplate
+99	coastaldist	150	m	-	Distance from the coast	 	nameplate
+100	corrosion	1.0	Years	-	Corrosion category index	 	nameplate
+101	age	65	Years	-	Normal life expectancy	 	nameplate
+102	fleet_clustering	0	-	0	Fleet clustering flag	 	Clustering
+103	learning_mode	0	-	0	Fleet learning flag	 	Clustering
+104	simu_sample	1000	-	1000	Number of simulation samples	 	Simulation
+105	mtrg_rate	4	Minute	-	Monitoring data sampling rate	 	Monitoring
+106	main_program	REACTIVE	Minute	-	Activat Maintenance program	 	Monitoring
+107	seasonal_rate	24	Minute	-	Monitoring data sampling rate	 	Monitoring
+108	alm_scanning	10	minute	-	Alarms scanning rate	 	Monitoring
+109	reliability	1.0	minute	-	Reliability assessment rate	 	Monitoring
+110	health_rate	10	minute	-	Health indexing assessment rate	 	Monitoring
+111	num_deg_samples	1000	-	-	Number of degradation samples	 	Reliability
+112	monitoring_mode	0	-	-	Monitoring mode or simulation mode	 	Reliability
+113	growth_rate	5	%/Year	-	Annual Maintenance Budget Growth Rate	Maintenance	Maintenance
+114	normal_pof	0.009	-	0.009	Normal Pof Threshold	 	Monitoring
+115	caution_pof	0.0115	-	0.0115	Caution Pof Threshold	 	Monitoring
+116	warning_pof	0.150	-	0.150	Warning Pof Threshold	 	Monitoring
+117	alarm_pof	0.2	-	0.2	Alarm Pof Threshold	 	Monitoring
+118	alert_pof	0.5	-	0.5	Alert Pof Threshold	 	Monitoring
+119	normal_score	3	-	3	Normal Score Threshold	 	Monitoring
+120	caution_score	5	-	5	Caution Score Threshold	 	Monitoring
+121	warning_score	7	-	7	Warning Score Threshold	 	Monitoring
+122	alarm_score	8	-	8	Alarm Score Threshold	 	Monitoring
+123	alert_score	9.5	-	9.5	Alert Score Threshold	 	Monitoring
+124	SmtpServer	smtp.example.com	-	smtp.example.com	SMTP Server Address	 	Email
+125	SmtpPort	587	-	587	SMTP Server Port	 	Email
+126	SmtpUsername	user@example.com	-	user@example.com	SMTP Username	 	Email
+127	SmtpPassword	password	-	password	SMTP Password	 	Email
+128	TwilioAccountSid	your_account_sid	-	your_account_sid	Twilio Account SID	 	Twilio
+129	TwilioAuthToken	your_auth_token	-	your_auth_token	Twilio Auth Token	 	Twilio
+130	TwilioPhoneNumber	+1234567890	-	+1234567890	Twilio Phone Number	 	Twilio
+131	sched_horizon	Current Date	-	-	Scheduling time horizon		Scheduling
+132	tapage	65	Years	-	Tap changer normal life expectancy	 	nameplate
+133	avgtapops	20	-	-	Average number of tap changer operations	 	nameplate
+134	proxwater	1000	-	-	Proximity to water	 	nameplate
+135	locationrisk	0	-	-	Location Risk Rating	 	nameplate
+136	typerisk	0	-	-	Type Risk Rating Risk that the asset presents to the public by its characteristics and particular situation	 	nameplate
+137	loadatrisk	0	-	-	Proximity to areas that may affect its likelihood of trespass or interference)	 	nameplate
+138	rating	20	kVA	-	Equipment Operating rating	 	nameplate
+139	bunded	0	-	-	Bunded Distance to the coast	 	nameplate
+140	secured	0	-	-	Boolean If the asset is in a secure network or not	 	nameplate
+141	gridoredge	0	-	-	Whether the asset is a primary or a distribution (secondary) asset in the network	 	nameplate
+142	numcustomers	150	-	-	Attached Number of customers	 	nameplate
+143	loademand	15	kVA	-	Size of loads and or electricity demand	 	nameplate
+144	puload	1.0	p.u	-	Maximum utilisation under normal operation	 	nameplate
+145	moisAw	0.1	p.u	-	Water Activiy in oil	 	diagnostic
+146	hotspot	150	degC	-	Hottest spot Temperature	 	diagnostic
+147	bubbling	150	degC	-	Bubbling Temperature	 	diagnostic
+148	obreakdwn	10	%	-	Oil Breakdown Voltage strength	 	diagnostic
+149	moisture	0.1	%	-	Moisture level in oil	 	diagnostic
+150	fural	0.1	%	-	Furan level in oil Quality Analysis	 	diagnostic
+151	dobletestCI	0.1	%	-	Doble Test Results		Inspections
+152	meggertestCI	0.1	%	-	Core Megger test results	Inspections	Inspections
+153	WindRestestCI	0.1	%	-	Winding Resistance test results	Inspections	Inspections
+154	DPtestCI	0.1	%	-	Paper Degree of Polymerization Test results	Inspections	Inspections
+155	IntInspecCI	0.1	%	-	Internal inspection Test results	Inspections	Inspections
+156	ac2h2ppm	1045	ppm	-	Actual value of Acethylen gas	 	diagnostic
+157	ac2h4ppm	100	ppm	-	Actual value of ethylen gas	 	diagnostic
+158	ac2h6ppm	500	ppm	-	Actual value of ethane gas	 	diagnostic
+159	ac2h8ppm	500	ppm	-	Actual value of propane gas	 	diagnostic
+160	ach4ppm	200	ppm	-	Actual value of methane gas	 	diagnostic
+161	acoppm	1000	ppm	-	Actual value of carbon monoxide gas	 	diagnostic
+162	aco2ppm	1200	ppm	-	Actual value of arbon dioxide gas	 	diagnostic
+163	ah2ppm	1300	ppm	-	Actual value of hydrogen gas	 	diagnostic
+164	prec2h2ppm	1045	ppm	-	Previous value of Acethylen gas	 	diagnostic
+165	prec2h4ppm	100	ppm	-	Previous value of ethylen gas	 	diagnostic
+166	prec2h6ppm	500	ppm	-	Previous value of ethane gas	 	diagnostic
+167	prec3h6ppm	1000	ppm	-	Previous value of propane gas	 	diagnostic
+168	prech4ppm	1200	ppm	-	Previous value of methane gas	 	diagnostic
+169	precoppm	1000	ppm	-	Previous value of carbon monoxide gas	 	diagnostic
+170	preco2ppm	1200	ppm	-	Previous value of carbon dioxide gas	 	diagnostic
+171	preh2ppm	1300	ppm	-	Previous value of hydrogen gas	 	diagnostic
+172	c2h2WeightFactor	5	-	-	Acetylene Weighting Factor 	 	Health Index
+173	c2h4WeightFactor	4	-	-	Ethylene Weighting Factor 	 	Health Index
+174	c2h6WeightFactor	3	-	-	Ethane Weighting Factor 	 	Health Index
+175	c3h6WeightFactor	3	-	-	Propane Weighting Factor 	 	Health Index
+176	ch4WeightFactor	3	-	-	Methane Weighting Factor 	 	Health Index
+177	coWeightFactor	1	-	-	Carbon Monoxide Weighting Factor 	 	Health Index
+178	h2WeightFactor	3	-	-	Carbon Dioxide Weighting Factor 	 	Health Index
+179	co2WeightFactor	3	-	-	Hydrogen Weighting Factor 	 	Health Index
+180	DGARoCFactorG1	0.1	-	-	DGA Rate Of Change Factor G1	 	Health Index
+181	DGARoCFactorG2	0.2	-	-	DGA Rate Of Change Factor G2	 	Health Index
+182	DGAConcentrationF0	0.0	-	-	DGA Concentration Factor 0	 	Health Index
+183	DGAConcentrationF1	0.2	-	-	DGA Concentration Factor 1	 	Health Index
+184	DGAConcentrationF2	0.2	-	-	DGA Concentration Factor 2	 	Health Index
+185	DGAConcentrationF3	0.33	-	-	DGA Concentration Factor 3	 	Health Index
+186	DGAConcentrationF4	0.33	-	-	DGA Concentration Factor 4	 	Health Index
+187	DGAConcentrationF5	1.0	-	-	DGA Concentration Factor 4	 	Health Index
+188	DGAConcentrationF6	0.66	-	-	DGA Concentration Factor 6	 	Health Index
+189	DGAConcentrationF7	1.0	-	-	DGA Concentration Factor 7	 	Health Index
+190	DGAConcentrationF8	1.5	-	-	DGA Concentration Factor 8	 	Health Index
+191	DGAConcentrationF9	2.0	-	-	DGA Concentration Factor 9	 	Health Index
+192	DGAConcentrationF10	4.0	-	-	DGA Concentration Factor 10	 	Health Index
+193	unp_dga_frequency	10	Hour	0	Low level of acetylen gas	-	Setpoints
+194	unp_real_norm_c2h2ppm	750	-	0	Low level of acetylen gas	-	Setpoints
+195	unp_real_low_c2h2ppm	750	-	0	Low level of acetylen gas	-	Setpoints
+196	unp_real_high_c2h2ppm	7500	-	0	High level of acetylen gas	-	Setpoints
+197	unp_real_norm_c2h4ppm	900	-	0	Low level of ethylen gas	-	Setpoints
+198	unp_real_low_c2h4ppm	900	-	0	Low level of ethylen gas	-	Setpoints
+199	unp_real_high_c2h4ppm	9000	-	0	High level of ethylen gas	-	Setpoints
+200	unp_real_norm_c2h6ppm	800	-	0	Low level of ethane gas	-	Setpoints
+201	unp_real_low_c2h6ppm	800	-	0	Low level of ethane gas	-	Setpoints
+202	unp_real_high_c2h6ppm	8000	-	0	High level of ethane gas	-	Setpoints
+203	unp_real_norm_c3h6ppm	700	-	0	Low level of propen gas	-	Setpoints
+204	unp_real_low_c3h6ppm	700	-	0	Low level of propen gas	-	Setpoints
+205	unp_real_high_c3h6ppm	7000	-	0	High level of propen gas	-	Setpoints
+206	unp_real_norm_ch4ppm	600	-	0	Low level of methane gas	-	Setpoints
+207	unp_real_low_ch4ppm	600	-	0	Low level of methane gas	-	Setpoints
+208	unp_real_high_ch4ppm	6000	-	0	High level of methane gas	-	Setpoints
+209	unp_real_norm_coppm	500	-	0	Low level of carbon monoxide	-	Setpoints
+210	unp_real_low_coppm	500	-	0	Low level of carbon monoxide	-	Setpoints
+211	unp_real_high_coppm	5000	-	0	high level of carbon monoxide	-	Setpoints
+212	unp_real_norm_co2ppm	200	-	0	Low level of carbon dioxide	-	Setpoints
+213	unp_real_low_co2ppm	200	-	0	Low level of carbon dioxide	-	Setpoints
+214	unp_real_high_co2ppm	2000	-	0	high level of carbon dioxide	-	Setpoints
+215	unp_real_norm_h2ppm	1000	-	0	Low level of hydrogen	-	Setpoints
+216	unp_real_low_h2ppm	1000	-	0	Low level of hydrogen	-	Setpoints
+217	unp_real_high_h2ppm	15000	-	0	High level of hydrogen	-	Setpoints
+218	unp_real_norm_o2ppm	1000	-	0	Normal level of oxygen	-	Setpoints
+219	unp_real_low_o2ppm	1000	-	0	Low level of oxygen	-	Setpoints
+220	unp_real_high_o2ppm	15000	-	0	High level of oxygen	-	Setpoints
+221	unp_real_norm_n2ppm	1000	-	0	Normal level of nitrogen	-	Setpoints
+222	unp_real_low_n2ppm	1000	-	0	Low level of nitrogen	-	Setpoints
+223	unp_real_high_n2ppm	15000	-	0	High level of nitrogen	-	Setpoints
+224	unp_real_norm_tdcgppm	1000	-	0	Normal level of Total Dissolved Gas	-	Setpoints
+225	unp_real_low_tdcgppm	1000	-	0	Low level of Total Dissolved Gas	-	Setpoints
+226	unp_real_high_tdcgppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+227	unp_lviec_c2h2ppm	1000	-	0	Low level of Total Dissolved Gas	-	Setpoints
+228	unp_lviec_c2h4ppm	1000	-	0	Low level of Total Dissolved Gas	-	Setpoints
+229	unp_lviec_c2h6ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+230	unp_lviec_c3h6ppm	1000	-	0	Low level of Total Dissolved Gas	-	Setpoints
+231	unp_lviec_ch4ppm	1000	-	0	Low level of Total Dissolved Gas	-	Setpoints
+232	unp_lviec_coppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+233	unp_lviec_co2ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+234	unp_lviec_h2ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+235	unp_lviec_tdcgppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+236	unp_rociec_c2h2ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+237	unp_rociec_c2h4ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+238	unp_rociec_c2h6ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+239	unp_rociec_c3h6ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+240	unp_rociec_ch4ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+241	unp_rociec_coppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+242	unp_rociec_co2ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+243	unp_rociec_h2ppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+244	unp_rociec_tdcgppm	15000	-	0	High level of Total Dissolved Gas	-	Setpoints
+245	high_topoil	120	-	0	Maximum top oil temperature	-	Setpoints
+246	high_hotspot	150	-	0	Maximum hot spot temperature	-	Setpoints
+247	high_bottom	60	-	0	Maximum bottom temperature	-	Setpoints
+248	high_bubbling	180	-	0	Maximum bubbling temperature	-	Setpoints
+249	pdtankCI	1.93	-	-	Partial discharge main tank	 	diagnostic
+250	pdtacpCI	828	-	-	Partial Discharge of Tap Changer	 	diagnostic
+251	maintankCI	1.850	-	-	Main Tank conditions	 	diagnostic
+252	bushingCI	0.6	-	-	Bushing conditions	 	diagnostic
+253	coolradCI	40.17	-	-	Cooler and radiator conditions	 	diagnostic
+254	kioskCI	0.04	-	-	Kiosk Condition Index	 	diagnostic
+255	cableboxCI	22.4	-	-	Cable and Boxes Condition Index	 	diagnostic
+256	externtapCI	22.4	-	-	External Tap Condition Index	 	diagnostic
+257	interntapCI	22.4	-	-	Internal Tap Condition Index	 	diagnostic
+258	mechnismCI	22.4	-	-	Drive Mechanism Condition Index	 	diagnostic
+259	divbraidCI	0	-	-	Diverter braids Condition Index	 	diagnostic
+260	divctactCI	0	-	-	Selector and Diverter contacts Condition Index	 	diagnostic
+261	compCI	100	%	-	Composite/Combined Condition Index	 	diagnostic
+262	dgaCI	0	%	-	DGA Condition Index	 	diagnostic
+263	hstCI	40	%	-	Thermal Condition Index	 	diagnostic
+264	topCI	90	%	-	Top Oil Condition Index	 	diagnostic
+265	boardbpCI	44	%	-	Board Break Down Probability Condition Index	 	nameplate
+266	oilbpCI	1	%	-	Oil Break Down Probability Condition Index	 	diagnostic
+267	loadCI	1	%	-	Load Condition Index	 	diagnostic
+268	tapCI	1	%	-	Tap Changer Condition Index	 	diagnostic
+269	bubCI	1	%	-	Bubling Temperature Condition Index	 	diagnostic
+270	altitude	30.201	deg	-	GPS Altitude	 	nameplate
+271	longitude	99.2	deg	-	GPS Longitude	 	nameplate
+272	latitude	101.2	deg	-	GPS Latitude	 	nameplate
+273	partial_discharge_tf	1.93	-	-	Partial discharge main tank	OBSERVED CONDITIONS	diagnostic
+274	partial_discharge_tc	0.5	-	-	Partial Discharge of Tap Changer	OBSERVED CONDITIONS	diagnostic
+275	main_tank	1.850	-	-	Main Tank conditions	OBSERVED CONDITIONS	diagnostic
+276	bushings	0.6	-	-	Bushing conditions	OBSERVED CONDITIONS	diagnostic
+277	coolers_radiator	9.5	-	-	Cooler and radiator conditions	OBSERVED CONDITIONS	diagnostic
+278	kiosk	0.8	-	-	Kiosk Condition Index	OBSERVED CONDITIONS	diagnostic
+279	cable_boxes	2.4	-	-	Cable and Boxes Condition Index	OBSERVED CONDITIONS	diagnostic
+280	external_tap	7.4	-	-	External Tap Condition Index	OBSERVED CONDITIONS	diagnostic
+281	internal_tap	8.4	-	-	Internal Tap Condition Index	OBSERVED CONDITIONS	diagnostic
+282	mechnism_cond	9.4	-	-	Drive Mechanism Condition Index	OBSERVED CONDITIONS	diagnostic
+283	diverter_braids	8.0	-	-	Diverter braids Condition Index	OBSERVED CONDITIONS	diagnostic
+284	diverter_contacts	8.0	-	-	Selector and Diverter contacts Condition Index	OBSERVED CONDITIONS	diagnostic
+285	temperature_reading	8.0	%	-	Thermal Condition Index	MEASURED CONDITIONS	diagnostic
+286	oil_condition	8.5	%	-	Oil condition Index	MEASURED CONDITIONS	diagnostic
+287	paper_condition	8.5	%	-	Paper condition Index	MEASURED CONDITIONS	diagnostic
+288	dissolved_gas	8.5	%	-	Dissolved Gas condition Index	MEASURED CONDITIONS	diagnostic
+289	cm_replacement_threshold	8.0	%	-	Corrective maintenance score level	 	Intervention
+290	pm_replacement_threshold	6.0	%	-	Preventive maintenance score level	 	Intervention
+291	em_replacement_threshold	9.8	%	-	Emergency replacement score level	 	Intervention
+292	routine_servicing_threshold	0.2	days	-	Routine servicing threshold	 	Intervention
+293	end_of_life_threshold	9.8	-	-	End of life score level		INTERVENTION
+294	inspec_testing_threshold	0.2	-	-	inspection testing threshold		INTERVENTION
+295	condition_monitoring_threshold	0.5	-	-	Condition monitoring threshold		INTERVENTION
+296	minimum_repair_threshold	6.0	-	-	Minimum repair threshold		INTERVENTION
+297	refurbishment_threshold	6.0	-	-	Refurbishment threshold		INTERVENTION

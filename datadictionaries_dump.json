@@ -1,0 +1,5982 @@
+[
+  {
+    "id": 1,
+    "varname": "customerid",
+    "value": "6.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Customer Identification",
+    "information": "",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 2,
+    "varname": "LossBasekVA",
+    "value": "26000",
+    "unit": "Volt",
+    "defaultv": "-",
+    "description": "Loss Base kVA",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 3,
+    "varname": "LossTempBase",
+    "value": "85",
+    "unit": "Volt",
+    "defaultv": "85",
+    "description": "Temperature Base for Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 4,
+    "varname": "WindI2RLosses",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "1200",
+    "description": "Winding square Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 5,
+    "varname": "WindEddyLoss",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "100",
+    "description": "Winding Eddy Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 6,
+    "varname": "WindStrayLosses",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "20",
+    "description": "Winding Stray Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 7,
+    "varname": "CoreLosses",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "0.5",
+    "description": "Core Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 8,
+    "varname": "PerUnitbasekVA",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "0.5",
+    "description": "Per-unit base kVA",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 9,
+    "varname": "Voltage",
+    "value": "132",
+    "unit": "kV",
+    "defaultv": "132",
+    "description": "Voltage Class",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 10,
+    "varname": "WindingTempBase",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Rated Avg. Winding Rise (AWR)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 11,
+    "varname": "AvgWindingRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Tested Average Winding Temperature Rise(ΔΘᴡ⁄ᴀ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 12,
+    "varname": "HotSpotRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Hot Spot Temperature Rise(ΔΘн,ᴀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 13,
+    "varname": "TopOilRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Tested Top Oil Temperature Rise(ΔΘᴛᴏ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 14,
+    "varname": "BottomOilRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Bottom Oil Temperature Rise(ΔΘʙᴏ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 15,
+    "varname": "AvgOilRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Average Oil Temperature Rise(ΔΘᴀᴏ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 16,
+    "varname": "RatedAmbient",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Rated Ambient Temperature(Θᴀ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 17,
+    "varname": "WindingConductor",
+    "value": "COPPER",
+    "unit": "-",
+    "defaultv": "COPPER",
+    "description": "Winding conductor Type(1=Aluminum, 2=Copper)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 18,
+    "varname": "PerUnitHSEddyLoss",
+    "value": "1.1",
+    "unit": "-",
+    "defaultv": "COPPER",
+    "description": "Per-unit Eddy Loss At Winding Hot Spot",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 19,
+    "varname": "WindTimeCst",
+    "value": "10",
+    "unit": "Minute",
+    "defaultv": "COPPER",
+    "description": "Winding Time Constant (tw)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 20,
+    "varname": "PerUnitHeighToHotSpot",
+    "value": "1.1",
+    "unit": "-",
+    "defaultv": "1.1",
+    "description": "Per-unit Height To Hot Spot",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 21,
+    "varname": "MassCoreCoil",
+    "value": "417776",
+    "unit": "pounds",
+    "defaultv": "-",
+    "description": "Weight of Core and Coils",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 22,
+    "varname": "MassTank",
+    "value": "155426",
+    "unit": "pounds",
+    "defaultv": "-",
+    "description": "Weight of Tank and Fittings",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 23,
+    "varname": "FluidType",
+    "value": "1",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Fluid Type (1=min. oil, 2=silicone, 3=HTHC)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 24,
+    "varname": "FluidDensity",
+    "value": "7.4",
+    "unit": "lbs/gal",
+    "defaultv": "-",
+    "description": "Fluid Density",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 25,
+    "varname": "GallonsOfFluid",
+    "value": "500",
+    "unit": "US Gallons",
+    "defaultv": "-",
+    "description": "Total Gallons of Fluid in the Transformer",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 26,
+    "varname": "XfrmerRating",
+    "value": "500",
+    "unit": "kVA",
+    "defaultv": "-",
+    "description": "Nameplate Ratings in kVA",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 27,
+    "varname": "XfrmerCooling",
+    "value": "ONAN",
+    "unit": "-",
+    "defaultv": "ONAN",
+    "description": "Cooling Modes",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 28,
+    "varname": "XfrmerCoolLevel",
+    "value": "100",
+    "unit": "%",
+    "defaultv": "100",
+    "description": "Cooling Capacities",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 29,
+    "varname": "OverExcitation",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Over Excitation (0=no, 1=yes)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 30,
+    "varname": "TimeOverExcitation",
+    "value": "0",
+    "unit": "hours",
+    "defaultv": "-",
+    "description": "Time When Over Excitation Occurs (hour)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 31,
+    "varname": "CoreLossesOverEx",
+    "value": "0",
+    "unit": "Watts",
+    "defaultv": "-",
+    "description": "Core Loss During Over Excitatio",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 32,
+    "varname": "TimeStep",
+    "value": "0.5",
+    "unit": "Minute",
+    "defaultv": "5",
+    "description": "Time increment for calculation(minutes)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 33,
+    "varname": "LoadLoss",
+    "value": "112600",
+    "unit": "Watts",
+    "defaultv": "-",
+    "description": "Load Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 34,
+    "varname": "PerImpedance",
+    "value": "8.920",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Winding Impedance",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 35,
+    "varname": "PerResistance",
+    "value": "0.432",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Winding Resistance",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 36,
+    "varname": "CumLossOfLife",
+    "value": "0.432",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Cumulative Loss of Life",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 37,
+    "varname": "PUMinMUL",
+    "value": "0.24",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Minimum Load Multiplier",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 38,
+    "varname": "PUMaxMUL",
+    "value": "2.432",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Maximum Load Multiplier",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 39,
+    "varname": "HotSpotDepth",
+    "value": "3.6",
+    "unit": "inches",
+    "defaultv": "-",
+    "description": "Depth of hotspot below oil",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 40,
+    "varname": "HotSpotMois",
+    "value": "1.11",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Hot Spot Moisture Content",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 41,
+    "varname": "InsLifeExp",
+    "value": "65000",
+    "unit": "Hour",
+    "defaultv": "-",
+    "description": "Insulation Life Expectancy",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 42,
+    "varname": "HotSpotLimit",
+    "value": "120",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Hot Spot Temperature Limit",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 43,
+    "varname": "TopOilLimit",
+    "value": "105",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Top Oil Temperature Limit",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 44,
+    "varname": "LoLLimit",
+    "value": "24",
+    "unit": "Hours",
+    "defaultv": "-",
+    "description": "Loss of Life Limit",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 45,
+    "varname": "PULLimit",
+    "value": "24",
+    "unit": "Hours",
+    "defaultv": "-",
+    "description": "Load Limit, p.u of Maximum Nameplate Rating",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 46,
+    "varname": "BubblingLimit",
+    "value": "143",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Bubbling Temperature Limit",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 47,
+    "varname": "LoadType",
+    "value": "24h-Normal",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Loading Scenario Name, ex.(Normal, Contingency)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 48,
+    "varname": "OptimError",
+    "value": "0.1",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Temperature Limit Tolerance for Optimization",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 49,
+    "varname": "BeginOverTime",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Begin Overload Time",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 50,
+    "varname": "EndOverTime",
+    "value": "24",
+    "unit": "Hour",
+    "defaultv": "-",
+    "description": "End Overload Time",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 51,
+    "varname": "GasContent",
+    "value": "10",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Gas Content in the Transformer Oil",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 52,
+    "varname": "MoisContent",
+    "value": "1.93",
+    "unit": "%",
+    "defaultv": "1.93",
+    "description": "Insulation Moisture content at Hot Spot",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 53,
+    "varname": "HSPressure",
+    "value": "828",
+    "unit": "Mm/Hg",
+    "defaultv": "1.93",
+    "description": "Threshold Pressure at Hot Spot ",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 54,
+    "varname": "AvgInsMois",
+    "value": "828",
+    "unit": "Mm/Hg",
+    "defaultv": "1.850",
+    "description": "Average Insulation Mositure Content",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 55,
+    "varname": "HotSpotMoMUL",
+    "value": "0.6",
+    "unit": "-",
+    "defaultv": "0.6",
+    "description": "Hot Spot Moisture Multiplier",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 56,
+    "varname": "dynamic_cycle",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Load cycle count for dynamic loading",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 57,
+    "varname": "enp_paper_type",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Type of Paper",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 58,
+    "varname": "enp_iec_ref",
+    "value": "110",
+    "unit": "degC",
+    "defaultv": "0",
+    "description": "Reference IEC Temperature",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 59,
+    "varname": "enp_ieee_ref",
+    "value": "110",
+    "unit": "degC",
+    "defaultv": "0",
+    "description": "Reference IEEE Temperature",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 60,
+    "varname": "num_fans",
+    "value": "4",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Total number of fans installed",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 61,
+    "varname": "num_pumps",
+    "value": "2",
+    "unit": "-",
+    "defaultv": "2",
+    "description": "Total number of pumps installed",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 62,
+    "varname": "num_radiators",
+    "value": "2",
+    "unit": "-",
+    "defaultv": "2",
+    "description": "Total number of radiators installed",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 63,
+    "varname": "num_coolers",
+    "value": "2",
+    "unit": "-",
+    "defaultv": "2",
+    "description": "Total number of coolers installed",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 64,
+    "varname": "power_per_fan",
+    "value": "5000",
+    "unit": "Watts",
+    "defaultv": "5000",
+    "description": "Cooling Power per installed fan",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 65,
+    "varname": "power_per_pump",
+    "value": "8000",
+    "unit": "Watts",
+    "defaultv": "8000",
+    "description": "Cooling Power per installed pump",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 66,
+    "varname": "power_per_radiator",
+    "value": "2500",
+    "unit": "Watts",
+    "defaultv": "2500",
+    "description": "Cooling Power per installed radiator",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 67,
+    "varname": "power_per_cooler",
+    "value": "2500",
+    "unit": "Watts",
+    "defaultv": "2500",
+    "description": "Cooling Power per installed cooler",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 68,
+    "varname": "HRatedAmps",
+    "value": "489.5",
+    "unit": "Amps",
+    "defaultv": "2500",
+    "description": "Rated current in the primary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 69,
+    "varname": "XRatedAmps",
+    "value": "955",
+    "unit": "Amps",
+    "defaultv": "2500",
+    "description": "Rated current in the secondary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 70,
+    "varname": "TRatedAmps",
+    "value": "1575",
+    "unit": "Amps",
+    "defaultv": "2500",
+    "description": "Rated current in the tertiary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 71,
+    "varname": "HRatedVolt",
+    "value": "1575",
+    "unit": "kV",
+    "defaultv": "2500",
+    "description": "Rated voltage in the primary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 72,
+    "varname": "XRatedVolt",
+    "value": "180",
+    "unit": "kV",
+    "defaultv": "180",
+    "description": "Rated voltage in the secondary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 73,
+    "varname": "TRatedVolt",
+    "value": "300",
+    "unit": "kV",
+    "defaultv": "300",
+    "description": "Rated voltage in the tertiary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 74,
+    "varname": "HRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Rated apparent power in the primary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 75,
+    "varname": "XRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Rated apparent power in the secondary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 76,
+    "varname": "TRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Rated apparent power in the tertiary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 77,
+    "varname": "HXRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Cross Rated apparent power in HX winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 78,
+    "varname": "HTRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Cross Rated apparent power in HT winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 79,
+    "varname": "HXLoadLoss",
+    "value": "250",
+    "unit": "Watts",
+    "defaultv": "250",
+    "description": "Load Losses in HX cross-winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 80,
+    "varname": "HTLoadLoss",
+    "value": "250",
+    "unit": "Watts",
+    "defaultv": "250",
+    "description": "Load Losses in HT cross-winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 81,
+    "varname": "XTLoadLoss",
+    "value": "250",
+    "unit": "Watts",
+    "defaultv": "250",
+    "description": "Load Losses in XT cross-winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 82,
+    "varname": "tflifetime",
+    "value": "50",
+    "unit": "Years",
+    "defaultv": "50",
+    "description": "Normal expected life of the tap changer",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 83,
+    "varname": "tflifetime",
+    "value": "50",
+    "unit": "Years",
+    "defaultv": "50",
+    "description": "Normal expected life of the tap changer",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 84,
+    "varname": "LtcTapRange",
+    "value": "50",
+    "unit": "kV",
+    "defaultv": "50",
+    "description": "Load Tap Range [±]",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 85,
+    "varname": "LtcTapSteps",
+    "value": "10",
+    "unit": "-",
+    "defaultv": "10",
+    "description": "Number of Tap Steps",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 86,
+    "varname": "LtcRatedOilRise",
+    "value": "35",
+    "unit": "degC",
+    "defaultv": "50",
+    "description": "Contact temperature rise over oil at rated current(ΔΘc,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 87,
+    "varname": "LtcLocation",
+    "value": "35",
+    "unit": "degC",
+    "defaultv": "50",
+    "description": "Location of the LTC (INTEGRATED/SEPARATED)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 88,
+    "varname": "LtcLocation",
+    "value": "INTEGRATED",
+    "unit": "-",
+    "defaultv": "INTEGRATED",
+    "description": "Location of the LTC (INTEGRATED/SEPARATED)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 89,
+    "varname": "LtcWinding",
+    "value": "HV",
+    "unit": "-",
+    "defaultv": "HV",
+    "description": "Winding with the adjustable tap (HV/LV)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 90,
+    "varname": "LtcCapacity",
+    "value": "10",
+    "unit": "MVA",
+    "defaultv": "10",
+    "description": "Load Tap Changer switching capacity",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 91,
+    "varname": "LtcRatedTapPos",
+    "value": "5",
+    "unit": "-",
+    "defaultv": "5",
+    "description": "Load Tap Changer Rated Position",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 92,
+    "varname": "LtcMinPos",
+    "value": "10",
+    "unit": "-",
+    "defaultv": "10",
+    "description": "Minimun Tap Changer Position",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 93,
+    "varname": "LtcMaxPos",
+    "value": "5",
+    "unit": "-",
+    "defaultv": "5",
+    "description": "Maximun Tap Changer Position",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 94,
+    "varname": "IsTapChanging",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Whether or Not Tap Changer gets Evaluated",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 95,
+    "varname": "eqpmt",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "{{XType}}",
+    "description": "Equipment type",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 96,
+    "varname": "manyear",
+    "value": "1986",
+    "unit": "Year",
+    "defaultv": "1986",
+    "description": "Year of manufacture",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 97,
+    "varname": "storage_duration",
+    "value": "4",
+    "unit": "Year",
+    "defaultv": "0",
+    "description": "Storage duration",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 98,
+    "varname": "accesstype",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Access Type A - Type B - Type C",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 99,
+    "varname": "notaps",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Indication of the presence of a tap changer",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 100,
+    "varname": "placement",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Location indication (Indoor or Outdoor)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 101,
+    "varname": "coastaldist",
+    "value": "150",
+    "unit": "m",
+    "defaultv": "-",
+    "description": "Distance from the coast",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 102,
+    "varname": "corrosion",
+    "value": "1.0",
+    "unit": "Years",
+    "defaultv": "-",
+    "description": "Corrosion category index",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 103,
+    "varname": "age",
+    "value": "65",
+    "unit": "Years",
+    "defaultv": "-",
+    "description": "Normal life expectancy",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 104,
+    "varname": "fleet_clustering",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Fleet clustering flag",
+    "information": " ",
+    "groupname": "Clustering"
+  },
+  {
+    "id": 105,
+    "varname": "learning_mode",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Fleet learning flag",
+    "information": " ",
+    "groupname": "Clustering"
+  },
+  {
+    "id": 106,
+    "varname": "simu_sample",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "1000",
+    "description": "Number of simulation samples",
+    "information": " ",
+    "groupname": "Simulation"
+  },
+  {
+    "id": 107,
+    "varname": "mtrg_rate",
+    "value": "4",
+    "unit": "Minute",
+    "defaultv": "-",
+    "description": "Monitoring data sampling rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 108,
+    "varname": "main_program",
+    "value": "REACTIVE",
+    "unit": "Minute",
+    "defaultv": "-",
+    "description": "Activat Maintenance program",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 109,
+    "varname": "seasonal_rate",
+    "value": "24",
+    "unit": "Minute",
+    "defaultv": "-",
+    "description": "Monitoring data sampling rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 110,
+    "varname": "alm_scanning",
+    "value": "10",
+    "unit": "minute",
+    "defaultv": "-",
+    "description": "Alarms scanning rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 111,
+    "varname": "reliability",
+    "value": "1.0",
+    "unit": "minute",
+    "defaultv": "-",
+    "description": "Reliability assessment rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 112,
+    "varname": "health_rate",
+    "value": "10",
+    "unit": "minute",
+    "defaultv": "-",
+    "description": "Health indexing assessment rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 113,
+    "varname": "num_deg_samples",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Number of degradation samples",
+    "information": " ",
+    "groupname": "Reliability"
+  },
+  {
+    "id": 114,
+    "varname": "monitoring_mode",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Monitoring mode or simulation mode",
+    "information": " ",
+    "groupname": "Reliability"
+  },
+  {
+    "id": 115,
+    "varname": "growth_rate",
+    "value": "5",
+    "unit": "%/Year",
+    "defaultv": "-",
+    "description": "Annual Maintenance Budget Growth Rate",
+    "information": "Maintenance",
+    "groupname": "Maintenance"
+  },
+  {
+    "id": 116,
+    "varname": "normal_pof",
+    "value": "0.009",
+    "unit": "-",
+    "defaultv": "0.009",
+    "description": "Normal Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 117,
+    "varname": "caution_pof",
+    "value": "0.0115",
+    "unit": "-",
+    "defaultv": "0.0115",
+    "description": "Caution Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 118,
+    "varname": "warning_pof",
+    "value": "0.150",
+    "unit": "-",
+    "defaultv": "0.150",
+    "description": "Warning Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 119,
+    "varname": "alarm_pof",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "0.2",
+    "description": "Alarm Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 120,
+    "varname": "alert_pof",
+    "value": "0.5",
+    "unit": "-",
+    "defaultv": "0.5",
+    "description": "Alert Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 121,
+    "varname": "normal_score",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "3",
+    "description": "Normal Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 122,
+    "varname": "caution_score",
+    "value": "5",
+    "unit": "-",
+    "defaultv": "5",
+    "description": "Caution Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 123,
+    "varname": "warning_score",
+    "value": "7",
+    "unit": "-",
+    "defaultv": "7",
+    "description": "Warning Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 124,
+    "varname": "alarm_score",
+    "value": "8",
+    "unit": "-",
+    "defaultv": "8",
+    "description": "Alarm Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 125,
+    "varname": "alert_score",
+    "value": "9.5",
+    "unit": "-",
+    "defaultv": "9.5",
+    "description": "Alert Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 126,
+    "varname": "SmtpServer",
+    "value": "smtp.example.com",
+    "unit": "-",
+    "defaultv": "smtp.example.com",
+    "description": "SMTP Server Address",
+    "information": " ",
+    "groupname": "Email"
+  },
+  {
+    "id": 127,
+    "varname": "SmtpPort",
+    "value": "587",
+    "unit": "-",
+    "defaultv": "587",
+    "description": "SMTP Server Port",
+    "information": " ",
+    "groupname": "Email"
+  },
+  {
+    "id": 128,
+    "varname": "SmtpUsername",
+    "value": "user@example.com",
+    "unit": "-",
+    "defaultv": "user@example.com",
+    "description": "SMTP Username",
+    "information": " ",
+    "groupname": "Email"
+  },
+  {
+    "id": 129,
+    "varname": "SmtpPassword",
+    "value": "password",
+    "unit": "-",
+    "defaultv": "password",
+    "description": "SMTP Password",
+    "information": " ",
+    "groupname": "Email"
+  },
+  {
+    "id": 130,
+    "varname": "TwilioAccountSid",
+    "value": "your_account_sid",
+    "unit": "-",
+    "defaultv": "your_account_sid",
+    "description": "Twilio Account SID",
+    "information": " ",
+    "groupname": "Twilio"
+  },
+  {
+    "id": 131,
+    "varname": "TwilioAuthToken",
+    "value": "your_auth_token",
+    "unit": "-",
+    "defaultv": "your_auth_token",
+    "description": "Twilio Auth Token",
+    "information": " ",
+    "groupname": "Twilio"
+  },
+  {
+    "id": 132,
+    "varname": "TwilioPhoneNumber",
+    "value": "+1234567890",
+    "unit": "-",
+    "defaultv": "+1234567890",
+    "description": "Twilio Phone Number",
+    "information": " ",
+    "groupname": "Twilio"
+  },
+  {
+    "id": 133,
+    "varname": "sched_horizon",
+    "value": "Current Date",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Scheduling time horizon",
+    "information": "",
+    "groupname": "Scheduling"
+  },
+  {
+    "id": 134,
+    "varname": "tapage",
+    "value": "65",
+    "unit": "Years",
+    "defaultv": "-",
+    "description": "Tap changer normal life expectancy",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 135,
+    "varname": "avgtapops",
+    "value": "20",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Average number of tap changer operations",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 136,
+    "varname": "proxwater",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Proximity to water",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 137,
+    "varname": "locationrisk",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Location Risk Rating",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 138,
+    "varname": "typerisk",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Type Risk Rating Risk that the asset presents to the public by its characteristics and particular situation",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 139,
+    "varname": "loadatrisk",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Proximity to areas that may affect its likelihood of trespass or interference)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 140,
+    "varname": "rating",
+    "value": "20",
+    "unit": "kVA",
+    "defaultv": "-",
+    "description": "Equipment Operating rating",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 141,
+    "varname": "bunded",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Bunded Distance to the coast",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 142,
+    "varname": "secured",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Boolean If the asset is in a secure network or not",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 143,
+    "varname": "gridoredge",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Whether the asset is a primary or a distribution (secondary) asset in the network",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 144,
+    "varname": "numcustomers",
+    "value": "150",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Attached Number of customers",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 145,
+    "varname": "loademand",
+    "value": "15",
+    "unit": "kVA",
+    "defaultv": "-",
+    "description": "Size of loads and or electricity demand",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 146,
+    "varname": "puload",
+    "value": "1.0",
+    "unit": "p.u",
+    "defaultv": "-",
+    "description": "Maximum utilisation under normal operation",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 147,
+    "varname": "moisAw",
+    "value": "0.1",
+    "unit": "p.u",
+    "defaultv": "-",
+    "description": "Water Activiy in oil",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 148,
+    "varname": "hotspot",
+    "value": "150",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Hottest spot Temperature",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 149,
+    "varname": "bubbling",
+    "value": "150",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Bubbling Temperature",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 150,
+    "varname": "obreakdwn",
+    "value": "10",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Oil Breakdown Voltage strength",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 151,
+    "varname": "moisture",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Moisture level in oil",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 152,
+    "varname": "fural",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Furan level in oil Quality Analysis",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 153,
+    "varname": "dobletestCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Doble Test Results",
+    "information": "",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 154,
+    "varname": "meggertestCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Core Megger test results",
+    "information": "Inspections",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 155,
+    "varname": "WindRestestCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Winding Resistance test results",
+    "information": "Inspections",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 156,
+    "varname": "DPtestCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Paper Degree of Polymerization Test results",
+    "information": "Inspections",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 157,
+    "varname": "IntInspecCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Internal inspection Test results",
+    "information": "Inspections",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 158,
+    "varname": "ac2h2ppm",
+    "value": "1045",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of Acethylen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 159,
+    "varname": "ac2h4ppm",
+    "value": "100",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of ethylen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 160,
+    "varname": "ac2h6ppm",
+    "value": "500",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of ethane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 161,
+    "varname": "ac2h8ppm",
+    "value": "500",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of propane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 162,
+    "varname": "ach4ppm",
+    "value": "200",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of methane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 163,
+    "varname": "acoppm",
+    "value": "1000",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of carbon monoxide gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 164,
+    "varname": "aco2ppm",
+    "value": "1200",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of arbon dioxide gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 165,
+    "varname": "ah2ppm",
+    "value": "1300",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of hydrogen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 166,
+    "varname": "prec2h2ppm",
+    "value": "1045",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of Acethylen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 167,
+    "varname": "prec2h4ppm",
+    "value": "100",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of ethylen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 168,
+    "varname": "prec2h6ppm",
+    "value": "500",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of ethane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 169,
+    "varname": "prec3h6ppm",
+    "value": "1000",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of propane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 170,
+    "varname": "prech4ppm",
+    "value": "1200",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of methane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 171,
+    "varname": "precoppm",
+    "value": "1000",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of carbon monoxide gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 172,
+    "varname": "preco2ppm",
+    "value": "1200",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of carbon dioxide gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 173,
+    "varname": "preh2ppm",
+    "value": "1300",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of hydrogen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 174,
+    "varname": "c2h2WeightFactor",
+    "value": "5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Acetylene Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 175,
+    "varname": "c2h4WeightFactor",
+    "value": "4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Ethylene Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 176,
+    "varname": "c2h6WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Ethane Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 177,
+    "varname": "c3h6WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Propane Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 178,
+    "varname": "ch4WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Methane Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 179,
+    "varname": "coWeightFactor",
+    "value": "1",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Carbon Monoxide Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 180,
+    "varname": "h2WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Carbon Dioxide Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 181,
+    "varname": "co2WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Hydrogen Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 182,
+    "varname": "DGARoCFactorG1",
+    "value": "0.1",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Rate Of Change Factor G1",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 183,
+    "varname": "DGARoCFactorG2",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Rate Of Change Factor G2",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 184,
+    "varname": "DGAConcentrationF0",
+    "value": "0.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 0",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 185,
+    "varname": "DGAConcentrationF1",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 1",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 186,
+    "varname": "DGAConcentrationF2",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 2",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 187,
+    "varname": "DGAConcentrationF3",
+    "value": "0.33",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 3",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 188,
+    "varname": "DGAConcentrationF4",
+    "value": "0.33",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 4",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 189,
+    "varname": "DGAConcentrationF5",
+    "value": "1.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 4",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 190,
+    "varname": "DGAConcentrationF6",
+    "value": "0.66",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 6",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 191,
+    "varname": "DGAConcentrationF7",
+    "value": "1.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 7",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 192,
+    "varname": "DGAConcentrationF8",
+    "value": "1.5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 8",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 193,
+    "varname": "DGAConcentrationF9",
+    "value": "2.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 9",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 194,
+    "varname": "DGAConcentrationF10",
+    "value": "4.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 10",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 195,
+    "varname": "unp_dga_frequency",
+    "value": "10",
+    "unit": "Hour",
+    "defaultv": "0",
+    "description": "Low level of acetylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 196,
+    "varname": "unp_real_norm_c2h2ppm",
+    "value": "750",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of acetylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 197,
+    "varname": "unp_real_low_c2h2ppm",
+    "value": "750",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of acetylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 198,
+    "varname": "unp_real_high_c2h2ppm",
+    "value": "7500",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of acetylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 199,
+    "varname": "unp_real_norm_c2h4ppm",
+    "value": "900",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of ethylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 200,
+    "varname": "unp_real_low_c2h4ppm",
+    "value": "900",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of ethylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 201,
+    "varname": "unp_real_high_c2h4ppm",
+    "value": "9000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of ethylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 202,
+    "varname": "unp_real_norm_c2h6ppm",
+    "value": "800",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of ethane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 203,
+    "varname": "unp_real_low_c2h6ppm",
+    "value": "800",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of ethane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 204,
+    "varname": "unp_real_high_c2h6ppm",
+    "value": "8000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of ethane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 205,
+    "varname": "unp_real_norm_c3h6ppm",
+    "value": "700",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of propen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 206,
+    "varname": "unp_real_low_c3h6ppm",
+    "value": "700",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of propen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 207,
+    "varname": "unp_real_high_c3h6ppm",
+    "value": "7000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of propen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 208,
+    "varname": "unp_real_norm_ch4ppm",
+    "value": "600",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of methane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 209,
+    "varname": "unp_real_low_ch4ppm",
+    "value": "600",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of methane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 210,
+    "varname": "unp_real_high_ch4ppm",
+    "value": "6000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of methane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 211,
+    "varname": "unp_real_norm_coppm",
+    "value": "500",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of carbon monoxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 212,
+    "varname": "unp_real_low_coppm",
+    "value": "500",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of carbon monoxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 213,
+    "varname": "unp_real_high_coppm",
+    "value": "5000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "high level of carbon monoxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 214,
+    "varname": "unp_real_norm_co2ppm",
+    "value": "200",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of carbon dioxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 215,
+    "varname": "unp_real_low_co2ppm",
+    "value": "200",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of carbon dioxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 216,
+    "varname": "unp_real_high_co2ppm",
+    "value": "2000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "high level of carbon dioxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 217,
+    "varname": "unp_real_norm_h2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of hydrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 218,
+    "varname": "unp_real_low_h2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of hydrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 219,
+    "varname": "unp_real_high_h2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of hydrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 220,
+    "varname": "unp_real_norm_o2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Normal level of oxygen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 221,
+    "varname": "unp_real_low_o2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of oxygen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 222,
+    "varname": "unp_real_high_o2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of oxygen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 223,
+    "varname": "unp_real_norm_n2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Normal level of nitrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 224,
+    "varname": "unp_real_low_n2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of nitrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 225,
+    "varname": "unp_real_high_n2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of nitrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 226,
+    "varname": "unp_real_norm_tdcgppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Normal level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 227,
+    "varname": "unp_real_low_tdcgppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 228,
+    "varname": "unp_real_high_tdcgppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 229,
+    "varname": "unp_lviec_c2h2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 230,
+    "varname": "unp_lviec_c2h4ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 231,
+    "varname": "unp_lviec_c2h6ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 232,
+    "varname": "unp_lviec_c3h6ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 233,
+    "varname": "unp_lviec_ch4ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 234,
+    "varname": "unp_lviec_coppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 235,
+    "varname": "unp_lviec_co2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 236,
+    "varname": "unp_lviec_h2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 237,
+    "varname": "unp_lviec_tdcgppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 238,
+    "varname": "unp_rociec_c2h2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 239,
+    "varname": "unp_rociec_c2h4ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 240,
+    "varname": "unp_rociec_c2h6ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 241,
+    "varname": "unp_rociec_c3h6ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 242,
+    "varname": "unp_rociec_ch4ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 243,
+    "varname": "unp_rociec_coppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 244,
+    "varname": "unp_rociec_co2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 245,
+    "varname": "unp_rociec_h2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 246,
+    "varname": "unp_rociec_tdcgppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 247,
+    "varname": "high_topoil",
+    "value": "120",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Maximum top oil temperature",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 248,
+    "varname": "high_hotspot",
+    "value": "150",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Maximum hot spot temperature",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 249,
+    "varname": "high_bottom",
+    "value": "60",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Maximum bottom temperature",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 250,
+    "varname": "high_bubbling",
+    "value": "180",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Maximum bubbling temperature",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 251,
+    "varname": "pdtankCI",
+    "value": "1.93",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Partial discharge main tank",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 252,
+    "varname": "pdtacpCI",
+    "value": "828",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Partial Discharge of Tap Changer",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 253,
+    "varname": "maintankCI",
+    "value": "1.850",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Main Tank conditions",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 254,
+    "varname": "bushingCI",
+    "value": "0.6",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Bushing conditions",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 255,
+    "varname": "coolradCI",
+    "value": "40.17",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Cooler and radiator conditions",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 256,
+    "varname": "kioskCI",
+    "value": "0.04",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Kiosk Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 257,
+    "varname": "cableboxCI",
+    "value": "22.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Cable and Boxes Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 258,
+    "varname": "externtapCI",
+    "value": "22.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "External Tap Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 259,
+    "varname": "interntapCI",
+    "value": "22.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Internal Tap Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 260,
+    "varname": "mechnismCI",
+    "value": "22.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Drive Mechanism Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 261,
+    "varname": "divbraidCI",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Diverter braids Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 262,
+    "varname": "divctactCI",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Selector and Diverter contacts Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 263,
+    "varname": "compCI",
+    "value": "100",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Composite/Combined Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 264,
+    "varname": "dgaCI",
+    "value": "0",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "DGA Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 265,
+    "varname": "hstCI",
+    "value": "40",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Thermal Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 266,
+    "varname": "topCI",
+    "value": "90",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Top Oil Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 267,
+    "varname": "boardbpCI",
+    "value": "44",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Board Break Down Probability Condition Index",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 268,
+    "varname": "oilbpCI",
+    "value": "1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Oil Break Down Probability Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 269,
+    "varname": "loadCI",
+    "value": "1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Load Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 270,
+    "varname": "tapCI",
+    "value": "1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Tap Changer Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 271,
+    "varname": "bubCI",
+    "value": "1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Bubling Temperature Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 272,
+    "varname": "altitude",
+    "value": "30.201",
+    "unit": "deg",
+    "defaultv": "-",
+    "description": "GPS Altitude",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 273,
+    "varname": "longitude",
+    "value": "99.2",
+    "unit": "deg",
+    "defaultv": "-",
+    "description": "GPS Longitude",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 274,
+    "varname": "latitude",
+    "value": "101.2",
+    "unit": "deg",
+    "defaultv": "-",
+    "description": "GPS Latitude",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 275,
+    "varname": "partial_discharge_tf",
+    "value": "1.93",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Partial discharge main tank",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 276,
+    "varname": "partial_discharge_tc",
+    "value": "0.5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Partial Discharge of Tap Changer",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 277,
+    "varname": "main_tank",
+    "value": "1.850",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Main Tank conditions",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 278,
+    "varname": "bushings",
+    "value": "0.6",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Bushing conditions",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 279,
+    "varname": "coolers_radiator",
+    "value": "9.5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Cooler and radiator conditions",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 280,
+    "varname": "kiosk",
+    "value": "0.8",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Kiosk Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 281,
+    "varname": "cable_boxes",
+    "value": "2.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Cable and Boxes Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 282,
+    "varname": "external_tap",
+    "value": "7.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "External Tap Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 283,
+    "varname": "internal_tap",
+    "value": "8.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Internal Tap Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 284,
+    "varname": "mechnism_cond",
+    "value": "9.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Drive Mechanism Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 285,
+    "varname": "diverter_braids",
+    "value": "8.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Diverter braids Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 286,
+    "varname": "diverter_contacts",
+    "value": "8.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Selector and Diverter contacts Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 287,
+    "varname": "temperature_reading",
+    "value": "8.0",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Thermal Condition Index",
+    "information": "MEASURED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 288,
+    "varname": "oil_condition",
+    "value": "8.5",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Oil condition Index",
+    "information": "MEASURED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 289,
+    "varname": "paper_condition",
+    "value": "8.5",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Paper condition Index",
+    "information": "MEASURED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 290,
+    "varname": "dissolved_gas",
+    "value": "8.5",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Dissolved Gas condition Index",
+    "information": "MEASURED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 291,
+    "varname": "cm_replacement_threshold",
+    "value": "8.0",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Corrective maintenance score level",
+    "information": " ",
+    "groupname": "Intervention"
+  },
+  {
+    "id": 292,
+    "varname": "pm_replacement_threshold",
+    "value": "6.0",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Preventive maintenance score level",
+    "information": " ",
+    "groupname": "Intervention"
+  },
+  {
+    "id": 293,
+    "varname": "em_replacement_threshold",
+    "value": "9.8",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Emergency replacement score level",
+    "information": " ",
+    "groupname": "Intervention"
+  },
+  {
+    "id": 294,
+    "varname": "routine_servicing_threshold",
+    "value": "0.2",
+    "unit": "days",
+    "defaultv": "-",
+    "description": "Routine servicing threshold",
+    "information": " ",
+    "groupname": "Intervention"
+  },
+  {
+    "id": 295,
+    "varname": "end_of_life_threshold",
+    "value": "9.8",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "End of life score level",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 296,
+    "varname": "inspec_testing_threshold",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "inspection testing threshold",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 297,
+    "varname": "condition_monitoring_threshold",
+    "value": "0.5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Condition monitoring threshold",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 298,
+    "varname": "minimum_repair_threshold",
+    "value": "6.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Minimum repair threshold",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 299,
+    "varname": "refurbishment_threshold",
+    "value": "6.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Refurbishment threshold",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 300,
+    "varname": "customerid",
+    "value": "6.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Customer Identification",
+    "information": "",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 301,
+    "varname": "LossBasekVA",
+    "value": "26000",
+    "unit": "Volt",
+    "defaultv": "-",
+    "description": "Loss Base kVA",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 302,
+    "varname": "LossTempBase",
+    "value": "85",
+    "unit": "Volt",
+    "defaultv": "85",
+    "description": "Temperature Base for Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 303,
+    "varname": "WindI2RLosses",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "1200",
+    "description": "Winding square Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 304,
+    "varname": "WindEddyLoss",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "100",
+    "description": "Winding Eddy Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 305,
+    "varname": "WindStrayLosses",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "20",
+    "description": "Winding Stray Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 306,
+    "varname": "CoreLosses",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "0.5",
+    "description": "Core Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 307,
+    "varname": "PerUnitbasekVA",
+    "value": "65",
+    "unit": "kW",
+    "defaultv": "0.5",
+    "description": "Per-unit base kVA",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 308,
+    "varname": "Voltage",
+    "value": "132",
+    "unit": "kV",
+    "defaultv": "132",
+    "description": "Voltage Class",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 309,
+    "varname": "WindingTempBase",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Rated Avg. Winding Rise (AWR)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 310,
+    "varname": "AvgWindingRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Tested Average Winding Temperature Rise(ΔΘᴡ⁄ᴀ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 311,
+    "varname": "HotSpotRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Hot Spot Temperature Rise(ΔΘн,ᴀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 312,
+    "varname": "TopOilRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Tested Top Oil Temperature Rise(ΔΘᴛᴏ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 313,
+    "varname": "BottomOilRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Bottom Oil Temperature Rise(ΔΘʙᴏ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 314,
+    "varname": "AvgOilRise",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Average Oil Temperature Rise(ΔΘᴀᴏ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 315,
+    "varname": "RatedAmbient",
+    "value": "65",
+    "unit": "degC",
+    "defaultv": "65",
+    "description": "Rated Ambient Temperature(Θᴀ,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 316,
+    "varname": "WindingConductor",
+    "value": "COPPER",
+    "unit": "-",
+    "defaultv": "COPPER",
+    "description": "Winding conductor Type(1=Aluminum, 2=Copper)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 317,
+    "varname": "PerUnitHSEddyLoss",
+    "value": "1.1",
+    "unit": "-",
+    "defaultv": "COPPER",
+    "description": "Per-unit Eddy Loss At Winding Hot Spot",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 318,
+    "varname": "WindTimeCst",
+    "value": "10",
+    "unit": "Minute",
+    "defaultv": "COPPER",
+    "description": "Winding Time Constant (tw)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 319,
+    "varname": "PerUnitHeighToHotSpot",
+    "value": "1.1",
+    "unit": "-",
+    "defaultv": "1.1",
+    "description": "Per-unit Height To Hot Spot",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 320,
+    "varname": "MassCoreCoil",
+    "value": "417776",
+    "unit": "pounds",
+    "defaultv": "-",
+    "description": "Weight of Core and Coils",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 321,
+    "varname": "MassTank",
+    "value": "155426",
+    "unit": "pounds",
+    "defaultv": "-",
+    "description": "Weight of Tank and Fittings",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 322,
+    "varname": "FluidType",
+    "value": "1",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Fluid Type (1=min. oil, 2=silicone, 3=HTHC)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 323,
+    "varname": "FluidDensity",
+    "value": "7.4",
+    "unit": "lbs/gal",
+    "defaultv": "-",
+    "description": "Fluid Density",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 324,
+    "varname": "GallonsOfFluid",
+    "value": "500",
+    "unit": "US Gallons",
+    "defaultv": "-",
+    "description": "Total Gallons of Fluid in the Transformer",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 325,
+    "varname": "XfrmerRating",
+    "value": "500",
+    "unit": "kVA",
+    "defaultv": "-",
+    "description": "Nameplate Ratings in kVA",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 326,
+    "varname": "XfrmerCooling",
+    "value": "ONAN",
+    "unit": "-",
+    "defaultv": "ONAN",
+    "description": "Cooling Modes",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 327,
+    "varname": "XfrmerCoolLevel",
+    "value": "100",
+    "unit": "%",
+    "defaultv": "100",
+    "description": "Cooling Capacities",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 328,
+    "varname": "OverExcitation",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Over Excitation (0=no, 1=yes)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 329,
+    "varname": "TimeOverExcitation",
+    "value": "0",
+    "unit": "hours",
+    "defaultv": "-",
+    "description": "Time When Over Excitation Occurs (hour)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 330,
+    "varname": "CoreLossesOverEx",
+    "value": "0",
+    "unit": "Watts",
+    "defaultv": "-",
+    "description": "Core Loss During Over Excitatio",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 331,
+    "varname": "TimeStep",
+    "value": "0.5",
+    "unit": "Minute",
+    "defaultv": "5",
+    "description": "Time increment for calculation(minutes)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 332,
+    "varname": "LoadLoss",
+    "value": "112600",
+    "unit": "Watts",
+    "defaultv": "-",
+    "description": "Load Losses",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 333,
+    "varname": "PerImpedance",
+    "value": "8.920",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Winding Impedance",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 334,
+    "varname": "PerResistance",
+    "value": "0.432",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Winding Resistance",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 335,
+    "varname": "CumLossOfLife",
+    "value": "0.432",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Cumulative Loss of Life",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 336,
+    "varname": "PUMinMUL",
+    "value": "0.24",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Minimum Load Multiplier",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 337,
+    "varname": "PUMaxMUL",
+    "value": "2.432",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Maximum Load Multiplier",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 338,
+    "varname": "HotSpotDepth",
+    "value": "3.6",
+    "unit": "inches",
+    "defaultv": "-",
+    "description": "Depth of hotspot below oil",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 339,
+    "varname": "HotSpotMois",
+    "value": "1.11",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Hot Spot Moisture Content",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 340,
+    "varname": "InsLifeExp",
+    "value": "65000",
+    "unit": "Hour",
+    "defaultv": "-",
+    "description": "Insulation Life Expectancy",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 341,
+    "varname": "HotSpotLimit",
+    "value": "120",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Hot Spot Temperature Limit",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 342,
+    "varname": "TopOilLimit",
+    "value": "105",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Top Oil Temperature Limit",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 343,
+    "varname": "LoLLimit",
+    "value": "24",
+    "unit": "Hours",
+    "defaultv": "-",
+    "description": "Loss of Life Limit",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 344,
+    "varname": "PULLimit",
+    "value": "24",
+    "unit": "Hours",
+    "defaultv": "-",
+    "description": "Load Limit, p.u of Maximum Nameplate Rating",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 345,
+    "varname": "BubblingLimit",
+    "value": "143",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Bubbling Temperature Limit",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 346,
+    "varname": "LoadType",
+    "value": "24h-Normal",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Loading Scenario Name, ex.(Normal, Contingency)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 347,
+    "varname": "OptimError",
+    "value": "0.1",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Temperature Limit Tolerance for Optimization",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 348,
+    "varname": "BeginOverTime",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Begin Overload Time",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 349,
+    "varname": "EndOverTime",
+    "value": "24",
+    "unit": "Hour",
+    "defaultv": "-",
+    "description": "End Overload Time",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 350,
+    "varname": "GasContent",
+    "value": "10",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Gas Content in the Transformer Oil",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 351,
+    "varname": "MoisContent",
+    "value": "1.93",
+    "unit": "%",
+    "defaultv": "1.93",
+    "description": "Insulation Moisture content at Hot Spot",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 352,
+    "varname": "HSPressure",
+    "value": "828",
+    "unit": "Mm/Hg",
+    "defaultv": "1.93",
+    "description": "Threshold Pressure at Hot Spot ",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 353,
+    "varname": "AvgInsMois",
+    "value": "828",
+    "unit": "Mm/Hg",
+    "defaultv": "1.850",
+    "description": "Average Insulation Mositure Content",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 354,
+    "varname": "HotSpotMoMUL",
+    "value": "0.6",
+    "unit": "-",
+    "defaultv": "0.6",
+    "description": "Hot Spot Moisture Multiplier",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 355,
+    "varname": "dynamic_cycle",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Load cycle count for dynamic loading",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 356,
+    "varname": "enp_paper_type",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Type of Paper",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 357,
+    "varname": "enp_iec_ref",
+    "value": "110",
+    "unit": "degC",
+    "defaultv": "0",
+    "description": "Reference IEC Temperature",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 358,
+    "varname": "enp_ieee_ref",
+    "value": "110",
+    "unit": "degC",
+    "defaultv": "0",
+    "description": "Reference IEEE Temperature",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 359,
+    "varname": "num_fans",
+    "value": "4",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Total number of fans installed",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 360,
+    "varname": "num_pumps",
+    "value": "2",
+    "unit": "-",
+    "defaultv": "2",
+    "description": "Total number of pumps installed",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 361,
+    "varname": "num_radiators",
+    "value": "2",
+    "unit": "-",
+    "defaultv": "2",
+    "description": "Total number of radiators installed",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 362,
+    "varname": "num_coolers",
+    "value": "2",
+    "unit": "-",
+    "defaultv": "2",
+    "description": "Total number of coolers installed",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 363,
+    "varname": "power_per_fan",
+    "value": "5000",
+    "unit": "Watts",
+    "defaultv": "5000",
+    "description": "Cooling Power per installed fan",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 364,
+    "varname": "power_per_pump",
+    "value": "8000",
+    "unit": "Watts",
+    "defaultv": "8000",
+    "description": "Cooling Power per installed pump",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 365,
+    "varname": "power_per_radiator",
+    "value": "2500",
+    "unit": "Watts",
+    "defaultv": "2500",
+    "description": "Cooling Power per installed radiator",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 366,
+    "varname": "power_per_cooler",
+    "value": "2500",
+    "unit": "Watts",
+    "defaultv": "2500",
+    "description": "Cooling Power per installed cooler",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 367,
+    "varname": "HRatedAmps",
+    "value": "489.5",
+    "unit": "Amps",
+    "defaultv": "2500",
+    "description": "Rated current in the primary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 368,
+    "varname": "XRatedAmps",
+    "value": "955",
+    "unit": "Amps",
+    "defaultv": "2500",
+    "description": "Rated current in the secondary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 369,
+    "varname": "TRatedAmps",
+    "value": "1575",
+    "unit": "Amps",
+    "defaultv": "2500",
+    "description": "Rated current in the tertiary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 370,
+    "varname": "HRatedVolt",
+    "value": "1575",
+    "unit": "kV",
+    "defaultv": "2500",
+    "description": "Rated voltage in the primary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 371,
+    "varname": "XRatedVolt",
+    "value": "180",
+    "unit": "kV",
+    "defaultv": "180",
+    "description": "Rated voltage in the secondary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 372,
+    "varname": "TRatedVolt",
+    "value": "300",
+    "unit": "kV",
+    "defaultv": "300",
+    "description": "Rated voltage in the tertiary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 373,
+    "varname": "HRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Rated apparent power in the primary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 374,
+    "varname": "XRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Rated apparent power in the secondary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 375,
+    "varname": "TRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Rated apparent power in the tertiary winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 376,
+    "varname": "HXRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Cross Rated apparent power in HX winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 377,
+    "varname": "HTRatedMVA",
+    "value": "250",
+    "unit": "kVA",
+    "defaultv": "250",
+    "description": "Cross Rated apparent power in HT winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 378,
+    "varname": "HXLoadLoss",
+    "value": "250",
+    "unit": "Watts",
+    "defaultv": "250",
+    "description": "Load Losses in HX cross-winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 379,
+    "varname": "HTLoadLoss",
+    "value": "250",
+    "unit": "Watts",
+    "defaultv": "250",
+    "description": "Load Losses in HT cross-winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 380,
+    "varname": "XTLoadLoss",
+    "value": "250",
+    "unit": "Watts",
+    "defaultv": "250",
+    "description": "Load Losses in XT cross-winding",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 381,
+    "varname": "tflifetime",
+    "value": "50",
+    "unit": "Years",
+    "defaultv": "50",
+    "description": "Normal expected life of the tap changer",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 382,
+    "varname": "tflifetime",
+    "value": "50",
+    "unit": "Years",
+    "defaultv": "50",
+    "description": "Normal expected life of the tap changer",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 383,
+    "varname": "LtcTapRange",
+    "value": "50",
+    "unit": "kV",
+    "defaultv": "50",
+    "description": "Load Tap Range [±]",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 384,
+    "varname": "LtcTapSteps",
+    "value": "10",
+    "unit": "-",
+    "defaultv": "10",
+    "description": "Number of Tap Steps",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 385,
+    "varname": "LtcRatedOilRise",
+    "value": "35",
+    "unit": "degC",
+    "defaultv": "50",
+    "description": "Contact temperature rise over oil at rated current(ΔΘc,ʀ)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 386,
+    "varname": "LtcLocation",
+    "value": "35",
+    "unit": "degC",
+    "defaultv": "50",
+    "description": "Location of the LTC (INTEGRATED/SEPARATED)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 387,
+    "varname": "LtcLocation",
+    "value": "INTEGRATED",
+    "unit": "-",
+    "defaultv": "INTEGRATED",
+    "description": "Location of the LTC (INTEGRATED/SEPARATED)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 388,
+    "varname": "LtcWinding",
+    "value": "HV",
+    "unit": "-",
+    "defaultv": "HV",
+    "description": "Winding with the adjustable tap (HV/LV)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 389,
+    "varname": "LtcCapacity",
+    "value": "10",
+    "unit": "MVA",
+    "defaultv": "10",
+    "description": "Load Tap Changer switching capacity",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 390,
+    "varname": "LtcRatedTapPos",
+    "value": "5",
+    "unit": "-",
+    "defaultv": "5",
+    "description": "Load Tap Changer Rated Position",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 391,
+    "varname": "LtcMinPos",
+    "value": "10",
+    "unit": "-",
+    "defaultv": "10",
+    "description": "Minimun Tap Changer Position",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 392,
+    "varname": "LtcMaxPos",
+    "value": "5",
+    "unit": "-",
+    "defaultv": "5",
+    "description": "Maximun Tap Changer Position",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 393,
+    "varname": "IsTapChanging",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Whether or Not Tap Changer gets Evaluated",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 394,
+    "varname": "eqpmt",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "{{XType}}",
+    "description": "Equipment type",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 395,
+    "varname": "manyear",
+    "value": "1986",
+    "unit": "Year",
+    "defaultv": "1986",
+    "description": "Year of manufacture",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 396,
+    "varname": "storage_duration",
+    "value": "4",
+    "unit": "Year",
+    "defaultv": "0",
+    "description": "Storage duration",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 397,
+    "varname": "accesstype",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Access Type A - Type B - Type C",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 398,
+    "varname": "notaps",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Indication of the presence of a tap changer",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 399,
+    "varname": "placement",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Location indication (Indoor or Outdoor)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 400,
+    "varname": "coastaldist",
+    "value": "150",
+    "unit": "m",
+    "defaultv": "-",
+    "description": "Distance from the coast",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 401,
+    "varname": "corrosion",
+    "value": "1.0",
+    "unit": "Years",
+    "defaultv": "-",
+    "description": "Corrosion category index",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 402,
+    "varname": "age",
+    "value": "65",
+    "unit": "Years",
+    "defaultv": "-",
+    "description": "Normal life expectancy",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 403,
+    "varname": "fleet_clustering",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Fleet clustering flag",
+    "information": " ",
+    "groupname": "Clustering"
+  },
+  {
+    "id": 404,
+    "varname": "learning_mode",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Fleet learning flag",
+    "information": " ",
+    "groupname": "Clustering"
+  },
+  {
+    "id": 405,
+    "varname": "simu_sample",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "1000",
+    "description": "Number of simulation samples",
+    "information": " ",
+    "groupname": "Simulation"
+  },
+  {
+    "id": 406,
+    "varname": "mtrg_rate",
+    "value": "4",
+    "unit": "Minute",
+    "defaultv": "-",
+    "description": "Monitoring data sampling rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 407,
+    "varname": "main_program",
+    "value": "REACTIVE",
+    "unit": "Minute",
+    "defaultv": "-",
+    "description": "Activat Maintenance program",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 408,
+    "varname": "seasonal_rate",
+    "value": "24",
+    "unit": "Minute",
+    "defaultv": "-",
+    "description": "Monitoring data sampling rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 409,
+    "varname": "alm_scanning",
+    "value": "10",
+    "unit": "minute",
+    "defaultv": "-",
+    "description": "Alarms scanning rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 410,
+    "varname": "reliability",
+    "value": "1.0",
+    "unit": "minute",
+    "defaultv": "-",
+    "description": "Reliability assessment rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 411,
+    "varname": "health_rate",
+    "value": "10",
+    "unit": "minute",
+    "defaultv": "-",
+    "description": "Health indexing assessment rate",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 412,
+    "varname": "num_deg_samples",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Number of degradation samples",
+    "information": " ",
+    "groupname": "Reliability"
+  },
+  {
+    "id": 413,
+    "varname": "monitoring_mode",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Monitoring mode or simulation mode",
+    "information": " ",
+    "groupname": "Reliability"
+  },
+  {
+    "id": 414,
+    "varname": "growth_rate",
+    "value": "5",
+    "unit": "%/Year",
+    "defaultv": "-",
+    "description": "Annual Maintenance Budget Growth Rate",
+    "information": "Maintenance",
+    "groupname": "Maintenance"
+  },
+  {
+    "id": 415,
+    "varname": "normal_pof",
+    "value": "0.009",
+    "unit": "-",
+    "defaultv": "0.009",
+    "description": "Normal Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 416,
+    "varname": "caution_pof",
+    "value": "0.0115",
+    "unit": "-",
+    "defaultv": "0.0115",
+    "description": "Caution Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 417,
+    "varname": "warning_pof",
+    "value": "0.150",
+    "unit": "-",
+    "defaultv": "0.150",
+    "description": "Warning Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 418,
+    "varname": "alarm_pof",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "0.2",
+    "description": "Alarm Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 419,
+    "varname": "alert_pof",
+    "value": "0.5",
+    "unit": "-",
+    "defaultv": "0.5",
+    "description": "Alert Pof Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 420,
+    "varname": "normal_score",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "3",
+    "description": "Normal Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 421,
+    "varname": "caution_score",
+    "value": "5",
+    "unit": "-",
+    "defaultv": "5",
+    "description": "Caution Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 422,
+    "varname": "warning_score",
+    "value": "7",
+    "unit": "-",
+    "defaultv": "7",
+    "description": "Warning Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 423,
+    "varname": "alarm_score",
+    "value": "8",
+    "unit": "-",
+    "defaultv": "8",
+    "description": "Alarm Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 424,
+    "varname": "alert_score",
+    "value": "9.5",
+    "unit": "-",
+    "defaultv": "9.5",
+    "description": "Alert Score Threshold",
+    "information": " ",
+    "groupname": "Monitoring"
+  },
+  {
+    "id": 425,
+    "varname": "SmtpServer",
+    "value": "smtp.example.com",
+    "unit": "-",
+    "defaultv": "smtp.example.com",
+    "description": "SMTP Server Address",
+    "information": " ",
+    "groupname": "Email"
+  },
+  {
+    "id": 426,
+    "varname": "SmtpPort",
+    "value": "587",
+    "unit": "-",
+    "defaultv": "587",
+    "description": "SMTP Server Port",
+    "information": " ",
+    "groupname": "Email"
+  },
+  {
+    "id": 427,
+    "varname": "SmtpUsername",
+    "value": "user@example.com",
+    "unit": "-",
+    "defaultv": "user@example.com",
+    "description": "SMTP Username",
+    "information": " ",
+    "groupname": "Email"
+  },
+  {
+    "id": 428,
+    "varname": "SmtpPassword",
+    "value": "password",
+    "unit": "-",
+    "defaultv": "password",
+    "description": "SMTP Password",
+    "information": " ",
+    "groupname": "Email"
+  },
+  {
+    "id": 429,
+    "varname": "TwilioAccountSid",
+    "value": "your_account_sid",
+    "unit": "-",
+    "defaultv": "your_account_sid",
+    "description": "Twilio Account SID",
+    "information": " ",
+    "groupname": "Twilio"
+  },
+  {
+    "id": 430,
+    "varname": "TwilioAuthToken",
+    "value": "your_auth_token",
+    "unit": "-",
+    "defaultv": "your_auth_token",
+    "description": "Twilio Auth Token",
+    "information": " ",
+    "groupname": "Twilio"
+  },
+  {
+    "id": 431,
+    "varname": "TwilioPhoneNumber",
+    "value": "+1234567890",
+    "unit": "-",
+    "defaultv": "+1234567890",
+    "description": "Twilio Phone Number",
+    "information": " ",
+    "groupname": "Twilio"
+  },
+  {
+    "id": 432,
+    "varname": "sched_horizon",
+    "value": "Current Date",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Scheduling time horizon",
+    "information": "",
+    "groupname": "Scheduling"
+  },
+  {
+    "id": 433,
+    "varname": "tapage",
+    "value": "65",
+    "unit": "Years",
+    "defaultv": "-",
+    "description": "Tap changer normal life expectancy",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 434,
+    "varname": "avgtapops",
+    "value": "20",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Average number of tap changer operations",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 435,
+    "varname": "proxwater",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Proximity to water",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 436,
+    "varname": "locationrisk",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Location Risk Rating",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 437,
+    "varname": "typerisk",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Type Risk Rating Risk that the asset presents to the public by its characteristics and particular situation",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 438,
+    "varname": "loadatrisk",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Proximity to areas that may affect its likelihood of trespass or interference)",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 439,
+    "varname": "rating",
+    "value": "20",
+    "unit": "kVA",
+    "defaultv": "-",
+    "description": "Equipment Operating rating",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 440,
+    "varname": "bunded",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Bunded Distance to the coast",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 441,
+    "varname": "secured",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Boolean If the asset is in a secure network or not",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 442,
+    "varname": "gridoredge",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Whether the asset is a primary or a distribution (secondary) asset in the network",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 443,
+    "varname": "numcustomers",
+    "value": "150",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Attached Number of customers",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 444,
+    "varname": "loademand",
+    "value": "15",
+    "unit": "kVA",
+    "defaultv": "-",
+    "description": "Size of loads and or electricity demand",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 445,
+    "varname": "puload",
+    "value": "1.0",
+    "unit": "p.u",
+    "defaultv": "-",
+    "description": "Maximum utilisation under normal operation",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 446,
+    "varname": "moisAw",
+    "value": "0.1",
+    "unit": "p.u",
+    "defaultv": "-",
+    "description": "Water Activiy in oil",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 447,
+    "varname": "hotspot",
+    "value": "150",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Hottest spot Temperature",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 448,
+    "varname": "bubbling",
+    "value": "150",
+    "unit": "degC",
+    "defaultv": "-",
+    "description": "Bubbling Temperature",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 449,
+    "varname": "obreakdwn",
+    "value": "10",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Oil Breakdown Voltage strength",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 450,
+    "varname": "moisture",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Moisture level in oil",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 451,
+    "varname": "fural",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Furan level in oil Quality Analysis",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 452,
+    "varname": "dobletestCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Doble Test Results",
+    "information": "",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 453,
+    "varname": "meggertestCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Core Megger test results",
+    "information": "Inspections",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 454,
+    "varname": "WindRestestCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Winding Resistance test results",
+    "information": "Inspections",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 455,
+    "varname": "DPtestCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Paper Degree of Polymerization Test results",
+    "information": "Inspections",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 456,
+    "varname": "IntInspecCI",
+    "value": "0.1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Internal inspection Test results",
+    "information": "Inspections",
+    "groupname": "Inspections"
+  },
+  {
+    "id": 457,
+    "varname": "ac2h2ppm",
+    "value": "1045",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of Acethylen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 458,
+    "varname": "ac2h4ppm",
+    "value": "100",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of ethylen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 459,
+    "varname": "ac2h6ppm",
+    "value": "500",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of ethane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 460,
+    "varname": "ac2h8ppm",
+    "value": "500",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of propane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 461,
+    "varname": "ach4ppm",
+    "value": "200",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of methane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 462,
+    "varname": "acoppm",
+    "value": "1000",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of carbon monoxide gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 463,
+    "varname": "aco2ppm",
+    "value": "1200",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of arbon dioxide gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 464,
+    "varname": "ah2ppm",
+    "value": "1300",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Actual value of hydrogen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 465,
+    "varname": "prec2h2ppm",
+    "value": "1045",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of Acethylen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 466,
+    "varname": "prec2h4ppm",
+    "value": "100",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of ethylen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 467,
+    "varname": "prec2h6ppm",
+    "value": "500",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of ethane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 468,
+    "varname": "prec3h6ppm",
+    "value": "1000",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of propane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 469,
+    "varname": "prech4ppm",
+    "value": "1200",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of methane gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 470,
+    "varname": "precoppm",
+    "value": "1000",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of carbon monoxide gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 471,
+    "varname": "preco2ppm",
+    "value": "1200",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of carbon dioxide gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 472,
+    "varname": "preh2ppm",
+    "value": "1300",
+    "unit": "ppm",
+    "defaultv": "-",
+    "description": "Previous value of hydrogen gas",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 473,
+    "varname": "c2h2WeightFactor",
+    "value": "5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Acetylene Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 474,
+    "varname": "c2h4WeightFactor",
+    "value": "4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Ethylene Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 475,
+    "varname": "c2h6WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Ethane Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 476,
+    "varname": "c3h6WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Propane Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 477,
+    "varname": "ch4WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Methane Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 478,
+    "varname": "coWeightFactor",
+    "value": "1",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Carbon Monoxide Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 479,
+    "varname": "h2WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Carbon Dioxide Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 480,
+    "varname": "co2WeightFactor",
+    "value": "3",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Hydrogen Weighting Factor ",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 481,
+    "varname": "DGARoCFactorG1",
+    "value": "0.1",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Rate Of Change Factor G1",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 482,
+    "varname": "DGARoCFactorG2",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Rate Of Change Factor G2",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 483,
+    "varname": "DGAConcentrationF0",
+    "value": "0.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 0",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 484,
+    "varname": "DGAConcentrationF1",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 1",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 485,
+    "varname": "DGAConcentrationF2",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 2",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 486,
+    "varname": "DGAConcentrationF3",
+    "value": "0.33",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 3",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 487,
+    "varname": "DGAConcentrationF4",
+    "value": "0.33",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 4",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 488,
+    "varname": "DGAConcentrationF5",
+    "value": "1.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 4",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 489,
+    "varname": "DGAConcentrationF6",
+    "value": "0.66",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 6",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 490,
+    "varname": "DGAConcentrationF7",
+    "value": "1.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 7",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 491,
+    "varname": "DGAConcentrationF8",
+    "value": "1.5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 8",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 492,
+    "varname": "DGAConcentrationF9",
+    "value": "2.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 9",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 493,
+    "varname": "DGAConcentrationF10",
+    "value": "4.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "DGA Concentration Factor 10",
+    "information": " ",
+    "groupname": "Health Index"
+  },
+  {
+    "id": 494,
+    "varname": "unp_dga_frequency",
+    "value": "10",
+    "unit": "Hour",
+    "defaultv": "0",
+    "description": "Low level of acetylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 495,
+    "varname": "unp_real_norm_c2h2ppm",
+    "value": "750",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of acetylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 496,
+    "varname": "unp_real_low_c2h2ppm",
+    "value": "750",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of acetylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 497,
+    "varname": "unp_real_high_c2h2ppm",
+    "value": "7500",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of acetylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 498,
+    "varname": "unp_real_norm_c2h4ppm",
+    "value": "900",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of ethylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 499,
+    "varname": "unp_real_low_c2h4ppm",
+    "value": "900",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of ethylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 500,
+    "varname": "unp_real_high_c2h4ppm",
+    "value": "9000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of ethylen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 501,
+    "varname": "unp_real_norm_c2h6ppm",
+    "value": "800",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of ethane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 502,
+    "varname": "unp_real_low_c2h6ppm",
+    "value": "800",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of ethane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 503,
+    "varname": "unp_real_high_c2h6ppm",
+    "value": "8000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of ethane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 504,
+    "varname": "unp_real_norm_c3h6ppm",
+    "value": "700",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of propen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 505,
+    "varname": "unp_real_low_c3h6ppm",
+    "value": "700",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of propen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 506,
+    "varname": "unp_real_high_c3h6ppm",
+    "value": "7000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of propen gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 507,
+    "varname": "unp_real_norm_ch4ppm",
+    "value": "600",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of methane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 508,
+    "varname": "unp_real_low_ch4ppm",
+    "value": "600",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of methane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 509,
+    "varname": "unp_real_high_ch4ppm",
+    "value": "6000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of methane gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 510,
+    "varname": "unp_real_norm_coppm",
+    "value": "500",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of carbon monoxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 511,
+    "varname": "unp_real_low_coppm",
+    "value": "500",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of carbon monoxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 512,
+    "varname": "unp_real_high_coppm",
+    "value": "5000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "high level of carbon monoxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 513,
+    "varname": "unp_real_norm_co2ppm",
+    "value": "200",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of carbon dioxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 514,
+    "varname": "unp_real_low_co2ppm",
+    "value": "200",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of carbon dioxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 515,
+    "varname": "unp_real_high_co2ppm",
+    "value": "2000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "high level of carbon dioxide",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 516,
+    "varname": "unp_real_norm_h2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of hydrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 517,
+    "varname": "unp_real_low_h2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of hydrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 518,
+    "varname": "unp_real_high_h2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of hydrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 519,
+    "varname": "unp_real_norm_o2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Normal level of oxygen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 520,
+    "varname": "unp_real_low_o2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of oxygen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 521,
+    "varname": "unp_real_high_o2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of oxygen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 522,
+    "varname": "unp_real_norm_n2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Normal level of nitrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 523,
+    "varname": "unp_real_low_n2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of nitrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 524,
+    "varname": "unp_real_high_n2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of nitrogen",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 525,
+    "varname": "unp_real_norm_tdcgppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Normal level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 526,
+    "varname": "unp_real_low_tdcgppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 527,
+    "varname": "unp_real_high_tdcgppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 528,
+    "varname": "unp_lviec_c2h2ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 529,
+    "varname": "unp_lviec_c2h4ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 530,
+    "varname": "unp_lviec_c2h6ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 531,
+    "varname": "unp_lviec_c3h6ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 532,
+    "varname": "unp_lviec_ch4ppm",
+    "value": "1000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Low level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 533,
+    "varname": "unp_lviec_coppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 534,
+    "varname": "unp_lviec_co2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 535,
+    "varname": "unp_lviec_h2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 536,
+    "varname": "unp_lviec_tdcgppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 537,
+    "varname": "unp_rociec_c2h2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 538,
+    "varname": "unp_rociec_c2h4ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 539,
+    "varname": "unp_rociec_c2h6ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 540,
+    "varname": "unp_rociec_c3h6ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 541,
+    "varname": "unp_rociec_ch4ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 542,
+    "varname": "unp_rociec_coppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 543,
+    "varname": "unp_rociec_co2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 544,
+    "varname": "unp_rociec_h2ppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 545,
+    "varname": "unp_rociec_tdcgppm",
+    "value": "15000",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "High level of Total Dissolved Gas",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 546,
+    "varname": "high_topoil",
+    "value": "120",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Maximum top oil temperature",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 547,
+    "varname": "high_hotspot",
+    "value": "150",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Maximum hot spot temperature",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 548,
+    "varname": "high_bottom",
+    "value": "60",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Maximum bottom temperature",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 549,
+    "varname": "high_bubbling",
+    "value": "180",
+    "unit": "-",
+    "defaultv": "0",
+    "description": "Maximum bubbling temperature",
+    "information": "-",
+    "groupname": "Setpoints"
+  },
+  {
+    "id": 550,
+    "varname": "pdtankCI",
+    "value": "1.93",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Partial discharge main tank",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 551,
+    "varname": "pdtacpCI",
+    "value": "828",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Partial Discharge of Tap Changer",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 552,
+    "varname": "maintankCI",
+    "value": "1.850",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Main Tank conditions",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 553,
+    "varname": "bushingCI",
+    "value": "0.6",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Bushing conditions",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 554,
+    "varname": "coolradCI",
+    "value": "40.17",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Cooler and radiator conditions",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 555,
+    "varname": "kioskCI",
+    "value": "0.04",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Kiosk Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 556,
+    "varname": "cableboxCI",
+    "value": "22.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Cable and Boxes Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 557,
+    "varname": "externtapCI",
+    "value": "22.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "External Tap Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 558,
+    "varname": "interntapCI",
+    "value": "22.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Internal Tap Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 559,
+    "varname": "mechnismCI",
+    "value": "22.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Drive Mechanism Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 560,
+    "varname": "divbraidCI",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Diverter braids Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 561,
+    "varname": "divctactCI",
+    "value": "0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Selector and Diverter contacts Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 562,
+    "varname": "compCI",
+    "value": "100",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Composite/Combined Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 563,
+    "varname": "dgaCI",
+    "value": "0",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "DGA Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 564,
+    "varname": "hstCI",
+    "value": "40",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Thermal Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 565,
+    "varname": "topCI",
+    "value": "90",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Top Oil Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 566,
+    "varname": "boardbpCI",
+    "value": "44",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Board Break Down Probability Condition Index",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 567,
+    "varname": "oilbpCI",
+    "value": "1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Oil Break Down Probability Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 568,
+    "varname": "loadCI",
+    "value": "1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Load Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 569,
+    "varname": "tapCI",
+    "value": "1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Tap Changer Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 570,
+    "varname": "bubCI",
+    "value": "1",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Bubling Temperature Condition Index",
+    "information": " ",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 571,
+    "varname": "altitude",
+    "value": "30.201",
+    "unit": "deg",
+    "defaultv": "-",
+    "description": "GPS Altitude",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 572,
+    "varname": "longitude",
+    "value": "99.2",
+    "unit": "deg",
+    "defaultv": "-",
+    "description": "GPS Longitude",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 573,
+    "varname": "latitude",
+    "value": "101.2",
+    "unit": "deg",
+    "defaultv": "-",
+    "description": "GPS Latitude",
+    "information": " ",
+    "groupname": "nameplate"
+  },
+  {
+    "id": 574,
+    "varname": "partial_discharge_tf",
+    "value": "1.93",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Partial discharge main tank",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 575,
+    "varname": "partial_discharge_tc",
+    "value": "0.5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Partial Discharge of Tap Changer",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 576,
+    "varname": "main_tank",
+    "value": "1.850",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Main Tank conditions",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 577,
+    "varname": "bushings",
+    "value": "0.6",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Bushing conditions",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 578,
+    "varname": "coolers_radiator",
+    "value": "9.5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Cooler and radiator conditions",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 579,
+    "varname": "kiosk",
+    "value": "0.8",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Kiosk Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 580,
+    "varname": "cable_boxes",
+    "value": "2.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Cable and Boxes Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 581,
+    "varname": "external_tap",
+    "value": "7.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "External Tap Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 582,
+    "varname": "internal_tap",
+    "value": "8.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Internal Tap Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 583,
+    "varname": "mechnism_cond",
+    "value": "9.4",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Drive Mechanism Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 584,
+    "varname": "diverter_braids",
+    "value": "8.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Diverter braids Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 585,
+    "varname": "diverter_contacts",
+    "value": "8.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Selector and Diverter contacts Condition Index",
+    "information": "OBSERVED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 586,
+    "varname": "temperature_reading",
+    "value": "8.0",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Thermal Condition Index",
+    "information": "MEASURED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 587,
+    "varname": "oil_condition",
+    "value": "8.5",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Oil condition Index",
+    "information": "MEASURED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 588,
+    "varname": "paper_condition",
+    "value": "8.5",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Paper condition Index",
+    "information": "MEASURED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 589,
+    "varname": "dissolved_gas",
+    "value": "8.5",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Dissolved Gas condition Index",
+    "information": "MEASURED CONDITIONS",
+    "groupname": "diagnostic"
+  },
+  {
+    "id": 590,
+    "varname": "cm_replacement_threshold",
+    "value": "8.0",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Corrective maintenance score level",
+    "information": " ",
+    "groupname": "Intervention"
+  },
+  {
+    "id": 591,
+    "varname": "pm_replacement_threshold",
+    "value": "6.0",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Preventive maintenance score level",
+    "information": " ",
+    "groupname": "Intervention"
+  },
+  {
+    "id": 592,
+    "varname": "em_replacement_threshold",
+    "value": "9.8",
+    "unit": "%",
+    "defaultv": "-",
+    "description": "Emergency replacement score level",
+    "information": " ",
+    "groupname": "Intervention"
+  },
+  {
+    "id": 593,
+    "varname": "routine_servicing_threshold",
+    "value": "0.2",
+    "unit": "days",
+    "defaultv": "-",
+    "description": "Routine servicing threshold",
+    "information": " ",
+    "groupname": "Intervention"
+  },
+  {
+    "id": 594,
+    "varname": "end_of_life_threshold",
+    "value": "9.8",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "End of life score level",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 595,
+    "varname": "inspec_testing_threshold",
+    "value": "0.2",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "inspection testing threshold",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 596,
+    "varname": "condition_monitoring_threshold",
+    "value": "0.5",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Condition monitoring threshold",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 597,
+    "varname": "minimum_repair_threshold",
+    "value": "6.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Minimum repair threshold",
+    "information": "",
+    "groupname": "INTERVENTION"
+  },
+  {
+    "id": 598,
+    "varname": "refurbishment_threshold",
+    "value": "6.0",
+    "unit": "-",
+    "defaultv": "-",
+    "description": "Refurbishment threshold",
+    "information": "",
+    "groupname": "INTERVENTION"
+  }
+]

@@ -1,51 +1,39 @@
 [  
   {
     "Eqsernum": "Template", "Varname": "customerid", "Value": "6.0", "Unit": "-", "Defaultv": "-", "Description": "Customer Identification",
-    "Groupname": "nameplate", "Information": ""
+    "Groupname": "nameplate", "Information": ""  
   },
     {
-    "Eqsernum": "Template", "Varname": "unitid", "Value": "6.0", "Unit": "-", "Defaultv": "-", "Description": "Unit Identification",
-    "Groupname": "nameplate", "Information": ""
-  },
-  {
-    "Eqsernum": "Template", "Varname": "assettype", "Value": "HV_TRANSFORMER", "Unit": "-", "Defaultv": "-", "Description": "Asset category",
-    "Groupname": "nameplate", "Information": ""
-  },
-  {
-    "Eqsernum": "Template", "Varname": "numphase", "Value": "6.0", "Unit": "-", "Defaultv": "-", "Description": "Number of phases",
-    "Groupname": "nameplate", "Information": ""
-  },
-  {
-    "Eqsernum": "Template", "Varname": "lossbasekva", "Value": "26000", "Unit": "Volt", "Defaultv": "-", "Description": "Loss Base kVA",
+    "Eqsernum": "Template", "Varname": "LossBasekVA", "Value": "26000", "Unit": "Volt", "Defaultv": "-", "Description": "Loss Base kVA",
     "Groupname": "nameplate", "Information": " "
   },
   {
-    "Eqsernum": "Template", "Varname": "losstempbase", "Value": "85", "Unit": "Volt", "Defaultv": "85", "Description": "Temperature Base for Losses",
+    "Eqsernum": "Template", "Varname": "assettype", "Value": "HV_TRANSFORMER", "Unit": "-", "Defaultv": "-", "Description": "DISTRIBUTION, MEDIUM, or LARGE Power Transformer",
     "Groupname": "nameplate", "Information": " "
   },
   {
-    "Eqsernum": "Template", "Varname": "windI2Rlosses", "Value": "65", "Unit": "kW", "Defaultv": "1200", "Description": "Winding square Losses",
+    "Eqsernum": "Template", "Varname": "LossTempBase", "Value": "85", "Unit": "Volt", "Defaultv": "85", "Description": "Temperature Base for Losses",
     "Groupname": "nameplate", "Information": " "
   },
   {
-    "Eqsernum": "Template", "Varname": "windeddyloss", "Value": "65", "Unit": "kW", "Defaultv": "100", "Description": "Winding Eddy Losses",
+    "Eqsernum": "Template", "Varname": "WindI2RLosses", "Value": "65", "Unit": "kW", "Defaultv": "1200", "Description": "Winding square Losses",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "WindEddyLoss", "Value": "65", "Unit": "kW", "Defaultv": "100", "Description": "Winding Eddy Losses",
     "Groupname": "nameplate", "Information": " "
   },    
   {
-    "Eqsernum": "Template", "Varname": "windstraylosses", "Value": "65", "Unit": "kW", "Defaultv": "20", "Description": "Winding Stray Losses",
+    "Eqsernum": "Template", "Varname": "WindStrayLosses", "Value": "65", "Unit": "kW", "Defaultv": "20", "Description": "Winding Stray Losses",
     "Groupname": "nameplate", "Information": " "
   },
   {
-    "Eqsernum": "Template", "Varname": "corelosses", "Value": "65", "Unit": "kW", "Defaultv": "0.5", "Description": "Core Losses",
-    "Groupname": "nameplate", "Information": " "
-  },
-  {
-    "Eqsernum": "Template", "Varname": "perunitbasekvA", "Value": "65", "Unit": "kW", "Defaultv": "0.5", "Description": "Per-unit base kVA",
+    "Eqsernum": "Template", "Varname": "CoreLosses", "Value": "65", "Unit": "kW", "Defaultv": "0.5", "Description": "Core Losses",
     "Groupname": "nameplate", "Information": " "
   },
 
   {
-    "Eqsernum": "Template", "Varname": "perUnitbasekvA", "Value": "65", "Unit": "kW", "Defaultv": "0.5", "Description": "Per-unit base kVA",
+    "Eqsernum": "Template", "Varname": "PerUnitbasekVA", "Value": "65", "Unit": "kW", "Defaultv": "0.5", "Description": "Per-unit base kVA",
     "Groupname": "nameplate", "Information": " "
   },
   {
@@ -77,7 +65,7 @@
     "Groupname": "nameplate", "Information": " "
   },
   {
-    "Eqsernum": "Template", "Varname": "RatedAmbient", "Value": "65", "Unit": "degC", "Defaultv": "65", "Description": "Rated Ambient Temperature(Θᴀ,ʀ)",
+    "Eqsernum": "Template", "Varname": "RatedAmbient", "Value": "30", "Unit": "degC", "Defaultv": "65", "Description": "Rated Ambient Temperature(Θᴀ,ʀ)",
     "Groupname": "nameplate", "Information": " "
   },
   {
@@ -236,12 +224,26 @@
     "Eqsernum": "Template", "Varname": "HotSpotMoMUL", "Value": "0.6", "Unit": "-", "Defaultv": "0.6", "Description": "Hot Spot Moisture Multiplier",
     "Groupname": "nameplate",  "Information": " "
   },
+
   {
-    "Eqsernum": "Template", "Varname": "num_fans", "Value": "4", "Unit": "-", "Defaultv": "0", "Description": "Total number of fans installed",
+    "Eqsernum": "Template", "Varname": "dynamic_cycle", "Value": "0", "Unit": "-", "Defaultv": "0", "Description": "Load cycle count for dynamic loading",
+    "Groupname": "nameplate",  "Information": " "
+  },
+
+  {
+    "Eqsernum": "Template", "Varname": "enp_paper_type", "Value": "0", "Unit": "-", "Defaultv": "0", "Description": "Type of Paper",
     "Groupname": "nameplate",  "Information": " "
   },
   {
-    "Eqsernum": "Template", "Varname": "dynamic_cycle", "Value": "0", "Unit": "-", "Defaultv": "0", "Description": "Load cycle count for dynamic loading",
+    "Eqsernum": "Template", "Varname": "enp_iec_ref", "Value": "110", "Unit": "degC", "Defaultv": "0", "Description": "Reference IEC Temperature",
+    "Groupname": "nameplate",  "Information": " "
+  },
+    {
+    "Eqsernum": "Template", "Varname": "enp_ieee_ref", "Value": "110", "Unit": "degC", "Defaultv": "0", "Description": "Reference IEEE Temperature",
+    "Groupname": "nameplate",  "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "num_fans", "Value": "4", "Unit": "-", "Defaultv": "0", "Description": "Total number of fans installed",
     "Groupname": "nameplate",  "Information": " "
   },
   {
@@ -328,14 +330,54 @@
     "Eqsernum": "Template", "Varname": "XTLoadLoss", "Value": "250", "Unit": "Watts", "Defaultv": "250", "Description": "Load Losses in XT cross-winding",
     "Groupname": "nameplate",  "Information": " "
   },
-    {
-    "Eqsernum": "Template", "Varname": "tflifetime", "Value": "50", "Unit": "Years",  "Defaultv": "50", "Description": "Normal expected life of the tap changer",
+  {
+    "Eqsernum": "Template", "Varname": "tflifetime", "Value": "50", "Unit": "Years",  "Defaultv": "50", "Description": "Normal expected life of the transformer",
     "Groupname": "nameplate", "Information": " "
   },
   {
     "Eqsernum": "Template", "Varname": "tclifetime", "Value": "50", "Unit": "Years",  "Defaultv": "50", "Description": "Normal expected life of the tap changer",
     "Groupname": "nameplate", "Information": " "
   },
+  {
+    "Eqsernum": "Template", "Varname": "LtcTapRange", "Value": "50", "Unit": "kV",  "Defaultv": "50", "Description": "Load Tap Range [±]",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LtcTapSteps", "Value": "10", "Unit": "-",  "Defaultv": "10", "Description": "Number of Tap Steps",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LtcRatedOilRise", "Value": "35", "Unit": "degC",  "Defaultv": "50", "Description": "Contact temperature rise over oil at rated current(ΔΘc,ʀ)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LtcLocation", "Value": "INTEGRATED", "Unit": "-", "Defaultv": "INTEGRATED", "Description": "Location of the LTC (INTEGRATED/SEPARATED)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LtcWinding", "Value": "HV", "Unit": "-", "Defaultv": "HV", "Description": "Winding with the adjustable tap (HV/LV)",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LtcCapacity", "Value": "10", "Unit": "MVA", "Defaultv": "10", "Description": "Load Tap Changer switching capacity",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LtcRatedTapPos", "Value": "5", "Unit": "-", "Defaultv": "5", "Description": "Load Tap Changer Rated Position",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LtcMinPos", "Value": "10", "Unit": "-", "Defaultv": "10", "Description": "Minimun Tap Changer Position",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "LtcMaxPos", "Value": "5", "Unit": "-", "Defaultv": "5", "Description": "Maximun Tap Changer Position",
+    "Groupname": "nameplate", "Information": " "
+  },
+  {
+    "Eqsernum": "Template", "Varname": "IsTapChanging", "Value": "0", "Unit": "-", "Defaultv": "0", "Description": "Whether or Not Tap Changer gets Evaluated",
+    "Groupname": "nameplate", "Information": " "
+  },  
   {
     "Eqsernum": "Template", "Varname": "eqpmt", "Value": "0",  "Unit": "-",  "Defaultv": "{{XType}}", "Description": "Equipment type",
     "Groupname": "nameplate", "Information": " "
@@ -513,7 +555,7 @@
     "Groupname": "nameplate", "Information": " "
   },
   {
-    "Eqsernum": "Template", "Varname": "rating",  "Value": "{{Rating1}}", "Unit": "kVA", "Defaultv": "-", "Description": "Equipment Operating rating", "Groupname": "nameplate",
+    "Eqsernum": "Template", "Varname": "rating",  "Value": "20", "Unit": "kVA", "Defaultv": "-", "Description": "Equipment Operating rating", "Groupname": "nameplate",
     "Information": " "
   },
   {
@@ -1711,7 +1753,6 @@
     "Eqsernum": "Template", "Varname": "end_of_life_threshold", "Value": "9.8", "Unit": "-", "Defaultv": "-",
     "Description": "End of life score level", "Groupname": "INTERVENTION", "Information": ""
   },
-
   {
     "Eqsernum": "Template", "Varname": "inspec_testing_threshold", "Value": "0.2", "Unit": "-", "Defaultv": "-", "Description": "inspection testing threshold",
     "Groupname": "INTERVENTION", "Information": ""

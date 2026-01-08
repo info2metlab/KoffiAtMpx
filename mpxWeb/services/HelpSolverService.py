@@ -1,8 +1,9 @@
 import logging
 import math
+import json
 from typing import Any, Callable, Iterable, List, Optional
 from HelpThermalSolver import *
-from .HelpSolverAnalytics import *
+from HelpSolverAnalytics import *
 
         # public readonly LoadingStd ThermalStd = new LoadingStd
         # {
@@ -15,12 +16,11 @@ from .HelpSolverAnalytics import *
 
 class SolverService:
 
-    def __init__(self, thermal_std: Optional[Any] = None) -> None:
+    def __init__(self, thermal_std: Optional[Any]) -> None:
         self.xfrm_analytics  = SolverAnalytics()
-        self.xfrm_assessment = ThermalSolver()
+        self.xfrm_assessment = ThermalSolver(self.xfrm_analytics, is_real_time=False)
         self.thermal_std = thermal_std
         self.logger = logging.getLogger(__name__)
-        self.p_session = Session(p_engine)                          
 
 
     def to_minutes(start_date: str, end_date: str) -> dict:
@@ -151,55 +151,75 @@ class SolverService:
 
         thermal_optimum: List[Any] = []
         plate_optimum: List[Any] = []
-        mpc_profile  = getattr(mpc_args, "mpcProfile", []) #[self._to_profile(p) for p in getattr(mpc_args, "mpcProfile", [])]
-        session_id   = getattr(mpc_args, "sessionId", "")
-        xfrm_id      = getattr(mpc_args, "XfrmID", "")
-        mpc_scenario = getattr(mpc_args, "mpcScenario", None)
-        mpc_power    = getattr(mpc_scenario, "CoolPWLimit", 0.0) if mpc_scenario else 0.0
-        pof_failure  = float(getattr(mpc_args, "mpcPof", 0.0))
-        xcool        = self.p_session.execute(coolings).select().all()
+        mpc_profile  = mpc_args.loadProfile #[self._to_profile(p) for p in getattr(mpc_args, "mpcProfile", [])]
+        session_id   = mpc_args.sessionId
+        xfrm_id      = mpc_args.xfrmId
+        mpc_scenario = mpc_args.loadingCase
+        mpc_power    = mpc_args.mpcPower
+        pof_failure  = mpc_args.mpcPof
         rx_ambient   = 0.0
+        
+        with Session(p_engine) as p_session:
+            xcool        = p_session.execute(select(coolings)).all()
+            for coolvar in xcool:
+                # if hasattr(coolvar, "Power"):
+                #     setattr(coolvar, "Power", mpc_power)
 
-        for coolvar in xcool:
-            if getattr(coolvar, "Status", None) != "ON":
-                continue
-            if hasattr(coolvar, "Power"):
-                setattr(coolvar, "Power", mpc_power)
+                # def _to_plain(o: Any):
+                #     if isinstance(o, dict):
+                #         return o
+                #     d = getattr(o, "__dict__", None)
+                #     if isinstance(d, dict):
+                #         return {k: v for k, v in d.items() if not k.startswith("_")}
+                #     try:
+                #         return dict(o)
+                #     except Exception:
+                #         return repr(o)
 
-            self.set_xfrm_dictionary(session_id, xfrm_id, coolvar)
-            output_str = getattr(self.xfrm_analytics, "output_string", "")
-            self.logger.info("LOADABILITY_LIMITS:%s", output_str)
-            if not output_str:
-                thermal_plate, thermals = self.xfrm_assessment.perform_trans_rating(
-                    mpc_scenario,
-                    mpc_profile,
-                    self.thermal_std,
-                    coolvar,
-                    rx_ambient,
-                    pof_failure
-                )
-                if thermals:
-                    thermal_optimum.extend(thermals)
-                if thermal_plate:
-                    plate_optimum.append(thermal_plate)
-            else:
-                self.logger.info("LOADABILITY_LIMITS: Could not run eNameplate due to: %s", output_str)
+                # profiles = [_to_plain(obj) for obj in mpc_profile]
+                # Print JSON-safe, readable representation of the profile
+                # print("mpc_profile =>", json.dumps(profiles, default=str))
 
-        self.logger.info("==============================================================")
-        self.logger.info("Session ID: %s", session_id)
-        self.logger.info("Transformer ID: %s", xfrm_id)
-        self.logger.info("End of the real-time forecast")
-        self.logger.info("Thermal Results: %s", thermal_optimum)
-        self.logger.info("NamePlate Results: %s", plate_optimum)
-        self.logger.info("==============================================================")
-        return OptimumResults(xfrm_id=xfrm_id, thermal_results=thermal_optimum, name_plate_results=plate_optimum)
+                self.set_xfrm_dictionary(session_id, xfrm_id, coolvar)
+                output_str = getattr(self.xfrm_analytics, "output_string", "")
+                print(f"output_str => {output_str}"   )
+                self.logger.info(f"PARAMETERS CHECKED OUTCOME {output_str}")
+                if not output_str:
+                    thermal_plate, thermals = self.xfrm_assessment.perform_trans_rating(
+                        mpc_scenario,
+                        mpc_profile,
+                        self.thermal_std,
+                        coolvar,
+                        rx_ambient,
+                        pof_failure
+                    )
+                    print(f"thermal_plate => {thermal_plate}"   )
+                    if thermals:
+                        thermal_optimum.extend(thermals)
+                    if thermal_plate:
+                        plate_optimum.append(thermal_plate)
+                else:
+                    self.logger.info(f"LOADABILITY_LIMITS: Could not run eNameplate due to: {output_str}")
+
+            self.logger.info("==============================================================")
+            self.logger.info(f"Session ID: {session_id}")
+            self.logger.info(f"Transformer ID: {xfrm_id}")
+            self.logger.info("End of the real-time forecast")
+            self.logger.info(f"Thermal Results: {thermal_optimum}")
+            self.logger.info(f"NamePlate Results: {plate_optimum}")
+            self.logger.info("==============================================================")
+            optimus_results                    =   OptimumResults()
+            optimus_results.xfrm_id            =   xfrm_id
+            optimus_results.thermal_results    =   thermal_optimum
+            optimus_results.name_plate_results =   plate_optimum
+            return optimus_results
 
     async def solve_without_limits(self, mpc_args: mpcArgs) -> OptimumResults:
         thermal_optimum: List[Any] = []
         plate_optimum: List[Any] = []
         mpc_profile = [self._to_profile(p) for p in getattr(mpc_args, "mpcProfile", [])]
         session_id = getattr(mpc_args, "sessionId", "")
-        xfrm_id = getattr(mpc_args, "XfrmID", "")
+        xfrm_id = getattr(mpc_args, "xfrmId", "")
 
         mpc_scenario = getattr(mpc_args, "mpcScenario", None)
         mpc_power    = getattr(mpc_scenario, "CoolPWLimit", 0.0) if mpc_scenario else 0.0
@@ -247,7 +267,7 @@ class SolverService:
         plate_optimum: List[Any] = []
         mpc_profile = [self._to_profile(p) for p in getattr(mpc_args, "mpcProfile", [])]
         session_id = getattr(mpc_args, "sessionId", "")
-        xfrm_id = getattr(mpc_args, "XfrmID", "")
+        xfrm_id = getattr(mpc_args, "xfrmId", "")
 
         mpc_scenario = getattr(mpc_args, "mpcScenario", None)
         mpc_power    = getattr(mpc_scenario, "CoolPWLimit", 0.0) if mpc_scenario else 0.0

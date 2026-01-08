@@ -14,12 +14,14 @@ import pandas as pd
 import requests
 import csv as csv
 import time
+import asyncio
 from sqlalchemy import extract, func
 from datetime import timedelta
+    
 from XUtility import *
 from XPoFailure import *
-# from HelpSolverAnalytics import *
 from HelpSolverService import SolverService
+
 
 
 # APIs URLs
@@ -51,6 +53,13 @@ class LoadProcessor:
         self.seasonal_profile = seasonal_profile        
         self.sim_samples                = 5
         self.horizon                    = simulation_time
+
+        # Default Loading standard
+        thermalStd = LoadingStd()
+        thermalStd.pubDate = arrow.now().format("YYYY-MM-DD")
+        thermalStd.pubName = LoadingStandard.IEEEG
+        thermalStd.pubTitle= "Default IEEE Guide for Loading"
+        self.thermalStd =  thermalStd
         # Initialize health_samples with one row per horizon step
         try:
             n_steps = int(self.horizon)
@@ -278,7 +287,7 @@ class LoadProcessor:
 
             # dynamic load profile
             for index, row_data in rla_all_state.iterrows():
-                load_profile            = loadprofiles()
+                load_profile            = LoadProfile()
                 load_profile.sessionId  = PERIODIC_USER
                 load_profile.xfrmId     = "MPX-100M"
                 load_profile.IsSelected = True
@@ -292,7 +301,7 @@ class LoadProcessor:
 
             # print(json.dumps([obj.__dict__ for obj in self.load_profile]))
             mpcArgs = {
-                "xfrmId": "", 
+                "xfrmId": "MPX-100", 
                 "sessionId":PERIODIC_USER, 
                 "mpcProfile": [obj.__dict__ for obj in self.load_profile],
                 "mpcScenario": self.loading_case.__dict__,
@@ -341,40 +350,42 @@ class LoadProcessor:
             if self.load_profile.__len__() < MAX_LOAD_PROFILE :
                 # print(f'Load profile length not adequate :{self.load_profile}')
                 return
-            mpc_args = mpcArgs(
-                       xfrmId="MPX-100M",
-                       sessionId=PERIODIC_USER, 
-                       mpcPof=mpcPof,
-                       loadProfile=self.load_profile,
-                       loadingCase=loading_case
-                      )  
+            # Simple dict-style arguments for solver (easier to serialize/test)
+            mpc_args = mpcArgs()
+            mpc_args.xfrmId = "MPX-100M"
+            mpc_args.sessionId = PERIODIC_USER
+            mpc_args.mpcPof = mpcPof
+            mpc_args.loadProfile = self.load_profile
+            mpc_args.loadingCase = loading_case
+            # {
+            #     "xfrmId": "MPX-100M",
+            #     "sessionId": PERIODIC_USER,
+            #     "mpcPof": mpcPof,
+            #     # convert LoadProfile objects to plain dicts for downstream use
+            #     "loadProfile": [obj.__dict__ for obj in self.load_profile],
+            #     # loadingCase may be an object; pass plain dict when possible
+            #     "loadingCase": loading_case.__dict__ if hasattr(loading_case, "__dict__") else loading_case,
+            # }
             # print(f"----seasonal load profile at step : ----{self.asset_id}--\n--")
             # print( loading_case.__dict__)
             # print("-------====--------")
             # [print(f"{load_profile.time} {load_profile.sumamb} {load_profile.sumpul} {load_profile.sumcool}") for load_profile in self.load_profile]
 
             try:
-          
-                
-                solver_service       = SolverService() 
-                self.mpc_results     = await solver_service.solve_dynamic_plate(mpc_args)
 
+                solver_service       = SolverService(self.thermalStd) 
+                self.mpc_results     = await solver_service.solve_dynamic_plate(mpc_args)
                 # response = requests.post(os.environ["RATING_URL"]  +'/DoRealForecast',  data = json.dumps(mpcArgs)) 
                 # print("======================\n", self.mpc_results)
                 # self.mpc_results = response.json()           
                 df_thermal = pd.DataFrame()
                 df_nameplate = pd.DataFrame()
 
-                if self.mpc_results.__len__():
-                    nameplate = self.mpc_results.get("NamePlateResults", [])
-                    thermal   = self.mpc_results.get("ThermalResults", [])
-
-                    # Thermal results
-                    df = pd.DataFrame(thermal)
-                                        
+                if self.mpc_results:
+                    nameplate = self.mpc_results.name_plate_results
+                    thermal   = self.mpc_results.thermal_results
                     print("=======thermal results ======")
-                    print(df)
-
+                    df = pd.DataFrame(thermal)                                        
                     if not df.empty:
                         thermal_cols_map = {
                             "LoadType":    "loadtype",
@@ -396,9 +407,10 @@ class LoadProcessor:
                                     df_thermal[col] = pd.to_numeric(df_thermal[col], errors="coerce")
                             if "otime" in df_thermal.columns:
                                 df_thermal = df_thermal.sort_values(["otime"])
-
+                        print(df_thermal)
                     # Nameplate results
                     df_n = pd.DataFrame(nameplate)
+                    print(f"=======nameplate results ======\n{df_n}")
                     if not df_n.empty:
                         nameplate_cols_map = {
                             "LoadType":         "loadtype",
@@ -410,7 +422,7 @@ class LoadProcessor:
                             "IEEEGttpTOT":      "ttptop",
                             "IEEEGttpHST":      "ttphot",
                             "IEEEGttpMVA":      "ttpmva",
-                            "IEEEGMargin":      "margin",
+                            "IEEEGMargin":      "margin"
                         }
                         available_nameplate = {src: dst for src, dst in nameplate_cols_map.items() if src in df_n.columns}
                         if available_nameplate:
@@ -419,14 +431,8 @@ class LoadProcessor:
                                 df_nameplate[col] = pd.to_numeric(df_nameplate[col], errors="coerce")
 
                 return df_thermal, df_nameplate
-            except HTTPError as http_err:
-                print(f'HTTP error occured: {http_err}')
-            except ConnectionError as errc:
-                print(f'Connection error occured: {errc}')
             except TimeoutError as errt:
                 print(f'Timeout error occured: {errt}')
-            except requests.RequestException as erreq:
-                print(f'Timeout error occured: {erreq}')
             except Exception as err:
                 print(f'HTTP error occured: {err}')
 
@@ -516,6 +522,8 @@ class LoadProcessor:
         for loading_case_item in self.loading_case:
             print(f"Performing load assessment for loading case: {loading_case_item.LoadType}")
             loading_case                 = LoadingCase()
+            loading_case.sessionId       = PERIODIC_USER
+            loading_case.xfrmId          = "MPX-100M"
             loading_case.LoadType        = loading_case_item.LoadType 
             loading_case.LoLLimit        = float(loading_case_item.LoLLimit)
             loading_case.BubblingLimit   = float(loading_case_item.BubblingLimit)
@@ -534,7 +542,11 @@ class LoadProcessor:
             loading_case.TopOilLimit     = float(loading_case_item.TopOilLimit)
             loading_case.PULLimit        = float(loading_case_item.PULLimit)
 
-            df_thermal, df_nameplate = self.perform_load_diagnostic(mpcPof, loading_case)
+            res = asyncio.run(self.perform_load_diagnostic(mpcPof, loading_case))
+            if res:
+                df_thermal, df_nameplate = res
+            else:
+                df_thermal, df_nameplate = pd.DataFrame(), pd.DataFrame()
             df_nameplate_all = pd.concat([df_nameplate_all, df_nameplate], ignore_index=True)
             df_thermal_all   = pd.concat([df_thermal_all, df_thermal], ignore_index=True)
         # print("--------------Completed load assessment----------------")
@@ -1390,6 +1402,10 @@ def dynamic_loading_function():
 
         except Exception as ex:
             print(f"Thread failed: {ex}")
+            # Ensure downstream variables exist even if run failed
+            health_samples = pd.DataFrame()
+            nameplate_samples = []
+            thermal_samples = pd.DataFrame()
 
                 
         print("--------------------------------------------")
@@ -1439,6 +1455,19 @@ def dynamic_loading_function():
         # ----------------------------#
         # Thermal stats               #
         # ----------------------------#                
+        # Normalize thermal_samples to have a canonical 'load_type' column and ensure required numeric columns exist.
+        if not isinstance(thermal_samples, pd.DataFrame):
+            thermal_samples = pd.DataFrame()
+        if 'load_type' not in thermal_samples.columns:
+            if 'loadtype' in thermal_samples.columns:
+                thermal_samples['load_type'] = thermal_samples['loadtype']
+            else:
+                thermal_samples['load_type'] = pd.Series(dtype=object)
+        if 'opyear' not in thermal_samples.columns:
+            thermal_samples['opyear'] = pd.Series(dtype='Int64')
+        if 'otime' not in thermal_samples.columns:
+            thermal_samples['otime'] = pd.Series(dtype=float)
+
         for lt in load_types:
             v = width     
             while(v < simulation_time + width):                                                

@@ -248,8 +248,8 @@ def main(args):
     asset_list      = p_session.execute(select(xfrmmaps)).all() 
 
     for asset_item in asset_list:
-        asset_id        = asset_item.XfrmID  
-        asset_type      = p_session.execute(select(xfrmmaps).where(xfrmmaps.c.XfrmID == asset_id)).fetchone().Catgory
+        asset_id        = asset_item.xfrmId  
+        asset_type      = p_session.execute(select(xfrmmaps).where(xfrmmaps.c.xfrmId == asset_id)).fetchone().Catgory
         alarm_configs   = pd.DataFrame(p_session.execute(select(alarmconfigs).where(alarmconfigs.c.Eqsernum == asset_id)).mappings())
         alarm_vars      = pd.DataFrame(p_session.execute(select(alarmentries).where(alarmentries.c.Eqsernum == asset_id)).mappings())
         action_vars     = pd.DataFrame(p_session.execute(select(actionentries).where(actionentries.c.AssetType == asset_type)).mappings())
