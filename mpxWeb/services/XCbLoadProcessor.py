@@ -36,14 +36,15 @@ PERIODIC_USER = "User"
 class LoadProcessor:
 
 
-    def __init__(self, dynamic_cycle, states, seasonal_profile, loading_cases, simulation_time):
+    def __init__(self, asset_id, dynamic_cycle, states, seasonal_profile, loading_cases, horizon):
 
         self.cycle             = dynamic_cycle
         self.states            = states
+        self.asset_id         = asset_id
         self.load_profile      = list()        
         self.loading_case      = loading_cases
-        self.horizon           = simulation_time # in hours 
-        self.sim_samples       = 100
+        self.horizon           = horizon # in hours 
+        self.sim_samples       = 2
         self.asset_vars        = pd.DataFrame()
         self.action_config     = {}
         self.pof_static_config = {}
@@ -51,8 +52,7 @@ class LoadProcessor:
         self.load_curve        = []
         self.ref_state         = []
         self.seasonal_profile = seasonal_profile        
-        self.sim_samples                = 5
-        self.horizon                    = simulation_time
+        self.horizon                    = horizon
 
         # Default Loading standard
         thermalStd = LoadingStd()
@@ -357,27 +357,12 @@ class LoadProcessor:
             mpc_args.mpcPof = mpcPof
             mpc_args.loadProfile = self.load_profile
             mpc_args.loadingCase = loading_case
-            # {
-            #     "xfrmId": "MPX-100M",
-            #     "sessionId": PERIODIC_USER,
-            #     "mpcPof": mpcPof,
-            #     # convert LoadProfile objects to plain dicts for downstream use
-            #     "loadProfile": [obj.__dict__ for obj in self.load_profile],
-            #     # loadingCase may be an object; pass plain dict when possible
-            #     "loadingCase": loading_case.__dict__ if hasattr(loading_case, "__dict__") else loading_case,
-            # }
-            # print(f"----seasonal load profile at step : ----{self.asset_id}--\n--")
-            # print( loading_case.__dict__)
-            # print("-------====--------")
-            # [print(f"{load_profile.time} {load_profile.sumamb} {load_profile.sumpul} {load_profile.sumcool}") for load_profile in self.load_profile]
-
+       
             try:
 
                 solver_service       = SolverService(self.thermalStd) 
                 self.mpc_results     = await solver_service.solve_dynamic_plate(mpc_args)
-                # response = requests.post(os.environ["RATING_URL"]  +'/DoRealForecast',  data = json.dumps(mpcArgs)) 
-                # print("======================\n", self.mpc_results)
-                # self.mpc_results = response.json()           
+
                 df_thermal = pd.DataFrame()
                 df_nameplate = pd.DataFrame()
 
@@ -385,7 +370,8 @@ class LoadProcessor:
                     nameplate = self.mpc_results.name_plate_results
                     thermal   = self.mpc_results.thermal_results
                     print("=======thermal results ======")
-                    df = pd.DataFrame(thermal)                                        
+                    thermal_json = [obj.__dict__ if hasattr(obj, '__dict__') else obj for obj in thermal]
+                    df = pd.DataFrame(thermal_json)                                        
                     if not df.empty:
                         thermal_cols_map = {
                             "LoadType":    "loadtype",
@@ -408,8 +394,10 @@ class LoadProcessor:
                             if "otime" in df_thermal.columns:
                                 df_thermal = df_thermal.sort_values(["otime"])
                         print(df_thermal)
+                    
                     # Nameplate results
-                    df_n = pd.DataFrame(nameplate)
+                    nameplate_json = [obj.__dict__ if hasattr(obj, '__dict__') else obj for obj in nameplate]
+                    df_n = pd.DataFrame(nameplate_json)
                     print(f"=======nameplate results ======\n{df_n}")
                     if not df_n.empty:
                         nameplate_cols_map = {
@@ -444,11 +432,6 @@ class LoadProcessor:
 
     def save_load_result (self):
         if self.mpc_results.__len__():
-            # print("\n======= Getting New loading assessment results =====")
-            # print("======= nameplate =====", self.mpc_results["NamePlateResults"])
-            # print("\n\n")
-            # print("======= thermal =====", self.mpc_results["ThermalResults"])
-
             nameplate   = self.mpc_results["NamePlateResults"]
             thermal     = self.mpc_results["ThermalResults"] 
             load_curve  = []
@@ -592,9 +575,7 @@ class LoadProcessor:
                   
          self.pof_dynamic_config["age_tf" ]          = age_tf
          self.pof_dynamic_config["age_tc" ]          = tapage + step
-         pof_vars                                    = self.pof_static_config | self.pof_dynamic_config
-                  
-
+         pof_vars                                    = self.pof_static_config | self.pof_dynamic_config                 
          pof                                         = PoF(pof_vars)
                   
          print("==========================================")
@@ -732,13 +713,13 @@ class LoadProcessor:
 
     def compute_replication_stats(self, nameplate_samples, thermal_samples):
         """
-        Aggregate replication samples and compute summary statistics.
+        Aggregate replication samples into domain objects.
 
         Returns:
-            - nameplate_stats_list: list of LoadDistro objects aggregated by ['asset_id','load_type','opyear'] (means)
-            - thermal_stats_df: DataFrame aggregated by ['asset_id','load_type','opyear','otime'] with mean/min/max/std/count
+            - nameplate_stats_list: list[LoadDistro] with mean/min/max/std for each metric
+            - thermal_stats_df: DataFrame representation of ThermalDistro aggregates
         """
-        # helpers
+
         def _to_num_safe(v, default=np.nan):
             try:
                 if isinstance(v, (list, tuple, np.ndarray, pd.Series)):
@@ -761,96 +742,101 @@ class LoadProcessor:
             return {}
 
         # --- Nameplate aggregation ---
-        # Build DataFrame from nameplate_samples (list of objects/dicts) or pass through if it's already a DataFrame
         if isinstance(nameplate_samples, pd.DataFrame):
             np_df = nameplate_samples.copy()
         else:
-            rows = []
-            if nameplate_samples:
-                for s in nameplate_samples:
-                    rows.append(_obj_to_row(s))
+            rows = [_obj_to_row(s) for s in (nameplate_samples or [])]
             np_df = pd.DataFrame(rows)
 
         nameplate_stats_list = []
         if not np_df.empty:
-            # normalize column names if expected names use different casing
-            # ensure opyear numeric
             if 'opyear' in np_df.columns:
                 np_df['opyear'] = pd.to_numeric(np_df['opyear'], errors='coerce')
 
-            # Identify metric columns starting with react_/prev_/condb_
-            metric_prefixes = ('react_', 'prev_', 'condb_')
-            metric_cols = [c for c in np_df.columns if any(c.startswith(pref) for pref in metric_prefixes)]
-            group_cols = [c for c in ('asset_id', 'load_type', 'opyear') if c in np_df.columns]
-            if group_cols and metric_cols:
-                # coerce numeric metrics
-                for c in metric_cols:
+            metric_cols_np = [c for c in ('upload', 'margin', 'upbottom', 'uptopoil', 'uphotspot', 'uplife') if c in np_df.columns]
+            group_cols     = [c for c in ('asset_id', 'load_type', 'opyear') if c in np_df.columns]
+
+            if group_cols and metric_cols_np:
+                for c in metric_cols_np:
                     np_df[c] = pd.to_numeric(np_df[c], errors='coerce')
 
-                # compute means
-                grouped = np_df.groupby(group_cols, dropna=False)
-                mean_df = grouped[metric_cols].mean().reset_index()
+                grouped         = np_df.groupby(group_cols, dropna=False)
+                agg_df          = grouped.agg({m: ['mean', 'min', 'max', 'std'] for m in metric_cols_np}).reset_index()
+                agg_df.columns  = [col if isinstance(col, str) else f"{col[0]}_{col[1]}" for col in agg_df.columns]
 
-                # convert each row to loaddistros
-                for row in mean_df.itertuples(index=False):
-                    ld = loaddistros()
-                    # safe set attributes if columns exist
+                for _, row in agg_df.iterrows():
+                    ld = LoadDistro()
                     for gc in group_cols:
-                        try:
-                            setattr(ld, gc, getattr(row, gc))
-                        except Exception:
-                            try:
-                                setattr(ld, gc, row[mean_df.columns.get_loc(gc)])
-                            except Exception:
-                                pass
-                    for mc in metric_cols:
-                        val = getattr(row, mc)
-                        try:
-                            setattr(ld, mc, float(val) if np.isfinite(val) else 0.0)
-                        except Exception:
-                            setattr(ld, mc, 0.0)
+                        setattr(ld, gc, row.get(gc))
+                    for mc in metric_cols_np:
+                        setattr(ld, mc, _to_num_safe(row.get(f"{mc}"), 0.0))
+                        setattr(ld, f"{mc}_min", _to_num_safe(row.get(f"{mc}_min"), 0.0))
+                        setattr(ld, f"{mc}_max", _to_num_safe(row.get(f"{mc}_max"), 0.0))
+                        setattr(ld, f"{mc}_std", _to_num_safe(row.get(f"{mc}_std"), 0.0))
                     nameplate_stats_list.append(ld)
-
+                print(f"====]]] {pd.DataFrame([obj.__dict__ for obj in nameplate_stats_list])}")
         # --- Thermal aggregation ---
         if isinstance(thermal_samples, pd.DataFrame):
             th_df = thermal_samples.copy()
         else:
-            # if thermal_samples is a list of dicts/objects, convert
             rows = []
             if thermal_samples:
                 if isinstance(thermal_samples, (list, tuple)):
-                    for s in thermal_samples:
-                        rows.append(_obj_to_row(s))
+                    rows = [_obj_to_row(s) for s in thermal_samples]
             th_df = pd.DataFrame(rows)
 
         thermal_stats_df = pd.DataFrame()
         if not th_df.empty:
-            # Ensure required columns exist and coerce numeric
             for c in ('opyear', 'otime'):
                 if c in th_df.columns:
                     th_df[c] = pd.to_numeric(th_df[c], errors='coerce')
 
-            metric_prefixes = ('react_', 'prev_', 'condb_')
-            metric_cols_th = [c for c in th_df.columns if any(c.startswith(pref) for pref in metric_prefixes)]
-
+            base_metric_cols = [c for c in ('opamb', 'obload') if c in th_df.columns]
+            stat_metric_cols = [c for c in (
+                'margin', 'optopoil', 'opbottom', 'ophotspot', 'opload', 'oplife'
+            ) if c in th_df.columns]
             group_keys = [k for k in ('load_type', 'opyear', 'otime') if k in th_df.columns]
-            if group_keys and metric_cols_th:
-                # coerce numeric metrics
-                for c in metric_cols_th:
+
+            if group_keys and (stat_metric_cols or base_metric_cols):
+                for c in stat_metric_cols + base_metric_cols:
                     th_df[c] = pd.to_numeric(th_df[c], errors='coerce')
 
-                # aggregate: mean/min/max/std and count
-                aggs = {}
-                for c in metric_cols_th:
-                    aggs[c + '_mean'] = (c, 'mean')
-                    aggs[c + '_min'] = (c, 'min')
-                    aggs[c + '_max'] = (c, 'max')
-                    aggs[c + '_std'] = (c, 'std')
+                grouped = th_df.groupby(group_keys, dropna=False)
+                stat_agg = grouped.agg({m: ['mean', 'min', 'max', 'std'] for m in stat_metric_cols}) if stat_metric_cols else grouped.mean()
+                stat_agg = stat_agg.reset_index()
+                stat_agg.columns = [
+                    col if isinstance(col, str) else f"{col[0]}_{col[1]}"
+                    for col in stat_agg.columns
+                ]
 
-                thermal_stats_df = th_df.groupby(group_keys, dropna=False).agg(**aggs).reset_index()
-                # sample counts
-                counts = th_df.groupby(group_keys, dropna=False).size().reset_index(name='samples')
-                thermal_stats_df = thermal_stats_df.merge(counts, on=group_keys, how='left')
+                base_means = grouped[base_metric_cols].mean().reset_index() if base_metric_cols else pd.DataFrame()
+                if not base_means.empty:
+                    stat_agg = stat_agg.merge(base_means, on=group_keys, how='left')
+
+                thermal_objects = []
+                for _, row in stat_agg.iterrows():
+                    th = ThermalDistro()
+                    for gk in group_keys:
+                        if gk == 'otime':
+                            th.th_time = _to_num_safe(row.get(gk), 0.0)
+                        else:
+                            setattr(th, 'opyear' if gk == 'opyear' else 'load_type', row.get(gk))
+
+                    for bm in base_metric_cols:
+                        setattr(th, bm, _to_num_safe(row.get(bm), 0.0))
+
+                    for mc in stat_metric_cols:
+                        setattr(th, mc, _to_num_safe(row.get(f"{mc}"), 0.0))
+                        setattr(th, f"{mc}_min", _to_num_safe(row.get(f"{mc}_min"), 0.0))
+                        setattr(th, f"{mc}_max", _to_num_safe(row.get(f"{mc}_max"), 0.0))
+                        setattr(th, f"{mc}_std", _to_num_safe(row.get(f"{mc}_std"), 0.0))
+
+                    thermal_objects.append(th)
+
+                thermal_stats_df = pd.DataFrame([
+                    {k: v for k, v in obj.__dict__.items() if not str(k).startswith('_')}
+                    for obj in thermal_objects
+                ])
 
         # --- Health samples aggregation and merge into self.health_samples ---
         try:
@@ -863,49 +849,35 @@ class LoadProcessor:
                 present_metrics = [m for m in health_metrics if m in hs.columns]
 
                 if present_metrics:
-                    # compute per-opyear stats using groupby -> will produce a MultiIndex columns, flatten them
                     gb = hs.groupby('opyear', sort=True)[present_metrics]
-                    # Use .agg with dict to ensure order of agg results
                     agg_df = gb.agg(['mean', 'min', 'max', 'std'])
-                    # Flatten column MultiIndex to desired names:
-                    # mean -> metric (overwrite the sample-level metric with aggregated mean)
-                    # min  -> metric + '_min'
-                    # max  -> metric + '_max'
-                    # std  -> metric + '_std'
                     agg_df.columns = [
                         f"{m}" if func == 'mean' else f"{m}_{func}"
                         for m, func in agg_df.columns
                     ]
-                    # Now agg_df index = opyear. Convert to DataFrame with opyear column
                     stats_df = agg_df.reset_index()
 
-                    # Map each stats column back to hs by opyear (avoid merge to prevent suffixes)
                     for col in stats_df.columns:
                         if col == 'opyear':
                             continue
-                        # Build mapping dict: opyear -> value
                         mapping = stats_df.set_index('opyear')[col].to_dict()
-                        # Map values into hs; where mapping returns NaN, keep existing hs value
                         mapped = hs['opyear'].map(mapping)
-                        # If original column exists in hs, assign mapped values where notna, otherwise create new column
                         if col in hs.columns:
-                            # Only overwrite with mapped finite values; otherwise keep existing
-                            # Coerce to numeric and replace non-finite with NaN to avoid accidental propagation
                             mapped_numeric = pd.to_numeric(mapped, errors='coerce')
                             mask = mapped_numeric.notna() & np.isfinite(mapped_numeric)
                             if mask.any():
                                 hs.loc[mask, col] = mapped_numeric[mask].astype(float)
                         else:
-                            # create column with mapped values, fill NaN with 0.0
                             hs[col] = pd.to_numeric(mapped, errors='coerce').replace([np.inf, -np.inf], np.nan).fillna(0.0)
 
-                    # Ensure all numeric columns are finite floats; replace NaN/inf with 0.0
                     for c in hs.columns:
                         if hs[c].dtype.kind in 'fiu' or c.startswith(tuple(health_metrics)):
                             hs[c] = pd.to_numeric(hs[c], errors='coerce').replace([np.inf, -np.inf], np.nan).fillna(0.0)
 
-                # assign back
                 self.health_samples = hs
+                print("=========>>>>>>>>>>>>")
+                print(f"Updated health_samples with aggregated stats:{self.health_samples}")
+
         except Exception as ex:
             print(f"Failed to compute/attach health sample stats: {ex}")
 
@@ -973,7 +945,7 @@ class LoadProcessor:
                 for step in range(self.horizon):
                     self.generate_config(step)
                     current_health, df_thermal, df_nameplate        = self.xfrm_preventative_load_forecast(step)
-                    health_samples.at[step, 'prev_score']           = current_health
+                    health_samples.at[step, 'score']                = current_health
                     load_types = (df_nameplate['loadtype'].dropna().drop_duplicates().tolist())
 
 
@@ -986,16 +958,16 @@ class LoadProcessor:
                 for step in range(self.horizon):
                     self.generate_config(step)             
                     current_health, df_thermal, df_nameplate        = self.xfrm_condb_load_forecast(step)
-                    health_samples.at[step, 'condb_score']            = current_health
+                    health_samples.at[step, 'score']                = current_health
                     load_types = (df_nameplate['loadtype'].dropna().drop_duplicates().tolist())
    
                 
             for lt in load_types:
                 print(f"--- Reactive Maintenance Load Results for \n {df_nameplate} at step {step} and load type ---")
                 row_first                   = df_nameplate.loc[df_nameplate['loadtype'] == lt].iloc[0]
-                load_item                   = loaddistros()
+                load_item                   = LoadDistro()
                 load_item.opyear            = step                 
-                # load_item.asset_id          = self.asset_id
+                load_item.asset_id          = self.asset_id
                 load_item.load_type         = lt
                 load_item.margin            = row_first['margin']
                 load_item.uphotspot         = row_first['uphotspot']
@@ -1004,6 +976,7 @@ class LoadProcessor:
                 load_item.uplife            = row_first['uplife']
                 load_item.upload            = row_first['upload']
                 nameplate_samples.append(load_item)
+
                 thermal_match = df_thermal.loc[df_thermal['loadtype'] == lt]
                 if not thermal_match.empty:
                     df_item = pd.DataFrame({
@@ -1026,7 +999,6 @@ class LoadProcessor:
                 else:
                     thermal_samples = pd.concat([thermal_samples, df_item], ignore_index=True)    
          
-         # print("=================thermal_samples===========================")
          # with pd.option_context(
          #        'display.max_rows', None,             # show all rows
          #        'display.max_columns', None,          # show all columns
@@ -1035,10 +1007,11 @@ class LoadProcessor:
          #        'display.expand_frame_repr', False    # keep DataFrame on a single line if possible
          #    ):
          #        # Use to_string to bypass any residual truncation logic
-         #    print(thermal_samples.to_string(index=False))
          nameplate_samples, thermal_samples = self.compute_replication_stats(nameplate_samples, thermal_samples)
+         print("===========<<<<======thermal_samples==========>>>>=================")
+         print(thermal_samples)
 
-         return self.health_samples, nameplate_samples, thermal_samples
+         return health_samples, nameplate_samples, thermal_samples
 
 
 def extract_seasonal_24h_profile(season: str, asset_id: str = None) -> pd.DataFrame:
@@ -1108,10 +1081,11 @@ def extract_seasonal_24h_profile(season: str, asset_id: str = None) -> pd.DataFr
             return pd.DataFrame(columns=['hour', 'ambient', 'puload', 'cooling'])
 
 
-def dynamic_loading_function():
-                
-    simulation_time    = 10 # int(horizon)
-        
+def dynamic_loading_function(args):
+
+    asset_id = args[0]
+    horizon = int(args[1])
+
     def _finite(x, default=0.0):
         try:
             v = float(x)
@@ -1185,6 +1159,7 @@ def dynamic_loading_function():
 
     def extract_op0_curves(health_samples, nameplate_samples, thermal_samples):
 
+
         def _to_dataframe(samples):
             # Convert list of objects or dicts to DataFrame; if already a DataFrame, return as-is.
             if isinstance(samples, pd.DataFrame):
@@ -1225,7 +1200,9 @@ def dynamic_loading_function():
         nameplate_df = _to_dataframe(nameplate_samples)
         thermal_df   = _to_dataframe(thermal_samples)
 
-
+        print(nameplate_df)
+        print("+++++++++++++++++++++")
+        print(thermal_df)
         # Apply filter
         health_curve    = _filter_op0(health_df)
         if not health_curve.empty:
@@ -1245,6 +1222,7 @@ def dynamic_loading_function():
 
         nameplate_curve = _filter_op0(nameplate_df)
         thermal_curve   = _filter_op0(thermal_df)
+
         if not thermal_curve.empty:
             # Coerce otime to numeric (if present) for consistent grouping
             if 'otime' in thermal_curve.columns:
@@ -1388,15 +1366,16 @@ def dynamic_loading_function():
         print("------------------------------------------------------------------")
         print(f"Launching Dynamic Loading                                        ")
         print("------------------------------------------------------------------")      
-        load_rater         = LoadProcessor(dynamic_cycle, 
+        load_rater         = LoadProcessor(asset_id, 
+                                           dynamic_cycle, 
                                            states,
                                            seasonal_profile, 
                                            loading_cases, 
-                                           simulation_time)
+                                           horizon)
         try:
             maintenance_strategy = MaintStrategy.REACTIVE.value
             health_samples, nameplate_samples, thermal_samples = load_rater.run(maintenance_strategy)
-            print(f"Completed Dynamic Loading for maintenance strategy: {maintenance_strategy} - thermal samples")
+            print(f"Completed Dynamic Loading for maintenance strategy: {maintenance_strategy} - {thermal_samples}")
             health_curve, nameplate_curve, thermal_curve = extract_op0_curves(health_samples, nameplate_samples, thermal_samples)
             # Persist the latest dynamic_cycle into datadictionaries
 
@@ -1414,6 +1393,8 @@ def dynamic_loading_function():
         # Extract plain LoadType values from the loading_cases rows for downstream grouping
         load_types = [getattr(case, "LoadType", None) for case in loading_cases if getattr(case, "LoadType", None) is not None]
 
+        print(f"Load types for stats computation: {load_types}")
+
         # Delete existing `loadcbdistro` records for this asset before any new inserts
         p_session.execute(loadcbdistros.delete())
         p_session.execute(loaddistros.delete())
@@ -1423,22 +1404,23 @@ def dynamic_loading_function():
                 .values(value=str(dynamic_cycle))
         )
         p_session.commit()                
-
+        print("--------------------------------------------")
+        print(f"health_samples: {health_samples}")
 
         # ----------------------------#
         # Nameplate stats             #
         # ----------------------------#
         for lt in load_types:
             v = width     
-            while(v < simulation_time + width):
+            while(v < horizon + width):
                 window_years = [v - width + 1, v]
                 subset = [x for x in nameplate_samples if (x.opyear in window_years and x.load_type == lt)]
                 subset_df = pd.DataFrame(subset)
                 if not subset_df.empty:
-                    l_cdistro                = loaddistros()
+                    l_cdistro                = LoadDistro()
                     l_cdistro.load_type      = lt  
                     l_cdistro.opyear         = f"Yr {v - width + 1} - {v}"
-                            
+                    print(f"Computing nameplate stats for load type {lt} for years {l_cdistro.opyear}")   
                     _apply_stats("margin", _stats([_to_num(x.margin) for x in subset]), l_cdistro, 3)
                     _apply_stats("uptopoil", _stats([_to_num(x.uptopoil) for x in subset]), l_cdistro, 1)
                     _apply_stats("upbottom", _stats([_to_num(x.upbottom) for x in subset]), l_cdistro, 1)
@@ -1451,7 +1433,9 @@ def dynamic_loading_function():
                     p_session.execute(loaddistros.insert(), record_np)
                     p_session.commit()
                 v += width   
-                
+        
+        print("--------------------------------------------")
+        print(f"nameplate_samples: {nameplate_samples}")      
         # ----------------------------#
         # Thermal stats               #
         # ----------------------------#                
@@ -1470,7 +1454,7 @@ def dynamic_loading_function():
 
         for lt in load_types:
             v = width     
-            while(v < simulation_time + width):                                                
+            while(v < horizon + width):                                                
                 window_years = [v - width + 1, v]        
                 subset_df = thermal_samples[(thermal_samples['load_type'] == lt) & (thermal_samples['opyear'].isin(window_years))]
                 if not subset_df.empty:
@@ -1488,11 +1472,11 @@ def dynamic_loading_function():
 
                     # Compute stats per th_time (otime) across the year window for this load type
                     for th_time, df_t in subset_df.groupby('otime', dropna=True):
-                        th_distro                = thermaldistros()
+                        th_distro                = ThermalDistro()
                         th_distro.load_type      = lt.LoadType
                         th_distro.opyear         = f"Yr {v - width + 1} - {v}"    
                         th_distro.th_time        = float(th_time)
-
+                        print(f"Computing thermal stats for load type {lt} at otime {th_time} for years {th_distro.opyear}")
                         # Margins
                         _apply_stats("margin", _stats(_col_vals(df_t, 'margin')), th_distro, 3)
                         _apply_stats("optopoil", _stats(_col_vals(df_t, 'optopoil')), th_distro, 1)
@@ -1508,10 +1492,12 @@ def dynamic_loading_function():
                         p_session.commit()
 
                 v += width        
-
-
-
-
+        
+        print("--------------------------------------------")
+        print(f"thermal_samples: {thermal_samples}")   
+        print("--------------------------------------------")
+        print(f"Post processing at unit level ...completed ")        
+        print("--------------------------------------------")
 
 
 if __name__ == '__main__':
@@ -1519,15 +1505,16 @@ if __name__ == '__main__':
     print("-----------------------------------")
     print("Launching Dynamic Loading ...      ")
     print("-----------------------------------") 
-    monitored_asset = "some_asset_id"
+    asset_id = "MPX-100M"
+    horizon  = 6 #CH_HORIZON
     with Session(p_engine) as p_session:
 
 
          monitoring_vars            = pd.DataFrame(p_session.execute(select(datadictionaries).
                                                                      where(datadictionaries.c.groupname == "Monitoring")).mappings())
         
-         dynamic_rating_rate        = float(monitoring_vars.loc[monitoring_vars['varname'] ==  "mtrg_rate", 'value'].item()) 
+         dynamic_rating_rate        = 10000# float(monitoring_vars.loc[monitoring_vars['varname'] ==  "mtrg_rate", 'value'].item()) 
          seasonal_rating_rate       = float(monitoring_vars.loc[monitoring_vars['varname'] ==  "seasonal_rate", 'value'].item()) 
 
-         daily_loading_thread       = RepeatEvery(int(dynamic_rating_rate), dynamic_loading_function)
+         daily_loading_thread       = RepeatEvery(int(dynamic_rating_rate), dynamic_loading_function, [asset_id, horizon])
          daily_loading_thread.run()  

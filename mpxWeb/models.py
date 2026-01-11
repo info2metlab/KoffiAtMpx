@@ -363,22 +363,32 @@ class loaddistros(models.Model):
     Id               = models.AutoField(primary_key=True)
     opyear           = models.CharField(max_length=50, null=True, blank=True)
     load_type        = models.CharField(max_length=100, null=True, blank=True)
+
+    upload           = models.CharField(max_length=100, null=True, blank=True)
+    upload_min       = models.CharField(max_length=100, null=True, blank=True)
+    upload_max       = models.CharField(max_length=100, null=True, blank=True)
+    upload_std       = models.CharField(max_length=100, null=True, blank=True)
+
     margin           = models.CharField(max_length=100, null=True, blank=True)
-    react_margin_min = models.CharField(max_length=100, null=True, blank=True)
+    margin_min       = models.CharField(max_length=100, null=True, blank=True)
     margin_max       = models.CharField(max_length=100, null=True, blank=True)
     margin_std       = models.CharField(max_length=100, null=True, blank=True)
-    uphotspot        = models.CharField(max_length=100, null=True, blank=True)
-    uphotspot_min    = models.CharField(max_length=100, null=True, blank=True)
-    uphotspot_max    = models.CharField(max_length=100, null=True, blank=True)
-    uphotspot_std    = models.CharField(max_length=100, null=True, blank=True)
-    uptopoil         = models.CharField(max_length=100, null=True, blank=True)
-    uptopoil_min     = models.CharField(max_length=100, null=True, blank=True)
-    uptopoil_max     = models.CharField(max_length=100, null=True, blank=True)
-    uptopoil_std     = models.CharField(max_length=100, null=True, blank=True)
+
     upbottom         = models.CharField(max_length=100, null=True, blank=True)
     upbottom_min     = models.CharField(max_length=100, null=True, blank=True)
     upbottom_max     = models.CharField(max_length=100, null=True, blank=True)
     upbottom_std     = models.CharField(max_length=100, null=True, blank=True)
+
+    uptopoil         = models.CharField(max_length=100, null=True, blank=True)
+    uptopoil_min     = models.CharField(max_length=100, null=True, blank=True)
+    uptopoil_max     = models.CharField(max_length=100, null=True, blank=True)
+    uptopoil_std     = models.CharField(max_length=100, null=True, blank=True)
+
+    uphotspot        = models.CharField(max_length=100, null=True, blank=True)
+    uphotspot_min    = models.CharField(max_length=100, null=True, blank=True)
+    uphotspot_max    = models.CharField(max_length=100, null=True, blank=True)
+    uphotspot_std    = models.CharField(max_length=100, null=True, blank=True)
+
     uplife           = models.CharField(max_length=100, null=True, blank=True)
     uplife_min       = models.CharField(max_length=100, null=True, blank=True)
     uplife_max       = models.CharField(max_length=100, null=True, blank=True)
@@ -386,6 +396,16 @@ class loaddistros(models.Model):
     class Meta:
         db_table = "loaddistros"
 
+class setpoints(models.Model):
+    Id                = models.AutoField(primary_key=True)
+    sw_type           = models.CharField(max_length=100, null=True, blank=True)
+    upper_curve       = models.CharField(max_length=100, null=True, blank=True)
+    lower_curve       = models.CharField(max_length=100, null=True, blank=True)
+    period            = models.CharField(max_length=100, null=True, blank=True)
+    coolpwr           = models.CharField(max_length=100, null=True, blank=True)
+    status            = models.CharField(max_length=100, null=True, blank=True)
+    class Meta:
+        db_table = "setpoints"
 
 
 class loadcbdistros(models.Model):

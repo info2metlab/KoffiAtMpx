@@ -325,6 +325,83 @@ class LoadCurve:
     osimu       = ''
     cycle = 0
 
+class LoadDistro:
+    def __init__(self):     
+        self.opyear           = 0
+        self.load_type        = ''
+        self.asset_id         = ""
+        # self.session_id       = ""
+
+        self.upload           = ""
+        self.upload_min       = ""
+        self.upload_max       = ""
+        self.upload_std       = ""
+
+        self.margin           = ""
+        self.margin_min       = ""
+        self.margin_max       = ""
+        self.margin_std       = ""
+
+        self.upbottom         = ""
+        self.upbottom_min     = ""
+        self.upbottom_max     = ""
+        self.upbottom_std     = ""
+
+        self.uptopoil         = ""
+        self.uptopoil_min     = ""
+        self.uptopoil_max     = ""
+        self.uptopoil_std     = ""
+
+        self.uphotspot        = ""
+        self.uphotspot_min    = ""
+        self.uphotspot_max    = ""
+        self.uphotspot_std    = ""
+       
+        self.uplife           = ""
+        self.uplife_min       = ""
+        self.uplife_max       = ""
+        self.uplife_std       = ""
+
+class ThermalDistro:
+     def __init__(self):     
+        self.opyear       = 0
+        self.load_type    = ''
+        self.asset_id     = ""
+        self.th_time            = 0
+        self.opamb              = 0
+        self.obload             = 0
+
+        self.margin = ''
+        self.margin_min=''
+        self.margin_max=''
+        self.margin_std=''
+
+        self.ophotspot =''
+        self.ophotspot_min =''
+        self.ophotspot_max =''
+        self.ophotspot_std =''
+
+        self.optopoil =''
+        self.optopoil_min =''
+        self.optopoil_max =''
+        self.optopoil_std=''
+
+        self.opbottom =''
+        self.opbottom_min =''
+        self.opbottom_max =''
+        self.opbottom_std=''
+
+        self.opload =''
+        self.opload_min =''
+        self.opload_max =''
+        self.opload_std=''
+
+        self.oplife =''
+        self.oplife_min =''
+        self.oplife_max =''
+        self.oplife_std=''
+
+
 class Cooling:
     sessionId: str = ""
     xfrmId: str = ""
@@ -492,6 +569,9 @@ class SETPOINTS(Enum):
     HOTSPOT_TEMPERATURE     =   1
     WINDING_TEMPERATURE     =   2
     PU_LOAD                 =   3
+    TTP_HOTSPOT             =   4
+    TTP_TOPOIL              =   5
+    TTP_MVA                 =   6
 
 class MaintStrategy(Enum):
     REACTIVE        =   0
@@ -885,7 +965,7 @@ class TCValue:
 # Deserialization object   #   
 # ------------------------ #
 def gaussErrorFunction(x):
-    err = 0.0;
+    err = 0.0
     t = (1 / (1 + 0.5 * math.fabs(x)))
     tau = t * math.exp(-math.pow(x,2) - 1.26551223 + 1.00002368 * t + 0.37409196 * math.pow(t,2) + 0.09678418 * math.pow(t,3)
                                 - 0.18628806 * math.pow(t, 4) + 0.27886807 * math.pow(t, 5) - 1.13520398 * math.pow(t, 6)

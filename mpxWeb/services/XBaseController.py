@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 import requests
 import csv as csv
-import time
+import time 
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt  
@@ -62,7 +62,7 @@ if is_ipython:
 
 class BaseController:
     
-    def __init__(self, equipId):
+    def __init__(self, equipId, loadtype):
 
         self.equipId        = equipId
         self.ref_state      = []
@@ -75,6 +75,7 @@ class BaseController:
         self.ref_bottom     = []
         self.bank_setpoints = []
         self.actuation_plan = np.zeros(LOADCYCLE)
+        self.active_case = loadtype
 
         self.n_fans         = 1
         self.n_pumps        = 1
@@ -104,50 +105,55 @@ class BaseController:
         
         self.fan_powers       = np.array([100, 120, 130, 145, 370,  430, 460, 500, 610, 720, 800, 860, 1030, 1230, 1350, 1500]) # response["num_fans"]     
         self.pump_powers      = np.array([430.0, 1070.0, 2950.0, 6920.0, 8830.0])  # response["pump_powers"]
-
+        with Session(p_engine) as p_session:
+                width            = 2                          
+                loading_curve    = pd.DataFrame(p_session.execute(select(loadcurves)).all())
+                load_results     = pd.DataFrame(p_session.execute(select(loadresults).where(loadresults.c.loadtype == self.active_case)).all())
+                setpoints_data   = pd.DataFrame(p_session.execute(select(setpoints)).all())
     
         self.bank_setpoints  = [
                                 {"CV":SETPOINTS.TOPOIL_TEMPERATURE, 
-                                            "lower_curve": np.random.uniform(40, 50, 1), 
-                                            "upper_curve": np.random.uniform(55, 60, 1), 
-                                            "period"     : 1, 
+                                            "lower_curve": 0.75 * loading_curve['optopoil'].values[-1] * np.ones(1), 
+                                            "upper_curve": 1.0 *loading_curve['optopoil'].values[-1] * np.ones(1), 
+                                            "period"     : 5, 
                                             "Power"      : 4 * self.fan_powers[2] +  2 * self.pump_powers[2], 
-                                            "status": 0},
+                                            "status": 0 },
 
                                 {"CV":SETPOINTS.TOPOIL_TEMPERATURE, 
-                                                "lower_curve": np.random.uniform(55.1, 60.1, 1), 
-                                                "upper_curve": np.random.uniform(65, 70, 1), 
-                                                "period"     : 1, 
+                                                "lower_curve": 1.0 * loading_curve['opbottom'].values[-1] * np.ones(1), 
+                                                "upper_curve": 0.75 * loading_curve['optopoil'].values[-1] * np.ones(1), 
+                                                "period"     : 5, 
                                                 "Power"      : 8 * self.fan_powers[4] +  2 * self.pump_powers[2], 
-                                                "status": 0},
-
-                                {"CV":SETPOINTS.TOPOIL_TEMPERATURE, 
-                                                "lower_curve": np.random.uniform(70.1, 75, 1), 
-                                                "upper_curve": np.random.uniform(80, 95, 1), 
-                                                "period"     : 1, 
-                                                "Power"      : 8 * self.fan_powers[5] +  2 * self.pump_powers[3], 
-                                                "status"     : 0},
+                                                "status"     : 0 },
 
                                 {"CV":SETPOINTS.HOTSPOT_TEMPERATURE, 
-                                                 "lower_curve": np.random.uniform(96, 105, 1), 
-                                                 "upper_curve": np.random.uniform(105.1, 110, 1), 
-                                                 "period"     : 1, 
+                                                 "lower_curve": 0.75 *loading_curve['ophotspot'].values[-1] * np.ones(1),  
+                                                 "upper_curve": 1.0 * loading_curve['ophotspot'].values[-1] * np.ones(1), 
+                                                 "period"     : 5, 
                                                  "Power"      : 8 * self.fan_powers[5] +  2 * self.pump_powers[3],
-                                                 "status"     : 0},
+                                                 "status"     : 0 },
                                 
                                 {"CV":SETPOINTS.HOTSPOT_TEMPERATURE, 
-                                                 "lower_curve": np.random.uniform(110.1, 115, 1), 
-                                                 "upper_curve": np.random.uniform(117, 125, 1), 
-                                                 "period"     : 1, 
+                                                 "lower_curve": 1.0 *  loading_curve['optopoil'].values[-1] * np.ones(1), 
+                                                 "upper_curve": 0.75 *  loading_curve['ophotspot'].values[-1] * np.ones(1),
+                                                 "period"     : 5, 
                                                  "Power"      : 8 * self.fan_powers[7] +  2 * self.pump_powers[-1],  
-                                                 "status"     : 0},
-                                
-                                {"CV":SETPOINTS.HOTSPOT_TEMPERATURE, 
-                                                 "lower_curve": np.random.uniform(127, 135, 1), 
-                                                 "upper_curve": np.random.uniform(140, 150, 1), 
-                                                 "period"     : 1, 
-                                                 "Power"      : 8 * self.fan_powers[-1] +  2 * self.pump_powers[-1],  
-                                                 "status"     : 0}]
+                                                 "status"     : 0 },
+
+                                {"CV":SETPOINTS.TTP_HOTSPOT, 
+                                                 "lower_curve": 0.5 *  load_results['ttptop'].values[-1] * np.ones(1), 
+                                                 "upper_curve": 0.75 * load_results['ttptop'].values[-1] * np.ones(1),
+                                                 "period"     : 0, 
+                                                 "Power"      : 8 * self.fan_powers[7] +  2 * self.pump_powers[-1],  
+                                                 "status"     : 0 },
+                                                                
+                                {"CV":SETPOINTS.TTP_HOTSPOT, 
+                                                 "lower_curve": 0.75 *  load_results['ttphot'].values[-1] * np.ones(1), 
+                                                 "upper_curve": 0.9 * load_results['ttphot'].values[-1] * np.ones(1),
+                                                 "period"     : 0, 
+                                                 "Power"      : 8 * self.fan_powers[7] +  2 * self.pump_powers[-1],  
+                                                 "status"     : 0 },
+                                ]
 
         self.min_fetching_rate = min([u["period"] for u in self.bank_setpoints])
         self.max_fetching_rate = max([u["period"] for u in self.bank_setpoints])
@@ -238,7 +244,7 @@ class BaseController:
 
 if __name__ == '__main__':
 
-    equipId = "LOME"
+    equipId = "MPX-100M"
     base_controller = BaseController(equipId)
     base_controller.run()
     

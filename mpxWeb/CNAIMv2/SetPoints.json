@@ -1,0 +1,54 @@
+[
+  {
+    "cv":"TOPOIL_TEMPERATURE", 
+    "lower_curve": 0.75, 
+    "upper_curve": 1.0, 
+    "period"     : 5, 
+    "Power"      : 4, 
+    "status": 0 
+  },
+
+  {
+    "cv":"TOPOIL_TEMPERATURE", 
+    "lower_curve": 1.0,
+    "upper_curve": 0.75,
+    "period"     : 5, 
+    "Power"      : 8,  
+    "status"     : 0 
+  },
+
+  {
+    "cv":"HOTSPOT_TEMPERATURE", 
+    "lower_curve": 0.75,
+    "upper_curve": 1.0, 
+    "period"     : 5, 
+    "Power"      : 8,
+    "status"     : 0 
+  },                               
+  {
+    "cv":"HOTSPOT_TEMPERATURE", 
+    "lower_curve": 1.0, 
+    "upper_curve": 0.75,
+    "period"     : 5, 
+    "Power"      : 8,  
+    "status"     : 0 
+  },
+  {
+    "cv":"TTP_HOTSPOT", 
+    "lower_curve": 0.5, 
+    "upper_curve": 0.75,
+    "period"     : 0, 
+    "Power"      : 8,  
+    "status"     : 0 
+  },
+                                  
+  {
+    "cv":"TTP_HOTSPOT", 
+    "lower_curve": 0.75, 
+    "upper_curve": 0.9,
+    "period"     : 0, 
+    "Power"      : 8,  
+    "status"     : 0 
+  }
+                                
+]
